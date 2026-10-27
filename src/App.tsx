@@ -5,12 +5,12 @@ import { Badge } from '@/components/ui/badge'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { cn } from '@/lib/utils'
 import {
-  CHASE_SPOT, FEELINGS, PROFILES, FEELING_TIPS, NEEDS, SITUATIONS, SOURCES, TIPS, sourceHref,
+  CHASE_SPOT, EMOTIONS, EMOTION_NOTE, FEELINGS, PROFILES, FEELING_TIPS, NEEDS, SITUATIONS, SOURCES, TIPS, sourceHref,
   type NeedId, type Situation,
 } from '@/data/content'
 import phrasesRaw from '@/data/phrases.json'
 
-interface Phrase { id: string; need: string; feeling: string; situation: Situation; sources: string[]; text: string; delivery?: string; basis?: string; ctx?: string }
+interface Phrase { id: string; need: string; feeling: string; situation: Situation; sources: string[]; text: string; delivery?: string; basis?: string; ctx?: string; emotion?: string }
 const PHRASES = phrasesRaw as Phrase[]
 
 type Status = 'keep' | 'bin'
@@ -50,6 +50,8 @@ function Chip({ active, onClick, children, title }: { active: boolean; onClick: 
 export default function App() {
   const [need, setNeed] = useState<NeedId | null>(null)
   const [feeling, setFeeling] = useState<string | null>(null)
+  const [emotion, setEmotion] = useState<string | null>(null)
+  const [mode, setMode] = useState<'feel' | 'now' | 'map'>('feel')
   const [situation, setSituation] = useState<Situation | 'all'>('all')
   const [spotOpen, setSpotOpen] = useState(false)
   const [showAll, setShowAll] = useState(false)
@@ -85,12 +87,12 @@ export default function App() {
     const pool = PHRASES.filter(visible)
     const bestList = need && feeling ? pool.filter((p) => p.feeling === feeling && (p.need === need || p.need === 'any')) : []
     // exact type first, then general
-    const rank = (p: Phrase) => (p.need === need ? 0 : p.ctx ? 2 : 1)
+    const rank = (p: Phrase) => (p.need === need ? 0 : emotion && p.emotion === emotion ? 1 : p.ctx ? 3 : 2)
     bestList.sort((a, b) => rank(a) - rank(b))
     const moreList = need && feeling && bestList.length < 3 ? pool.filter((p) => p.need === need && p.feeling !== feeling) : []
     return { best: bestList, more: moreList }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [need, feeling, situation, review, showBinned])
+  }, [need, feeling, emotion, situation, review, showBinned])
 
   useEffect(() => { setShowAll(false) }, [need, feeling, situation])
   useEffect(() => {
@@ -148,6 +150,43 @@ export default function App() {
     })
   }
 
+  const emotionObj = EMOTIONS.find((e) => e.id === emotion) ?? null
+
+  function pickFeeling(id: string) {
+    setFeeling(id === feeling ? null : id)
+    // choosing a feeling directly means we are no longer reasoning from an emotion
+    if (emotionObj && !emotionObj.targets.includes(id)) setEmotion(null)
+  }
+  function pickEmotion(id: string) {
+    if (id === emotion) { setEmotion(null); return }
+    const e = EMOTIONS.find((x) => x.id === id)!
+    setEmotion(id)
+    if (!feeling || !e.targets.includes(feeling)) setFeeling(e.targets[0]) // suggest the first target
+  }
+
+  function renderEmotionDetail(e: (typeof EMOTIONS)[number], showAim = true) {
+    const row = (k: string, v: string) => (
+      <div className="grid grid-cols-[3.2rem_1fr] gap-2"><span className="font-semibold text-accent-foreground">{k}</span><span>{v}</span></div>
+    )
+    return (
+      <div className="pop mt-2 space-y-2 rounded-3xl border border-primary/20 bg-accent/60 p-4 text-sm">
+        <p className="font-semibold">How to spot {e.label.toLowerCase()}</p>
+        {row('Face', e.face)}{row('Voice', e.voice)}{row('Words', e.words)}
+        <p className="rounded-2xl bg-card/80 p-2.5"><span className="font-semibold">How to respond: </span>{e.respond}</p>
+        {showAim && <div>
+          <p className="mb-1.5 font-semibold">Aim for (tap to switch)</p>
+          <div className="flex flex-wrap gap-2">
+            {e.targets.map((t, i) => {
+              const f = FEELINGS.find((x) => x.id === t)!
+              return <Chip key={t} active={feeling === t} onClick={() => setFeeling(t)}><span className="mr-1">{f.emoji}</span>{f.label}{i === 0 && <span className="ml-1.5 text-[0.65rem] uppercase tracking-wide opacity-70">suggested</span>}</Chip>
+            })}
+          </div>
+        </div>}
+        <p className="text-xs text-muted-foreground">{EMOTION_NOTE} Source: <a className="underline" href={SOURCES.EK.url} target="_blank" rel="noreferrer">Paul Ekman Group</a>.</p>
+      </div>
+    )
+  }
+
   function renderCard(p: Phrase, general?: boolean) {
     const st = statusOf(p)
     const tipIds = FEELING_TIPS[p.feeling] ?? []
@@ -161,6 +200,7 @@ export default function App() {
           <div className="mb-2.5 flex flex-wrap items-center gap-1.5">
             <Badge variant="secondary" className="rounded-full">{sit.label}</Badge>
             {general && <Badge variant="outline" className="rounded-full text-muted-foreground">General</Badge>}
+            {p.emotion && <Badge variant="outline" className="rounded-full border-violet-200 bg-violet-50 text-violet-800">For {EMOTIONS.find((e) => e.id === p.emotion)?.label.toLowerCase()}</Badge>}
             {example && <Badge variant="outline" className="rounded-full border-sky-200 bg-sky-50 text-sky-800">{example}</Badge>}
             {st === 'draft' && <Badge variant="outline" className="rounded-full border-amber-300 bg-amber-50 text-amber-800">Draft</Badge>}
             {st === 'keep' && <Badge className="rounded-full">Kept</Badge>}
@@ -247,11 +287,77 @@ export default function App() {
 
       <section aria-labelledby="feel" className="mt-6">
         <h2 id="feel" className="mb-2 text-sm font-semibold text-muted-foreground">2. How do you want them to feel?</h2>
-        <div className="flex flex-wrap gap-2">
-          {FEELINGS.map((f) => (
-            <Chip key={f.id} active={feeling === f.id} onClick={() => setFeeling(f.id === feeling ? null : f.id)}><span className="mr-1">{f.emoji}</span>{f.label}</Chip>
+        <div role="tablist" className="mb-3 grid grid-cols-3 gap-1 rounded-full bg-secondary p-1 text-sm font-medium">
+          {([['feel', 'Aim for'], ['now', 'They feel now'], ['map', 'Side by side']] as const).map(([id, label]) => (
+            <button key={id} role="tab" aria-selected={mode === id} type="button" onClick={() => setMode(id)}
+              className={cn('rounded-full px-2 py-2 transition-all', mode === id ? 'bg-card text-primary shadow-sm' : 'text-muted-foreground')}>{label}</button>
           ))}
         </div>
+
+        {mode === 'feel' && (
+          <div className="flex flex-wrap gap-2">
+            {FEELINGS.map((f) => (
+              <Chip key={f.id} active={feeling === f.id} onClick={() => pickFeeling(f.id)}><span className="mr-1">{f.emoji}</span>{f.label}</Chip>
+            ))}
+          </div>
+        )}
+
+        {mode === 'now' && (
+          <>
+            <p className="mb-2 text-sm text-muted-foreground">What are they feeling right now? We will suggest what to aim for.</p>
+            <div className="flex flex-wrap gap-2">
+              {EMOTIONS.map((e) => (
+                <Chip key={e.id} active={emotion === e.id} onClick={() => pickEmotion(e.id)}><span className="mr-1">{e.emoji}</span>{e.label}</Chip>
+              ))}
+            </div>
+            {emotionObj && renderEmotionDetail(emotionObj)}
+          </>
+        )}
+
+        {mode === 'map' && (
+          <div>
+            <div className="mb-1.5 grid grid-cols-[7.2rem_1fr] gap-2 px-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              <span>They feel</span><span>Aim for</span>
+            </div>
+            <div className="space-y-2">
+              {EMOTIONS.map((e) => (
+                <div key={e.id} className={cn('rounded-2xl border bg-card p-2', emotion === e.id ? 'border-primary/50' : 'border-border')}>
+                  <div className="grid grid-cols-[7.2rem_1fr] items-center gap-2">
+                    <button type="button" aria-pressed={emotion === e.id} onClick={() => pickEmotion(e.id)}
+                      className={cn('rounded-xl px-2.5 py-2 text-left text-sm font-medium transition-all active:scale-95', emotion === e.id ? 'bg-primary text-primary-foreground' : 'bg-secondary')}>
+                      <span className="mr-1">{e.emoji}</span>{e.label}
+                    </button>
+                    <div className="flex flex-wrap gap-1.5">
+                      {e.targets.map((t) => {
+                        const f = FEELINGS.find((x) => x.id === t)!
+                        const on = feeling === t && emotion === e.id
+                        return (
+                          <button key={t} type="button" aria-pressed={on} onClick={() => { setEmotion(e.id); setFeeling(t) }}
+                            className={cn('rounded-full border px-2.5 py-1 text-xs font-medium transition-all active:scale-95', on ? 'border-primary bg-primary text-primary-foreground' : 'border-border bg-background hover:bg-accent')}>{f.label}</button>
+                        )
+                      })}
+                    </div>
+                  </div>
+                  {emotion === e.id && renderEmotionDetail(e, false)}
+                </div>
+              ))}
+              {(() => {
+                const mapped = new Set(EMOTIONS.flatMap((e) => e.targets))
+                const rest = FEELINGS.filter((f) => !mapped.has(f.id))
+                return rest.length > 0 && (
+                  <div className="rounded-2xl border border-dashed bg-card/60 p-2">
+                    <div className="grid grid-cols-[7.2rem_1fr] items-center gap-2">
+                      <span className="px-2.5 text-sm text-muted-foreground">Any mood</span>
+                      <div className="flex flex-wrap gap-1.5">
+                        {rest.map((f) => <button key={f.id} type="button" onClick={() => { setEmotion(null); setFeeling(f.id) }} className={cn('rounded-full border px-2.5 py-1 text-xs font-medium', feeling === f.id && !emotion ? 'border-primary bg-primary text-primary-foreground' : 'border-border bg-background')}>{f.label}</button>)}
+                      </div>
+                    </div>
+                  </div>
+                )
+              })()}
+            </div>
+          </div>
+        )}
       </section>
 
       <section className="mt-6">
@@ -267,6 +373,7 @@ export default function App() {
           <>
             <h2 className="mb-3 text-base font-bold">
               Words for <span className="text-primary">{needObj?.label}</span> &rarr; <span className="text-primary">{feelingObj?.label}</span>
+              {emotionObj && <span className="ml-2 text-xs font-normal text-muted-foreground">(they seem to feel {emotionObj.label.toLowerCase()})</span>}
             </h2>
             {best.length === 0 && more.length === 0 && <p className="rounded-2xl border border-dashed p-4 text-sm text-muted-foreground">Nothing here for this mix yet. Try &ldquo;All&rdquo; under step 3, or another feeling.</p>}
             <div className="space-y-3">{(showAll ? best : best.slice(0, LIMIT)).map((p) => renderCard(p, p.need === 'any'))}</div>

@@ -1,4 +1,4 @@
-# need|feeling|situation|sources|text|delivery(optional)|basis(optional)|context(optional)
+# need|feeling|situation|sources|text|delivery(optional)|basis(optional)|context(optional)|emotion(optional)
 # APPEND ONLY: a phrase's id is its line number, and review choices (keep/bin/edit) are saved by id. Never reorder or delete lines.
 # Sources: KEY or KEY@h:mm:ss (timestamp links to YouTube). All phrases are drafts.
 significance|heard|opener|NM|You've clearly built something real here. Walk me through how it came together.
@@ -277,3 +277,34 @@ any|smart|rapport|VX2,VTK1|What's one thing about this that most people miss?|As
 any|smart|rapport|VTK1|That's a clever way to put it. How did you work that out?|Sincere interest, a slight head tilt. Specific beats general.|social|
 acceptance|included|rapport|GTK3,GIG1|You're one of us here, you know. We'd notice if you weren't around.|Use "we" and "us" language and say it with a smile.|social|
 intelligence|smart|rapport|VTK1,VX2|I'd trust your read on this more than most. What would you do?|Only say this if you mean it. Ask, then listen to the full answer.|social|Only say this if it is true for you
+# ---- universal-emotion phrases (original wording, 2026-10-27). 9th column = emotion they are feeling ----
+any|liked|rapport|EK|That's wonderful! Tell me everything.|Match their lift in energy, smile properly, lean in a little.|adapted||joy
+any|appreciated|rapport|EK|You've worked hard for this, and it shows.|Warm and specific. Name the thing they did, then pause.|adapted||joy
+any|included|rapport|EK|I'm so glad you told me. Can I be part of celebrating this?|Bright tone, open hands. Let them set how big the celebration is.|adapted||joy
+any|liked|rapport|EK|I love seeing you this happy.|Say it softly and mean it. Let your own face show it too.|adapted||joy
+any|heard|rapport|EK|That sounds really hard. I'm here, and there's no rush.|Slow right down, lower your volume, and leave a pause.|adapted||sadness
+any|comfortable|rapport|EK|You don't have to explain it all. I'm happy just to sit with you.|Quiet voice, relaxed shoulders. Silence is fine.|adapted||sadness
+any|reassured|rapport|EK|Anyone would feel low after that. You're not overreacting.|Acknowledge first. Don't rush to fix or cheer them up.|adapted||sadness
+any|heard|rapport|EK|Would it help to talk it through, or would you rather have some company?|Offer the choice gently, then let them pick.|adapted||sadness
+any|control|rapport|EK|Let's take this one step at a time. What's the very first thing?|Calm, steady pace. Small steps feel safe.|adapted||fear
+any|reassured|rapport|EK|It's okay to be worried. Here's what we know for sure, and what we can find out.|Keep your voice even and your movements slow.|adapted||fear
+any|reassured|rapport|EK|You're not facing this alone.|Falling tone at the end of the sentence. Stay close, not crowding.|adapted||fear
+any|comfortable|rapport|EK|We can go as slowly as you like.|Slow your own pace first. People tend to follow it.|adapted||fear
+any|control|rapport|EK|What would help you feel safer about this?|Ask, then wait. Give them the lead on the answer.|adapted||fear
+any|heard|disagree|EK|I can see how much this matters to you. Go on, I'm listening.|Lower your volume, keep your face still and open, don't interrupt.|adapted||anger
+any|understood|disagree|EK|You have every right to be upset about that part.|Say it only where it is true. Steady and unhurried.|adapted||anger
+any|understood|disagree|EK|Let me check I've understood what upset you most.|Say it slowly, then really listen to the answer.|adapted||anger
+any|reconciled|disagree|EK|I'd like us to find a way through this together.|Wait until they've finished. Soft tone, open palms.|adapted||anger
+any|reconciled|disagree|EK|I'm sorry for my part in this.|Plain, specific and brief. No "but" afterwards.|adapted||anger
+any|curious|opener|EK|Didn't see that coming, did you? What's going through your mind?|Surprise fades in seconds. Ask while it is fresh, and smile if it is good news.|adapted||surprise
+any|comfortable|rapport|EK|Take a moment. There's no need to react straight away.|Give them a beat of quiet. Keep your own voice level.|adapted||surprise
+any|curious|rapport|EK|Want me to explain what happened, or shall we start with how you feel?|Give them the choice of where to begin.|adapted||surprise
+any|comfortable|rapport|EK|That's a lot to take in. Where would you like to start?|Slow, warm, unhurried.|adapted||surprise
+any|respected|disagree|EK|I can tell that's not okay with you, and I respect that.|Don't push the thing they're recoiling from. Keep your tone neutral.|adapted||disgust
+any|respected|disagree|EK|We don't have to go any further with it. What bothers you most?|Step back first, then ask. Your face stays calm.|adapted||disgust
+any|trusted|rapport|EK|I take your standards seriously. We'll do it your way.|Say it only if you will. Level voice, steady eye contact.|adapted||disgust
+any|trusted|rapport|EK|You're right to care about that. Let's get it sorted properly.|Short and sincere, then act on it.|adapted||disgust
+any|respected|disagree|EK|I get the sense you're not convinced. What would you need to see?|Stay level and curious, with no sarcasm back.|adapted||contempt
+any|trusted|rapport|EK|Fair challenge. Let me show you rather than tell you.|Calm and unhurried. Then follow through.|adapted||contempt
+any|respected|disagree|EK|I'd value your honest view, even if it's blunt.|Mean it, and listen to the whole answer.|adapted||contempt
+any|important|rapport|EK|Your standards are high, and I'd like to meet them.|Say it only if it's true. Even pace, no flattery.|adapted||contempt

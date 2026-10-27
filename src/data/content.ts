@@ -144,6 +144,7 @@ export const SOURCES: Record<string, Source> = {
   CS: { label: 'Chase: YouTube Short on the six needs', video: 'YzJI8GTHteQ' },
   VGQ: { label: 'Vinh: how to enter conversations', video: '-X13GINFYOY' },
   VVC: { label: 'Vanessa: memorable compliments', video: 'MOre3dRqHlA' },
+  EK: { label: 'Paul Ekman Group: the seven universal emotions', url: 'https://www.paulekman.com/universal-emotions/' },
   NCI: { label: 'NCI University: six social needs (secondary, not Chase\u2019s own words)', url: 'https://merlinobrecht.com/behavior-profiling/the-six-social-needs/' },
   // Social posts (Saturday section 8). Read from captions only; summarised, no timestamps.
   VIG1: { platform: 'Instagram', label: 'Vanessa, Instagram reel: a better opener than "nice to meet you"', url: 'https://www.instagram.com/vvanedwards/reel/DSvJHzLDula/' },
@@ -186,3 +187,49 @@ export const PROFILES = [
   { who: 'Vinh Giang', links: [['Instagram', 'https://www.instagram.com/askvinh/'], ['TikTok', 'https://www.tiktok.com/@askvinh'], ['X', 'https://x.com/AskVinh']] },
   { who: 'Chase Hughes', links: [['Instagram', 'https://www.instagram.com/chasehughesofficial/']] },
 ] as const
+
+// ---- Universal emotions (Paul Ekman's seven) ----
+// "They are feeling X right now" -> which target feelings to aim for. The first target is the suggestion.
+export interface Emotion {
+  id: string; label: string; emoji: string
+  targets: string[]
+  face: string; voice: string; words: string; respond: string
+}
+export const EMOTIONS: Emotion[] = [
+  { id: 'joy', label: 'Joy', emoji: '😄', targets: ['liked', 'appreciated', 'included'],
+    face: 'A real smile that reaches the eyes, with crinkles at the corners and lifted cheeks.',
+    voice: 'Higher, faster and more musical.',
+    words: 'Good news, "finally", "you won\u2019t believe it".',
+    respond: 'Share it with them. Match their lift, ask for the story, and let them have the moment.' },
+  { id: 'sadness', label: 'Sadness', emoji: '😢', targets: ['heard', 'reassured', 'comfortable'],
+    face: 'Inner eyebrows pulled up, mouth corners down, eyes lowered or glassy.',
+    voice: 'Slow, quiet and flat, with long pauses.',
+    words: '"I\u2019m tired", "what\u2019s the point", trailing-off sentences.',
+    respond: 'Slow down and lower your voice. Acknowledge before you try to fix, and let silence be okay.' },
+  { id: 'fear', label: 'Fear', emoji: '😨', targets: ['reassured', 'comfortable', 'control'],
+    face: 'Wide eyes, raised eyebrows drawn together, lips stretched back.',
+    voice: 'Higher, quicker, maybe shaky.',
+    words: '"What if\u2026", "I\u2019m worried", lots of "are you sure?"',
+    respond: 'Stay calm and steady. Give one clear next step and let them set the pace. Never wave the worry away.' },
+  { id: 'anger', label: 'Anger', emoji: '😠', targets: ['heard', 'understood', 'reconciled'],
+    face: 'Eyebrows down and together, hard stare, tight lips or clenched jaw.',
+    voice: 'Louder, or tight and clipped.',
+    words: '"Always" and "never", blame, "you should have\u2026"',
+    respond: 'Lower your voice, don\u2019t match their energy, and let them finish. Name what matters to them before you answer.' },
+  { id: 'surprise', label: 'Surprise', emoji: '😮', targets: ['curious', 'comfortable'],
+    face: 'Eyebrows up, eyes wide, jaw dropped. It lasts only a second or so.',
+    voice: 'A sharp breath in, "oh!" or "wow".',
+    words: '"I didn\u2019t expect that", "wait, what?"',
+    respond: 'Give them a beat. Surprise fades fast and turns into something else, so what comes next is the real signal.' },
+  { id: 'disgust', label: 'Disgust', emoji: '🤢', targets: ['respected', 'trusted'],
+    face: 'Wrinkled nose, raised upper lip, head pulled back.',
+    voice: '"Ugh", flat or clipped, a drawn-out "eww".',
+    words: '"That\u2019s not right", "I can\u2019t stand\u2026", "gross".',
+    respond: 'Don\u2019t push the thing they are recoiling from. Ask what bothers them, and show you take their standards seriously.' },
+  { id: 'contempt', label: 'Contempt', emoji: '😏', targets: ['respected', 'trusted', 'important'],
+    face: 'One corner of the mouth tightened or raised, sometimes an eye-roll.',
+    voice: 'Dry, sarcastic or dismissive.',
+    words: '"Whatever", "obviously", put-downs.',
+    respond: 'Stay level and skip the sarcasm. Ask what they would need to see, and show quiet competence.' },
+]
+export const EMOTION_NOTE = 'Faces and voices are clues, not proof. If you are unsure, ask how they are.'

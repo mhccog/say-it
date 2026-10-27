@@ -3063,5 +3063,395 @@
   "delivery": "Only say this if you mean it. Ask, then listen to the full answer.",
   "basis": "social",
   "ctx": "Only say this if it is true for you"
+ },
+ {
+  "id": "p275",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "That's wonderful! Tell me everything.",
+  "delivery": "Match their lift in energy, smile properly, lean in a little.",
+  "basis": "adapted",
+  "emotion": "joy"
+ },
+ {
+  "id": "p276",
+  "need": "any",
+  "feeling": "appreciated",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "You've worked hard for this, and it shows.",
+  "delivery": "Warm and specific. Name the thing they did, then pause.",
+  "basis": "adapted",
+  "emotion": "joy"
+ },
+ {
+  "id": "p277",
+  "need": "any",
+  "feeling": "included",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "I'm so glad you told me. Can I be part of celebrating this?",
+  "delivery": "Bright tone, open hands. Let them set how big the celebration is.",
+  "basis": "adapted",
+  "emotion": "joy"
+ },
+ {
+  "id": "p278",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "I love seeing you this happy.",
+  "delivery": "Say it softly and mean it. Let your own face show it too.",
+  "basis": "adapted",
+  "emotion": "joy"
+ },
+ {
+  "id": "p279",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "That sounds really hard. I'm here, and there's no rush.",
+  "delivery": "Slow right down, lower your volume, and leave a pause.",
+  "basis": "adapted",
+  "emotion": "sadness"
+ },
+ {
+  "id": "p280",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "You don't have to explain it all. I'm happy just to sit with you.",
+  "delivery": "Quiet voice, relaxed shoulders. Silence is fine.",
+  "basis": "adapted",
+  "emotion": "sadness"
+ },
+ {
+  "id": "p281",
+  "need": "any",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "Anyone would feel low after that. You're not overreacting.",
+  "delivery": "Acknowledge first. Don't rush to fix or cheer them up.",
+  "basis": "adapted",
+  "emotion": "sadness"
+ },
+ {
+  "id": "p282",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "Would it help to talk it through, or would you rather have some company?",
+  "delivery": "Offer the choice gently, then let them pick.",
+  "basis": "adapted",
+  "emotion": "sadness"
+ },
+ {
+  "id": "p283",
+  "need": "any",
+  "feeling": "control",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "Let's take this one step at a time. What's the very first thing?",
+  "delivery": "Calm, steady pace. Small steps feel safe.",
+  "basis": "adapted",
+  "emotion": "fear"
+ },
+ {
+  "id": "p284",
+  "need": "any",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "It's okay to be worried. Here's what we know for sure, and what we can find out.",
+  "delivery": "Keep your voice even and your movements slow.",
+  "basis": "adapted",
+  "emotion": "fear"
+ },
+ {
+  "id": "p285",
+  "need": "any",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "You're not facing this alone.",
+  "delivery": "Falling tone at the end of the sentence. Stay close, not crowding.",
+  "basis": "adapted",
+  "emotion": "fear"
+ },
+ {
+  "id": "p286",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "We can go as slowly as you like.",
+  "delivery": "Slow your own pace first. People tend to follow it.",
+  "basis": "adapted",
+  "emotion": "fear"
+ },
+ {
+  "id": "p287",
+  "need": "any",
+  "feeling": "control",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "What would help you feel safer about this?",
+  "delivery": "Ask, then wait. Give them the lead on the answer.",
+  "basis": "adapted",
+  "emotion": "fear"
+ },
+ {
+  "id": "p288",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "disagree",
+  "sources": [
+   "EK"
+  ],
+  "text": "I can see how much this matters to you. Go on, I'm listening.",
+  "delivery": "Lower your volume, keep your face still and open, don't interrupt.",
+  "basis": "adapted",
+  "emotion": "anger"
+ },
+ {
+  "id": "p289",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "disagree",
+  "sources": [
+   "EK"
+  ],
+  "text": "You have every right to be upset about that part.",
+  "delivery": "Say it only where it is true. Steady and unhurried.",
+  "basis": "adapted",
+  "emotion": "anger"
+ },
+ {
+  "id": "p290",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "disagree",
+  "sources": [
+   "EK"
+  ],
+  "text": "Let me check I've understood what upset you most.",
+  "delivery": "Say it slowly, then really listen to the answer.",
+  "basis": "adapted",
+  "emotion": "anger"
+ },
+ {
+  "id": "p291",
+  "need": "any",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "EK"
+  ],
+  "text": "I'd like us to find a way through this together.",
+  "delivery": "Wait until they've finished. Soft tone, open palms.",
+  "basis": "adapted",
+  "emotion": "anger"
+ },
+ {
+  "id": "p292",
+  "need": "any",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "EK"
+  ],
+  "text": "I'm sorry for my part in this.",
+  "delivery": "Plain, specific and brief. No \"but\" afterwards.",
+  "basis": "adapted",
+  "emotion": "anger"
+ },
+ {
+  "id": "p293",
+  "need": "any",
+  "feeling": "curious",
+  "situation": "opener",
+  "sources": [
+   "EK"
+  ],
+  "text": "Didn't see that coming, did you? What's going through your mind?",
+  "delivery": "Surprise fades in seconds. Ask while it is fresh, and smile if it is good news.",
+  "basis": "adapted",
+  "emotion": "surprise"
+ },
+ {
+  "id": "p294",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "Take a moment. There's no need to react straight away.",
+  "delivery": "Give them a beat of quiet. Keep your own voice level.",
+  "basis": "adapted",
+  "emotion": "surprise"
+ },
+ {
+  "id": "p295",
+  "need": "any",
+  "feeling": "curious",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "Want me to explain what happened, or shall we start with how you feel?",
+  "delivery": "Give them the choice of where to begin.",
+  "basis": "adapted",
+  "emotion": "surprise"
+ },
+ {
+  "id": "p296",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "That's a lot to take in. Where would you like to start?",
+  "delivery": "Slow, warm, unhurried.",
+  "basis": "adapted",
+  "emotion": "surprise"
+ },
+ {
+  "id": "p297",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "disagree",
+  "sources": [
+   "EK"
+  ],
+  "text": "I can tell that's not okay with you, and I respect that.",
+  "delivery": "Don't push the thing they're recoiling from. Keep your tone neutral.",
+  "basis": "adapted",
+  "emotion": "disgust"
+ },
+ {
+  "id": "p298",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "disagree",
+  "sources": [
+   "EK"
+  ],
+  "text": "We don't have to go any further with it. What bothers you most?",
+  "delivery": "Step back first, then ask. Your face stays calm.",
+  "basis": "adapted",
+  "emotion": "disgust"
+ },
+ {
+  "id": "p299",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "I take your standards seriously. We'll do it your way.",
+  "delivery": "Say it only if you will. Level voice, steady eye contact.",
+  "basis": "adapted",
+  "emotion": "disgust"
+ },
+ {
+  "id": "p300",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "You're right to care about that. Let's get it sorted properly.",
+  "delivery": "Short and sincere, then act on it.",
+  "basis": "adapted",
+  "emotion": "disgust"
+ },
+ {
+  "id": "p301",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "disagree",
+  "sources": [
+   "EK"
+  ],
+  "text": "I get the sense you're not convinced. What would you need to see?",
+  "delivery": "Stay level and curious, with no sarcasm back.",
+  "basis": "adapted",
+  "emotion": "contempt"
+ },
+ {
+  "id": "p302",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "Fair challenge. Let me show you rather than tell you.",
+  "delivery": "Calm and unhurried. Then follow through.",
+  "basis": "adapted",
+  "emotion": "contempt"
+ },
+ {
+  "id": "p303",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "disagree",
+  "sources": [
+   "EK"
+  ],
+  "text": "I'd value your honest view, even if it's blunt.",
+  "delivery": "Mean it, and listen to the whole answer.",
+  "basis": "adapted",
+  "emotion": "contempt"
+ },
+ {
+  "id": "p304",
+  "need": "any",
+  "feeling": "important",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "Your standards are high, and I'd like to meet them.",
+  "delivery": "Say it only if it's true. Even pace, no flattery.",
+  "basis": "adapted",
+  "emotion": "contempt"
  }
 ]
