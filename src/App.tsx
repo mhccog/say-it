@@ -5,12 +5,12 @@ import { Badge } from '@/components/ui/badge'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { cn } from '@/lib/utils'
 import {
-  FEELINGS, FEELING_TIPS, NEEDS, SITUATIONS, SOURCES, TIPS,
+  CHASE_SPOT, FEELINGS, FEELING_TIPS, NEEDS, SITUATIONS, SOURCES, TIPS, sourceHref,
   type NeedId, type Situation,
 } from '@/data/content'
 import phrasesRaw from '@/data/phrases.json'
 
-interface Phrase { id: string; need: string; feeling: string; situation: Situation; sources: string[]; text: string }
+interface Phrase { id: string; need: string; feeling: string; situation: Situation; sources: string[]; text: string; delivery?: string; basis?: string; ctx?: string }
 const PHRASES = phrasesRaw as Phrase[]
 
 type Status = 'keep' | 'bin'
@@ -52,6 +52,8 @@ export default function App() {
   const [feeling, setFeeling] = useState<string | null>(null)
   const [situation, setSituation] = useState<Situation | 'all'>('all')
   const [spotOpen, setSpotOpen] = useState(false)
+  const [showAll, setShowAll] = useState(false)
+  const LIMIT = 8
   const [reviewMode, setReviewMode] = useState(false)
   const [showBinned, setShowBinned] = useState(false)
   const [review, setReview] = useState<Review>(loadReview)
@@ -83,12 +85,14 @@ export default function App() {
     const pool = PHRASES.filter(visible)
     const bestList = need && feeling ? pool.filter((p) => p.feeling === feeling && (p.need === need || p.need === 'any')) : []
     // exact type first, then general
-    bestList.sort((a, b) => Number(b.need === need) - Number(a.need === need))
+    const rank = (p: Phrase) => (p.need === need ? 0 : p.ctx ? 2 : 1)
+    bestList.sort((a, b) => rank(a) - rank(b))
     const moreList = need && feeling && bestList.length < 3 ? pool.filter((p) => p.need === need && p.feeling !== feeling) : []
     return { best: bestList, more: moreList }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [need, feeling, situation, review, showBinned])
 
+  useEffect(() => { setShowAll(false) }, [need, feeling, situation])
   useEffect(() => {
     if (need && feeling) resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }, [need, feeling])
@@ -118,16 +122,36 @@ export default function App() {
     say(ok ? 'Copied. Paste it anywhere.' : 'Could not copy')
   }
 
-  function srcLink(key: string, prefix = '') {
-    const s = SOURCES[key]
-    if (!s.url) return <span key={prefix + key}>{prefix}{s.label}</span>
-    return <a key={prefix + key} href={s.url} target="_blank" rel="noreferrer" className="underline-offset-2 hover:text-foreground hover:underline">{prefix}{s.label}</a>
+  // Group "KEY@time" entries by key so one source shows once, with a link per timestamp.
+  function srcGroups(keys: string[], prefix = '') {
+    const groups = new Map<string, string[]>()
+    for (const k of keys) {
+      const [key, ts] = k.split('@')
+      if (!groups.has(key)) groups.set(key, [])
+      if (ts) groups.get(key)!.push(ts)
+    }
+    const linkCls = 'underline underline-offset-2 hover:text-foreground'
+    return [...groups.entries()].map(([key, times]) => {
+      const s = SOURCES[key]
+      if (!s) return null
+      const href = sourceHref(key)
+      return (
+        <span key={prefix + key}>
+          {prefix}
+          {href ? <a href={href} target="_blank" rel="noreferrer" className={times.length ? '' : linkCls}>{s.label}</a> : s.label}
+          {times.map((t) => (
+            <a key={t} href={sourceHref(key, t)} target="_blank" rel="noreferrer" className={cn('ml-1.5 rounded-full bg-secondary px-1.5 py-0.5 font-medium text-foreground/70 hover:bg-accent', )} title="Opens YouTube at this moment">&#9654; {t}</a>
+          ))}
+        </span>
+      )
+    })
   }
 
   function renderCard(p: Phrase, general?: boolean) {
     const st = statusOf(p)
     const tipIds = FEELING_TIPS[p.feeling] ?? []
     const tip = TIPS[tipIds[hash(p.id) % Math.max(tipIds.length, 1)]]
+    const example = p.basis === 'source-example' ? "Coach's own example" : p.basis === 'source-example/adapted' ? "Based on a coach's example" : p.basis === 'nci' ? 'From NCI (secondary)' : null
     const sit = SITUATIONS.find((s) => s.id === p.situation)!
     const isEditing = editing === p.id
     return (
@@ -136,6 +160,7 @@ export default function App() {
           <div className="mb-2.5 flex flex-wrap items-center gap-1.5">
             <Badge variant="secondary" className="rounded-full">{sit.label}</Badge>
             {general && <Badge variant="outline" className="rounded-full text-muted-foreground">General</Badge>}
+            {example && <Badge variant="outline" className="rounded-full border-sky-200 bg-sky-50 text-sky-800">{example}</Badge>}
             {st === 'draft' && <Badge variant="outline" className="rounded-full border-amber-300 bg-amber-50 text-amber-800">Draft</Badge>}
             {st === 'keep' && <Badge className="rounded-full">Kept</Badge>}
             {st === 'bin' && <Badge variant="destructive" className="rounded-full">Binned</Badge>}
@@ -143,6 +168,7 @@ export default function App() {
             <span className="ml-auto flex items-center gap-1 text-xs text-muted-foreground"><Copy className="size-3" /> tap to copy</span>
           </div>
           {!isEditing && <p className="text-[1.05rem] leading-relaxed font-medium text-foreground">{textOf(p)}</p>}
+          {!isEditing && p.ctx && <p className="mt-1.5 text-xs text-muted-foreground">{p.ctx}</p>}
         </button>
         {isEditing && (
           <div>
@@ -155,12 +181,12 @@ export default function App() {
           </div>
         )}
         <div className="mt-3 rounded-2xl bg-accent/70 p-3 text-sm text-accent-foreground">
-          <span className="font-semibold">How to say it: </span>{tip.text}
+          <span className="font-semibold">How to say it: </span>{p.delivery ?? tip.text}
         </div>
         <div className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
           <span>Source:</span>
-          {p.sources.map((s) => srcLink(s))}
-          {srcLink(tip.source, 'Tip: ')}
+          {srcGroups(p.sources)}
+          {!p.delivery && srcGroups([tip.source], 'Tip: ')}
         </div>
         {reviewMode && !isEditing && (
           <div className="mt-3 flex flex-wrap gap-2 border-t pt-3">
@@ -210,6 +236,7 @@ export default function App() {
                 <p className="mb-1 font-semibold">They might say</p>
                 <ul className="mb-2 list-disc space-y-0.5 pl-5">{needObj.mightSay.map((l) => <li key={l}>{l}</li>)}</ul>
                 <p className="mb-2"><span className="font-semibold">Speaking to it: </span>{needObj.speakTo}</p>
+                <p className="mb-2 text-xs text-muted-foreground">Hear Chase describe this type: <a className="underline" href={sourceHref('C24', CHASE_SPOT[needObj.id])} target="_blank" rel="noreferrer">YouTube at {CHASE_SPOT[needObj.id]}</a></p>
                 <p className="rounded-2xl bg-card/80 p-2.5 text-xs text-muted-foreground">These are things to listen for, not labels. Most people show a mix, and a few minutes can&rsquo;t tell you who someone is. If you are unsure, just ask.</p>
               </div>
             )}
@@ -241,7 +268,8 @@ export default function App() {
               Words for <span className="text-primary">{needObj?.label}</span> &rarr; <span className="text-primary">{feelingObj?.label}</span>
             </h2>
             {best.length === 0 && more.length === 0 && <p className="rounded-2xl border border-dashed p-4 text-sm text-muted-foreground">Nothing here for this mix yet. Try &ldquo;All&rdquo; under step 3, or another feeling.</p>}
-            <div className="space-y-3">{best.map((p) => renderCard(p, p.need === 'any'))}</div>
+            <div className="space-y-3">{(showAll ? best : best.slice(0, LIMIT)).map((p) => renderCard(p, p.need === 'any'))}</div>
+            {!showAll && best.length > LIMIT && <Button variant="outline" className="mt-3 w-full rounded-full" onClick={() => setShowAll(true)}>Show {best.length - LIMIT} more</Button>}
             {more.length > 0 && (
               <>
                 <h3 className="mb-2 mt-6 text-sm font-semibold text-muted-foreground">More for {needObj?.label} (other feelings)</h3>

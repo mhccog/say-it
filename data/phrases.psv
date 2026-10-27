@@ -1,4 +1,6 @@
-# need|feeling|situation|sources|text   (all drafts; written fresh from Notion rules + coach websites)
+# need|feeling|situation|sources|text|delivery(optional)|basis(optional)|context(optional)
+# APPEND ONLY: a phrase's id is its line number, and review choices (keep/bin/edit) are saved by id. Never reorder or delete lines.
+# Sources: KEY or KEY@h:mm:ss (timestamp links to YouTube). All phrases are drafts.
 significance|heard|opener|NM|You've clearly built something real here. Walk me through how it came together.
 significance|heard|rapport|NM,VVEA|Let me check I've got this right: you took it from nothing to what it is today?
 significance|understood|rapport|NM,VVEA|It sounds like what matters most to you is the difference it makes for people. Is that fair?
@@ -173,3 +175,69 @@ any|heard|rapport|VVER|Before I answer: what's the most important part of this f
 any|included|opener|VVEC|How do you know the host?
 any|important|rapport|VVEL|I really enjoyed talking with you, and I wanted you to know it.
 any|trusted|close|NG|I'll message you tomorrow with the next step, as promised.
+# ---- merged from Saturday research (2026-10-27) ----
+any|heard|rapport|V26@0:17:51,V26@0:09:12,V24@1:16:24,V24@1:17:25,V26@0:41:35|Last time you mentioned [X]. How's that going?|Slow triple nod, head tilt, look at them while they speak, let them finish. Keep your turns to 15-30 seconds.|source-example/adapted|
+any|heard|rapport|V26@0:17:51,V26@0:09:12,V24@1:16:24,V24@1:17:25,V26@0:41:35|Tell me more about that.|Slow triple nod, head tilt, look at them while they speak, let them finish. Keep your turns to 15-30 seconds.|source-example/adapted|
+any|liked|opener|V26@0:10:12,V26@0:17:21,V26@0:26:46,V24@1:20:58,V24@0:43:38|Any fun plans coming up?|Genuine smile, slight lean in, open palm on greeting, vary your tone.|source-example|
+any|liked|opener|V26@0:10:12,V26@0:17:21,V26@0:26:46,V24@1:20:58,V24@0:43:38|What do you talk about when you're not talking about work?|Genuine smile, slight lean in, open palm on greeting, vary your tone.|source-example|
+any|trusted|rapport|V24@1:51:13,V24@0:56:46,V24@0:57:17|Honestly, I was nervous about this one.|Share a small, real imperfection early. Keep warmth and confidence balanced; too much of either makes people suspicious.|adapted|Only say this if it is true for you
+any|trusted|rapport|V24@1:51:13,V24@0:56:46,V24@0:57:17|I'm still working on [small flaw], but I'm getting better.|Share a small, real imperfection early. Keep warmth and confidence balanced; too much of either makes people suspicious.|adapted|Only say this if it is true for you
+any|trusted|rapport|V24@1:51:13,V24@0:56:46,V24@0:57:17|Here's what I'm sure of, and here's what I'm not sure of.|Share a small, real imperfection early. Keep warmth and confidence balanced; too much of either makes people suspicious.|adapted|
+any|respected|disagree|VG@1:29:11,VG@1:43:45,V24@1:02:20,VG@0:29:42,VG@0:48:44|Yes, and that's a good point. Building on it...|Slow down on the key point, then pause. Hand gestures within your power sphere. Eye contact at the end of your sentence. Shoulders down.|adapted|
+any|respected|disagree|VG@1:29:11,VG@1:43:45,V24@1:02:20,VG@0:29:42,VG@0:48:44|Let me finish the idea and then I'd love your input.|Slow down on the key point, then pause. Hand gestures within your power sphere. Eye contact at the end of your sentence. Shoulders down.|adapted|
+any|respected|rapport|VG@1:29:11,VG@1:43:45,V24@1:02:20,VG@0:29:42,VG@0:48:44|That's a hard call; I appreciate how you handled it.|Slow down on the key point, then pause. Hand gestures within your power sphere. Eye contact at the end of your sentence. Shoulders down.|adapted|
+any|appreciated|rapport|VVC@1:23,VVC@2:04|I wanted to say I appreciated how you handled [specific thing].|Be specific and about something real. Avoid the obvious thing (e.g. someone's height). Praise something they value or worked hard on.|adapted|
+any|appreciated|rapport|VVC@1:23,VVC@2:04|The way you [specific action] made a real difference to me.|Be specific and about something real. Avoid the obvious thing (e.g. someone's height). Praise something they value or worked hard on.|adapted|
+any|comfortable|rapport|VG@1:44:21,V26@0:09:42|Hold on, I'll take that slow.|Match their pace and volume first, then gently lead. Keep early questions light, not too deep.|adapted|
+any|comfortable|rapport|VG@1:44:21,V26@0:09:42|That's a great question; no rush.|Match their pace and volume first, then gently lead. Keep early questions light, not too deep.|adapted|
+any|comfortable|rapport|VG@1:44:21,V26@0:09:42|Let me ask something easier first.|Match their pace and volume first, then gently lead. Keep early questions light, not too deep.|adapted|
+any|curious|opener|V26@0:15:50,V26@0:16:20,VG@0:44:13|The strangest thing happened to me this week. Want to hear it?|Make a small information gap with 'most surprising / weirdest', then pay it off. Use vocal variety and VAKS details in stories.|source-example|Only use a real story of yours
+any|curious|opener|V26@0:15:50,V26@0:16:20,VG@0:44:13|What's the most surprising thing you've learned lately?|Make a small information gap with 'most surprising / weirdest', then pay it off. Use vocal variety and VAKS details in stories.|source-example|
+any|liked|close|V26@1:55:54,V26@1:57:25|It was lovely talking to you. I hope [their future plan] goes well. I'm going to grab a coffee.|Use a 'closing' tone, step back slightly, angle towards the exit. Be clear. Lingering awkwardly is worse than a short, warm exit.|source-example|
+significance|respected|rapport|C24@0:41:13,C24@1:20:41,CS@0:00:30,NCI|The work you've done there has really made a difference to people.|Say it sincerely after something specific they just told you. Imply the quality; don't name it.|adapted|
+significance|respected|rapport|C24@0:41:13,C24@1:20:41,CS@0:00:30,NCI|Twenty years of people still calling you for advice says a lot.|Say it sincerely after something specific they just told you. Imply the quality; don't name it.|adapted|
+significance|heard|rapport|C24@0:41:13,V24@1:16:24|That's a big achievement. How did that come about?|Ask about their impact and let them tell it. Slow nod.|adapted|
+significance|heard|rapport|C24@0:41:13,V24@1:16:24|What impact are you most proud of?|Ask about their impact and let them tell it. Slow nod.|adapted|
+significance|appreciated|rapport|NCI|I don't think people say enough how much your presence matters here.|Say it in front of others if appropriate; significance people like their impact to be visible.|nci|
+approval|appreciated|rapport|NCI,C24@0:41:43|I appreciate what you do, and I don't say it enough.|Direct and specific. Then pause so it can land.|nci|
+approval|appreciated|rapport|NCI,C24@0:41:43|I noticed how much effort you put into [specific thing].|Direct and specific. Then pause so it can land.|nci|
+approval|reassured|rapport|C24@0:41:43,V24@1:17:25|You've done this well before, and you'll do it well again.|Calm, steady pace; warm face. Don't over-reassure.|adapted|
+approval|reassured|rapport|C24@0:41:43,V24@1:17:25|Nerves usually mean you care. You've got this.|Calm, steady pace; warm face. Don't over-reassure.|adapted|
+approval|liked|rapport|V24@1:20:58|I always enjoy working with you.|Smile and lean in slightly.|adapted|
+acceptance|liked|rapport|C24@0:42:17,NCI|You're a big part of why this team works.|Use 'we' and 'us' in your language.|nci|
+acceptance|liked|rapport|C24@0:42:17,NCI|We'd be missing something without you.|Use 'we' and 'us' in your language.|nci|
+acceptance|heard|rapport|C24@0:42:17|How did the whole group feel about it?|Ask about the group; show interest in the people they mention.|adapted|
+acceptance|heard|rapport|C24@0:42:17|Who else was there?|Ask about the group; show interest in the people they mention.|adapted|
+acceptance|trusted|rapport|NCI|You're someone we'd always want in the room.|Keep it sincere, tied to a real recent event.|nci|
+intelligence|respected|rapport|NCI,C24@0:42:48|The way you explained that made it click for me.|Acknowledge that their explanation made it clearer. Let them explain more if they want to.|nci|
+intelligence|respected|rapport|NCI,C24@0:42:48|I hadn't thought of it that way. That helps.|Acknowledge that their explanation made it clearer. Let them explain more if they want to.|nci|
+intelligence|heard|rapport|C24@0:42:48,V26@0:12:47|Walk me through how it works. I'd like to understand it properly.|Ask a genuine 'how' question and listen fully.|adapted|
+pity|heard|rapport|CS@0:00:50,C24@0:42:48,VG@0:48:44|I don't know how you keep it together.|Slow down, lower volume a little, pause after the line. Don't try to fix it or minimise it.|source-example|
+pity|heard|rapport|CS@0:00:50,C24@0:42:48,VG@0:48:44|Thank you for telling me. That sounds really heavy.|Slow down, lower volume a little, pause after the line. Don't try to fix it or minimise it.|source-example|
+pity|respected|rapport|CS@0:00:50|Most people have no idea what you've been through to get here.|Sincere and unhurried. Avoid 'it's not that bad'. Chase says that is the instinct to resist.|source-example|
+pity|comfortable|rapport|V24@1:17:25,V24@1:16:24|There's no rush. Take your time.|Head tilt, slow nod, soft tone.|adapted|
+power|respected|rapport|NCI|I'd value your view on this. What do you think is right?|Ask rather than tell. Telling them what to do tends to provoke resistance.|nci|
+power|respected|rapport|NCI|I'm glad you're on this with us.|Ask rather than tell. Telling them what to do tends to provoke resistance.|nci|
+power|trusted|rapport|NCI,C24@0:17:21|I'll leave the call with you.|Keep your own confidence steady; don't compete. Calm, slow tone.|adapted|
+any|heard|rapport|V26@1:44:43|What's the next big goal?|Show interest in progress and new things.|adapted|Works well with an ambitious, driven person
+any|heard|rapport|V26@1:44:43|How's the project going? Where are you up to?|Show interest in progress and new things.|adapted|Works well with an ambitious, driven person
+any|respected|rapport|V26@1:44:43,VG@1:44:21|That's a big step forward. What's next for you?|Match their energy; speak at a lively pace.|adapted|Works well with an ambitious, driven person
+any|comfortable|rapport|V26@1:45:43|Don't forget to enjoy this one before the next one.|Light touch, said warmly; Vanessa notes contented types remind heroes to savour.|adapted|Works well with an ambitious, driven person
+any|heard|rapport|V26@1:44:43,V26@1:45:43|What's your favourite part of how you do this?|Slow, relaxed pace; don't push for growth or change.|adapted|Works well with a content, steady person
+any|heard|rapport|V26@1:44:43,V26@1:45:43|Tell me about the tradition you keep.|Slow, relaxed pace; don't push for growth or change.|adapted|Works well with a content, steady person
+any|respected|rapport|V26@1:45:43|There's a lot to be said for something that works so well.|Honour what works. Gratitude lands well.|adapted|Works well with a content, steady person
+any|heard|rapport|V26@1:49:17|I'd really like to hear how you're doing, not just about everyone else.|Warm, gentle, unhurried. They may deflect, so ask again kindly.|adapted|Works well with someone who always puts others first
+any|heard|rapport|V26@1:49:17|What's going on for you at the moment?|Warm, gentle, unhurried. They may deflect, so ask again kindly.|adapted|Works well with someone who always puts others first
+any|appreciated|rapport|V26@1:49:47|Hearing about you gives me something, it doesn't take anything away.|Reframe so that being known is a gift to you.|source-example|Works well with someone who always puts others first
+any|appreciated|rapport|V26@1:49:47|It makes me feel good to be able to help you.|Reframe so that being known is a gift to you.|source-example|Works well with someone who always puts others first
+any|trusted|disagree|V26@1:51:17|I'm giving you this feedback because I want you to succeed.|Frame hard feedback as help; this is how Vanessa says good helper-managers do it.|source-example|Works well with someone who always puts others first
+any|respected|disagree|V26@1:51:47,V26@1:53:50|That's a different angle. What would you change first?|Don't get defensive. Treat challenge as a contribution.|adapted|Works well with a creative challenger
+any|respected|disagree|V26@1:51:47,V26@1:53:50|You've challenged something I'd taken for granted.|Don't get defensive. Treat challenge as a contribution.|adapted|Works well with a creative challenger
+any|heard|disagree|V26@1:51:47|Say more about what you'd break and rebuild.|Curious tone, head tilt.|adapted|Works well with a creative challenger
+any|heard|rapport|V26@1:54:52|That sounds frustrating. Tell me what happened.|Listen. Don't try to talk them into being lucky or positive.|adapted|Works well with someone having a rough run
+any|heard|rapport|V26@1:54:52|I can see why it feels that way.|Listen. Don't try to talk them into being lucky or positive.|adapted|Works well with someone having a rough run
+any|liked|rapport|V26@1:55:23|You always make me laugh.|Enjoy their humour; lean in and smile genuinely.|adapted|Works well with someone having a rough run
+any|comfortable|opener|V26@0:09:42,V26@0:32:26,VGQ@4:26|No pressure, I'll start. [light story]. Does that ever happen to you?|Keep questions light and not too deep, give processing time, and let silences breathe.|adapted|Works well with someone shy or nervous
+any|comfortable|rapport|V26@0:09:42,V26@0:32:26,VGQ@4:26|Take your time.|Keep questions light and not too deep, give processing time, and let silences breathe.|adapted|Works well with someone shy or nervous
+any|heard|disagree|VGQ@4:26,VG@0:48:44|I'd love your take, especially if it's different.|Make space with a pause and look their way; ask a direct but easy question.|adapted|Works well with someone shy or nervous
+any|liked|opener|V24@0:43:38,V24@1:19:56|I'm glad you came.|Open palm, warm greeting, sincere smile.|adapted|Works well with someone shy or nervous

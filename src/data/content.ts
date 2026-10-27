@@ -72,6 +72,8 @@ export const FEELINGS: Feeling[] = [
   { id: 'smart', label: 'Smart', emoji: '💡' },
   { id: 'control', label: 'In control', emoji: '🧭' },
   { id: 'reconciled', label: 'Reconciled', emoji: '🕊️' },
+  { id: 'appreciated', label: 'Appreciated', emoji: '🙏' },
+  { id: 'curious', label: 'Curious', emoji: '🔍' },
 ]
 
 export const SITUATIONS: { id: Situation; label: string }[] = [
@@ -114,9 +116,11 @@ export const FEELING_TIPS: Record<string, string[]> = {
   smart: ['askstop', 'lean', 'computer'],
   control: ['palmsup', 'askstop', 'melody'],
   reconciled: ['warm', 'congruent', 'match'],
+  appreciated: ['pause', 'warm', 'triangle'],
+  curious: ['melody', 'lean', 'askstop'],
 }
 
-export interface Source { label: string; url?: string } // Notion notes are private, so they have no link
+export interface Source { label: string; url?: string; video?: string } // Notion notes are private, so they have no link
 export const SOURCES: Record<string, Source> = {
   NM: { label: 'Notion: Needs-Map (Chase Hughes)' },
   NG: { label: 'Notion: Who I\u2019m Becoming' },
@@ -131,4 +135,32 @@ export const SOURCES: Record<string, Source> = {
   VGF: { label: 'Vinh: constructive feedback', url: 'https://vinhgiang.com/blog/how-to-give-constructive-feedback-without-destroying-confidence' },
   VGA: { label: 'Vinh: sincere apology', url: 'https://vinhgiang.com/blog/the-art-of-the-apology-how-to-apologize-sincerely-to-anyone' },
   VGP: { label: 'Vinh: projecting without sounding angry', url: 'https://vinhgiang.com/blog/how-to-project-your-voice-without-shouting-or-sounding-angry' },
+  // Saturday's research: YouTube videos. A key like V26@0:17:51 links to that second.
+  V24: { label: 'Vanessa on The Diary of a CEO (2024)', video: 'VHUrdELKjDw' },
+  V26: { label: 'Vanessa on The Diary of a CEO (2026)', video: 'q2cg1gEYWJQ' },
+  VG: { label: 'Vinh on The Diary of a CEO (2025)', video: 'oIiv_335yus' },
+  C24: { label: 'Chase on The Diary of a CEO (2024)', video: 'RvjR9GM2kX8' },
+  C26: { label: 'Chase on The Diary of a CEO (2026)', video: '9uSXOr-AdAU' },
+  CS: { label: 'Chase: YouTube Short on the six needs', video: 'YzJI8GTHteQ' },
+  VGQ: { label: 'Vinh: how to enter conversations', video: '-X13GINFYOY' },
+  VVC: { label: 'Vanessa: memorable compliments', video: 'MOre3dRqHlA' },
+  NCI: { label: 'NCI University: six social needs (secondary, not Chase\u2019s own words)', url: 'https://merlinobrecht.com/behavior-profiling/the-six-social-needs/' },
+}
+
+/** Turn "h:mm:ss" or "m:ss" into seconds. */
+export function toSeconds(ts: string): number {
+  return ts.split(':').map(Number).reduce((a, n) => a * 60 + n, 0)
+}
+
+/** Link for a source key, with an optional timestamp. */
+export function sourceHref(key: string, ts?: string): string | undefined {
+  const s = SOURCES[key]
+  if (!s) return undefined
+  if (s.video) return `https://www.youtube.com/watch?v=${s.video}` + (ts ? `&t=${toSeconds(ts)}s` : '')
+  return s.url
+}
+
+/** Where Chase explains how to spot each need (DOAC 2024), so people can hear it in his own words. */
+export const CHASE_SPOT: Record<NeedId, string> = {
+  significance: '0:41:13', approval: '0:41:43', acceptance: '0:42:17', intelligence: '0:42:48', pity: '0:42:48', power: '0:43:18',
 }

@@ -1750,5 +1750,888 @@
    "NG"
   ],
   "text": "I'll message you tomorrow with the next step, as promised."
+ },
+ {
+  "id": "p175",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "V26@0:17:51",
+   "V26@0:09:12",
+   "V24@1:16:24",
+   "V24@1:17:25",
+   "V26@0:41:35"
+  ],
+  "text": "Last time you mentioned [X]. How's that going?",
+  "delivery": "Slow triple nod, head tilt, look at them while they speak, let them finish. Keep your turns to 15-30 seconds.",
+  "basis": "source-example/adapted"
+ },
+ {
+  "id": "p176",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "V26@0:17:51",
+   "V26@0:09:12",
+   "V24@1:16:24",
+   "V24@1:17:25",
+   "V26@0:41:35"
+  ],
+  "text": "Tell me more about that.",
+  "delivery": "Slow triple nod, head tilt, look at them while they speak, let them finish. Keep your turns to 15-30 seconds.",
+  "basis": "source-example/adapted"
+ },
+ {
+  "id": "p177",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "V26@0:10:12",
+   "V26@0:17:21",
+   "V26@0:26:46",
+   "V24@1:20:58",
+   "V24@0:43:38"
+  ],
+  "text": "Any fun plans coming up?",
+  "delivery": "Genuine smile, slight lean in, open palm on greeting, vary your tone.",
+  "basis": "source-example"
+ },
+ {
+  "id": "p178",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "V26@0:10:12",
+   "V26@0:17:21",
+   "V26@0:26:46",
+   "V24@1:20:58",
+   "V24@0:43:38"
+  ],
+  "text": "What do you talk about when you're not talking about work?",
+  "delivery": "Genuine smile, slight lean in, open palm on greeting, vary your tone.",
+  "basis": "source-example"
+ },
+ {
+  "id": "p179",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "V24@1:51:13",
+   "V24@0:56:46",
+   "V24@0:57:17"
+  ],
+  "text": "Honestly, I was nervous about this one.",
+  "delivery": "Share a small, real imperfection early. Keep warmth and confidence balanced; too much of either makes people suspicious.",
+  "basis": "adapted",
+  "ctx": "Only say this if it is true for you"
+ },
+ {
+  "id": "p180",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "V24@1:51:13",
+   "V24@0:56:46",
+   "V24@0:57:17"
+  ],
+  "text": "I'm still working on [small flaw], but I'm getting better.",
+  "delivery": "Share a small, real imperfection early. Keep warmth and confidence balanced; too much of either makes people suspicious.",
+  "basis": "adapted",
+  "ctx": "Only say this if it is true for you"
+ },
+ {
+  "id": "p181",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "V24@1:51:13",
+   "V24@0:56:46",
+   "V24@0:57:17"
+  ],
+  "text": "Here's what I'm sure of, and here's what I'm not sure of.",
+  "delivery": "Share a small, real imperfection early. Keep warmth and confidence balanced; too much of either makes people suspicious.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p182",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "disagree",
+  "sources": [
+   "VG@1:29:11",
+   "VG@1:43:45",
+   "V24@1:02:20",
+   "VG@0:29:42",
+   "VG@0:48:44"
+  ],
+  "text": "Yes, and that's a good point. Building on it...",
+  "delivery": "Slow down on the key point, then pause. Hand gestures within your power sphere. Eye contact at the end of your sentence. Shoulders down.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p183",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "disagree",
+  "sources": [
+   "VG@1:29:11",
+   "VG@1:43:45",
+   "V24@1:02:20",
+   "VG@0:29:42",
+   "VG@0:48:44"
+  ],
+  "text": "Let me finish the idea and then I'd love your input.",
+  "delivery": "Slow down on the key point, then pause. Hand gestures within your power sphere. Eye contact at the end of your sentence. Shoulders down.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p184",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "VG@1:29:11",
+   "VG@1:43:45",
+   "V24@1:02:20",
+   "VG@0:29:42",
+   "VG@0:48:44"
+  ],
+  "text": "That's a hard call; I appreciate how you handled it.",
+  "delivery": "Slow down on the key point, then pause. Hand gestures within your power sphere. Eye contact at the end of your sentence. Shoulders down.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p185",
+  "need": "any",
+  "feeling": "appreciated",
+  "situation": "rapport",
+  "sources": [
+   "VVC@1:23",
+   "VVC@2:04"
+  ],
+  "text": "I wanted to say I appreciated how you handled [specific thing].",
+  "delivery": "Be specific and about something real. Avoid the obvious thing (e.g. someone's height). Praise something they value or worked hard on.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p186",
+  "need": "any",
+  "feeling": "appreciated",
+  "situation": "rapport",
+  "sources": [
+   "VVC@1:23",
+   "VVC@2:04"
+  ],
+  "text": "The way you [specific action] made a real difference to me.",
+  "delivery": "Be specific and about something real. Avoid the obvious thing (e.g. someone's height). Praise something they value or worked hard on.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p187",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "VG@1:44:21",
+   "V26@0:09:42"
+  ],
+  "text": "Hold on, I'll take that slow.",
+  "delivery": "Match their pace and volume first, then gently lead. Keep early questions light, not too deep.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p188",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "VG@1:44:21",
+   "V26@0:09:42"
+  ],
+  "text": "That's a great question; no rush.",
+  "delivery": "Match their pace and volume first, then gently lead. Keep early questions light, not too deep.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p189",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "VG@1:44:21",
+   "V26@0:09:42"
+  ],
+  "text": "Let me ask something easier first.",
+  "delivery": "Match their pace and volume first, then gently lead. Keep early questions light, not too deep.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p190",
+  "need": "any",
+  "feeling": "curious",
+  "situation": "opener",
+  "sources": [
+   "V26@0:15:50",
+   "V26@0:16:20",
+   "VG@0:44:13"
+  ],
+  "text": "The strangest thing happened to me this week. Want to hear it?",
+  "delivery": "Make a small information gap with 'most surprising / weirdest', then pay it off. Use vocal variety and VAKS details in stories.",
+  "basis": "source-example",
+  "ctx": "Only use a real story of yours"
+ },
+ {
+  "id": "p191",
+  "need": "any",
+  "feeling": "curious",
+  "situation": "opener",
+  "sources": [
+   "V26@0:15:50",
+   "V26@0:16:20",
+   "VG@0:44:13"
+  ],
+  "text": "What's the most surprising thing you've learned lately?",
+  "delivery": "Make a small information gap with 'most surprising / weirdest', then pay it off. Use vocal variety and VAKS details in stories.",
+  "basis": "source-example"
+ },
+ {
+  "id": "p192",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "close",
+  "sources": [
+   "V26@1:55:54",
+   "V26@1:57:25"
+  ],
+  "text": "It was lovely talking to you. I hope [their future plan] goes well. I'm going to grab a coffee.",
+  "delivery": "Use a 'closing' tone, step back slightly, angle towards the exit. Be clear. Lingering awkwardly is worse than a short, warm exit.",
+  "basis": "source-example"
+ },
+ {
+  "id": "p193",
+  "need": "significance",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "C24@0:41:13",
+   "C24@1:20:41",
+   "CS@0:00:30",
+   "NCI"
+  ],
+  "text": "The work you've done there has really made a difference to people.",
+  "delivery": "Say it sincerely after something specific they just told you. Imply the quality; don't name it.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p194",
+  "need": "significance",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "C24@0:41:13",
+   "C24@1:20:41",
+   "CS@0:00:30",
+   "NCI"
+  ],
+  "text": "Twenty years of people still calling you for advice says a lot.",
+  "delivery": "Say it sincerely after something specific they just told you. Imply the quality; don't name it.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p195",
+  "need": "significance",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "C24@0:41:13",
+   "V24@1:16:24"
+  ],
+  "text": "That's a big achievement. How did that come about?",
+  "delivery": "Ask about their impact and let them tell it. Slow nod.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p196",
+  "need": "significance",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "C24@0:41:13",
+   "V24@1:16:24"
+  ],
+  "text": "What impact are you most proud of?",
+  "delivery": "Ask about their impact and let them tell it. Slow nod.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p197",
+  "need": "significance",
+  "feeling": "appreciated",
+  "situation": "rapport",
+  "sources": [
+   "NCI"
+  ],
+  "text": "I don't think people say enough how much your presence matters here.",
+  "delivery": "Say it in front of others if appropriate; significance people like their impact to be visible.",
+  "basis": "nci"
+ },
+ {
+  "id": "p198",
+  "need": "approval",
+  "feeling": "appreciated",
+  "situation": "rapport",
+  "sources": [
+   "NCI",
+   "C24@0:41:43"
+  ],
+  "text": "I appreciate what you do, and I don't say it enough.",
+  "delivery": "Direct and specific. Then pause so it can land.",
+  "basis": "nci"
+ },
+ {
+  "id": "p199",
+  "need": "approval",
+  "feeling": "appreciated",
+  "situation": "rapport",
+  "sources": [
+   "NCI",
+   "C24@0:41:43"
+  ],
+  "text": "I noticed how much effort you put into [specific thing].",
+  "delivery": "Direct and specific. Then pause so it can land.",
+  "basis": "nci"
+ },
+ {
+  "id": "p200",
+  "need": "approval",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "C24@0:41:43",
+   "V24@1:17:25"
+  ],
+  "text": "You've done this well before, and you'll do it well again.",
+  "delivery": "Calm, steady pace; warm face. Don't over-reassure.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p201",
+  "need": "approval",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "C24@0:41:43",
+   "V24@1:17:25"
+  ],
+  "text": "Nerves usually mean you care. You've got this.",
+  "delivery": "Calm, steady pace; warm face. Don't over-reassure.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p202",
+  "need": "approval",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "V24@1:20:58"
+  ],
+  "text": "I always enjoy working with you.",
+  "delivery": "Smile and lean in slightly.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p203",
+  "need": "acceptance",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "C24@0:42:17",
+   "NCI"
+  ],
+  "text": "You're a big part of why this team works.",
+  "delivery": "Use 'we' and 'us' in your language.",
+  "basis": "nci"
+ },
+ {
+  "id": "p204",
+  "need": "acceptance",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "C24@0:42:17",
+   "NCI"
+  ],
+  "text": "We'd be missing something without you.",
+  "delivery": "Use 'we' and 'us' in your language.",
+  "basis": "nci"
+ },
+ {
+  "id": "p205",
+  "need": "acceptance",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "C24@0:42:17"
+  ],
+  "text": "How did the whole group feel about it?",
+  "delivery": "Ask about the group; show interest in the people they mention.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p206",
+  "need": "acceptance",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "C24@0:42:17"
+  ],
+  "text": "Who else was there?",
+  "delivery": "Ask about the group; show interest in the people they mention.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p207",
+  "need": "acceptance",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NCI"
+  ],
+  "text": "You're someone we'd always want in the room.",
+  "delivery": "Keep it sincere, tied to a real recent event.",
+  "basis": "nci"
+ },
+ {
+  "id": "p208",
+  "need": "intelligence",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NCI",
+   "C24@0:42:48"
+  ],
+  "text": "The way you explained that made it click for me.",
+  "delivery": "Acknowledge that their explanation made it clearer. Let them explain more if they want to.",
+  "basis": "nci"
+ },
+ {
+  "id": "p209",
+  "need": "intelligence",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NCI",
+   "C24@0:42:48"
+  ],
+  "text": "I hadn't thought of it that way. That helps.",
+  "delivery": "Acknowledge that their explanation made it clearer. Let them explain more if they want to.",
+  "basis": "nci"
+ },
+ {
+  "id": "p210",
+  "need": "intelligence",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "C24@0:42:48",
+   "V26@0:12:47"
+  ],
+  "text": "Walk me through how it works. I'd like to understand it properly.",
+  "delivery": "Ask a genuine 'how' question and listen fully.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p211",
+  "need": "pity",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "CS@0:00:50",
+   "C24@0:42:48",
+   "VG@0:48:44"
+  ],
+  "text": "I don't know how you keep it together.",
+  "delivery": "Slow down, lower volume a little, pause after the line. Don't try to fix it or minimise it.",
+  "basis": "source-example"
+ },
+ {
+  "id": "p212",
+  "need": "pity",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "CS@0:00:50",
+   "C24@0:42:48",
+   "VG@0:48:44"
+  ],
+  "text": "Thank you for telling me. That sounds really heavy.",
+  "delivery": "Slow down, lower volume a little, pause after the line. Don't try to fix it or minimise it.",
+  "basis": "source-example"
+ },
+ {
+  "id": "p213",
+  "need": "pity",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "CS@0:00:50"
+  ],
+  "text": "Most people have no idea what you've been through to get here.",
+  "delivery": "Sincere and unhurried. Avoid 'it's not that bad'. Chase says that is the instinct to resist.",
+  "basis": "source-example"
+ },
+ {
+  "id": "p214",
+  "need": "pity",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "V24@1:17:25",
+   "V24@1:16:24"
+  ],
+  "text": "There's no rush. Take your time.",
+  "delivery": "Head tilt, slow nod, soft tone.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p215",
+  "need": "power",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NCI"
+  ],
+  "text": "I'd value your view on this. What do you think is right?",
+  "delivery": "Ask rather than tell. Telling them what to do tends to provoke resistance.",
+  "basis": "nci"
+ },
+ {
+  "id": "p216",
+  "need": "power",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NCI"
+  ],
+  "text": "I'm glad you're on this with us.",
+  "delivery": "Ask rather than tell. Telling them what to do tends to provoke resistance.",
+  "basis": "nci"
+ },
+ {
+  "id": "p217",
+  "need": "power",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NCI",
+   "C24@0:17:21"
+  ],
+  "text": "I'll leave the call with you.",
+  "delivery": "Keep your own confidence steady; don't compete. Calm, slow tone.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p218",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:44:43"
+  ],
+  "text": "What's the next big goal?",
+  "delivery": "Show interest in progress and new things.",
+  "basis": "adapted",
+  "ctx": "Works well with an ambitious, driven person"
+ },
+ {
+  "id": "p219",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:44:43"
+  ],
+  "text": "How's the project going? Where are you up to?",
+  "delivery": "Show interest in progress and new things.",
+  "basis": "adapted",
+  "ctx": "Works well with an ambitious, driven person"
+ },
+ {
+  "id": "p220",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:44:43",
+   "VG@1:44:21"
+  ],
+  "text": "That's a big step forward. What's next for you?",
+  "delivery": "Match their energy; speak at a lively pace.",
+  "basis": "adapted",
+  "ctx": "Works well with an ambitious, driven person"
+ },
+ {
+  "id": "p221",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:45:43"
+  ],
+  "text": "Don't forget to enjoy this one before the next one.",
+  "delivery": "Light touch, said warmly; Vanessa notes contented types remind heroes to savour.",
+  "basis": "adapted",
+  "ctx": "Works well with an ambitious, driven person"
+ },
+ {
+  "id": "p222",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:44:43",
+   "V26@1:45:43"
+  ],
+  "text": "What's your favourite part of how you do this?",
+  "delivery": "Slow, relaxed pace; don't push for growth or change.",
+  "basis": "adapted",
+  "ctx": "Works well with a content, steady person"
+ },
+ {
+  "id": "p223",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:44:43",
+   "V26@1:45:43"
+  ],
+  "text": "Tell me about the tradition you keep.",
+  "delivery": "Slow, relaxed pace; don't push for growth or change.",
+  "basis": "adapted",
+  "ctx": "Works well with a content, steady person"
+ },
+ {
+  "id": "p224",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:45:43"
+  ],
+  "text": "There's a lot to be said for something that works so well.",
+  "delivery": "Honour what works. Gratitude lands well.",
+  "basis": "adapted",
+  "ctx": "Works well with a content, steady person"
+ },
+ {
+  "id": "p225",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:49:17"
+  ],
+  "text": "I'd really like to hear how you're doing, not just about everyone else.",
+  "delivery": "Warm, gentle, unhurried. They may deflect, so ask again kindly.",
+  "basis": "adapted",
+  "ctx": "Works well with someone who always puts others first"
+ },
+ {
+  "id": "p226",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:49:17"
+  ],
+  "text": "What's going on for you at the moment?",
+  "delivery": "Warm, gentle, unhurried. They may deflect, so ask again kindly.",
+  "basis": "adapted",
+  "ctx": "Works well with someone who always puts others first"
+ },
+ {
+  "id": "p227",
+  "need": "any",
+  "feeling": "appreciated",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:49:47"
+  ],
+  "text": "Hearing about you gives me something, it doesn't take anything away.",
+  "delivery": "Reframe so that being known is a gift to you.",
+  "basis": "source-example",
+  "ctx": "Works well with someone who always puts others first"
+ },
+ {
+  "id": "p228",
+  "need": "any",
+  "feeling": "appreciated",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:49:47"
+  ],
+  "text": "It makes me feel good to be able to help you.",
+  "delivery": "Reframe so that being known is a gift to you.",
+  "basis": "source-example",
+  "ctx": "Works well with someone who always puts others first"
+ },
+ {
+  "id": "p229",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "disagree",
+  "sources": [
+   "V26@1:51:17"
+  ],
+  "text": "I'm giving you this feedback because I want you to succeed.",
+  "delivery": "Frame hard feedback as help; this is how Vanessa says good helper-managers do it.",
+  "basis": "source-example",
+  "ctx": "Works well with someone who always puts others first"
+ },
+ {
+  "id": "p230",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "disagree",
+  "sources": [
+   "V26@1:51:47",
+   "V26@1:53:50"
+  ],
+  "text": "That's a different angle. What would you change first?",
+  "delivery": "Don't get defensive. Treat challenge as a contribution.",
+  "basis": "adapted",
+  "ctx": "Works well with a creative challenger"
+ },
+ {
+  "id": "p231",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "disagree",
+  "sources": [
+   "V26@1:51:47",
+   "V26@1:53:50"
+  ],
+  "text": "You've challenged something I'd taken for granted.",
+  "delivery": "Don't get defensive. Treat challenge as a contribution.",
+  "basis": "adapted",
+  "ctx": "Works well with a creative challenger"
+ },
+ {
+  "id": "p232",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "disagree",
+  "sources": [
+   "V26@1:51:47"
+  ],
+  "text": "Say more about what you'd break and rebuild.",
+  "delivery": "Curious tone, head tilt.",
+  "basis": "adapted",
+  "ctx": "Works well with a creative challenger"
+ },
+ {
+  "id": "p233",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:54:52"
+  ],
+  "text": "That sounds frustrating. Tell me what happened.",
+  "delivery": "Listen. Don't try to talk them into being lucky or positive.",
+  "basis": "adapted",
+  "ctx": "Works well with someone having a rough run"
+ },
+ {
+  "id": "p234",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:54:52"
+  ],
+  "text": "I can see why it feels that way.",
+  "delivery": "Listen. Don't try to talk them into being lucky or positive.",
+  "basis": "adapted",
+  "ctx": "Works well with someone having a rough run"
+ },
+ {
+  "id": "p235",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:55:23"
+  ],
+  "text": "You always make me laugh.",
+  "delivery": "Enjoy their humour; lean in and smile genuinely.",
+  "basis": "adapted",
+  "ctx": "Works well with someone having a rough run"
+ },
+ {
+  "id": "p236",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "V26@0:09:42",
+   "V26@0:32:26",
+   "VGQ@4:26"
+  ],
+  "text": "No pressure, I'll start. [light story]. Does that ever happen to you?",
+  "delivery": "Keep questions light and not too deep, give processing time, and let silences breathe.",
+  "basis": "adapted",
+  "ctx": "Works well with someone shy or nervous"
+ },
+ {
+  "id": "p237",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "V26@0:09:42",
+   "V26@0:32:26",
+   "VGQ@4:26"
+  ],
+  "text": "Take your time.",
+  "delivery": "Keep questions light and not too deep, give processing time, and let silences breathe.",
+  "basis": "adapted",
+  "ctx": "Works well with someone shy or nervous"
+ },
+ {
+  "id": "p238",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "disagree",
+  "sources": [
+   "VGQ@4:26",
+   "VG@0:48:44"
+  ],
+  "text": "I'd love your take, especially if it's different.",
+  "delivery": "Make space with a pause and look their way; ask a direct but easy question.",
+  "basis": "adapted",
+  "ctx": "Works well with someone shy or nervous"
+ },
+ {
+  "id": "p239",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "V24@0:43:38",
+   "V24@1:19:56"
+  ],
+  "text": "I'm glad you came.",
+  "delivery": "Open palm, warm greeting, sincere smile.",
+  "basis": "adapted",
+  "ctx": "Works well with someone shy or nervous"
  }
 ]
