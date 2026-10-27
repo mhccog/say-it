@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { cn } from '@/lib/utils'
 import {
-  CHASE_SPOT, FEELINGS, FEELING_TIPS, NEEDS, SITUATIONS, SOURCES, TIPS, sourceHref,
+  CHASE_SPOT, FEELINGS, PROFILES, FEELING_TIPS, NEEDS, SITUATIONS, SOURCES, TIPS, sourceHref,
   type NeedId, type Situation,
 } from '@/data/content'
 import phrasesRaw from '@/data/phrases.json'
@@ -138,6 +138,7 @@ export default function App() {
       return (
         <span key={prefix + key}>
           {prefix}
+          {s.platform && <span className="mr-1.5 rounded-full bg-secondary px-1.5 py-0.5 font-medium text-foreground/70">{s.platform}</span>}
           {href ? <a href={href} target="_blank" rel="noreferrer" className={times.length ? '' : linkCls}>{s.label}</a> : s.label}
           {times.map((t) => (
             <a key={t} href={sourceHref(key, t)} target="_blank" rel="noreferrer" className={cn('ml-1.5 rounded-full bg-secondary px-1.5 py-0.5 font-medium text-foreground/70 hover:bg-accent', )} title="Opens YouTube at this moment">&#9654; {t}</a>
@@ -151,7 +152,7 @@ export default function App() {
     const st = statusOf(p)
     const tipIds = FEELING_TIPS[p.feeling] ?? []
     const tip = TIPS[tipIds[hash(p.id) % Math.max(tipIds.length, 1)]]
-    const example = p.basis === 'source-example' ? "Coach's own example" : p.basis === 'source-example/adapted' ? "Based on a coach's example" : p.basis === 'nci' ? 'From NCI (secondary)' : null
+    const example = p.basis === 'source-example' ? "Coach's own example" : p.basis === 'source-example/adapted' ? "Based on a coach's example" : p.basis === 'nci' ? 'From NCI (secondary)' : p.basis === 'social' ? "From a coach's post (summarised)" : null
     const sit = SITUATIONS.find((s) => s.id === p.situation)!
     const isEditing = editing === p.id
     return (
@@ -309,6 +310,12 @@ export default function App() {
             <p><b>Please use it kindly.</b> Types are things to listen for, not labels. The aim is that the other person feels heard, respected or at ease, never pressured. No hidden tricks are included.</p>
             <p><b>Review mode.</b> Tap Review to keep, edit or bin each phrase. Your choices live on this device. Press Export to send them on.</p>
             <p><b>Add to your home screen.</b> iPhone: Safari &rarr; Share &rarr; Add to Home Screen. Android: Chrome menu &rarr; Install app. It then works offline.</p>
+            <div className="rounded-2xl bg-secondary/60 p-3 text-xs">
+              <p className="mb-1 font-semibold text-foreground">Follow the coaches (official accounts)</p>
+              {PROFILES.map((p) => (
+                <p key={p.who} className="text-muted-foreground">{p.who}: {p.links.map(([n, u], i) => <span key={n}>{i > 0 && ' · '}<a className="underline" href={u} target="_blank" rel="noreferrer">{n}</a></span>)}</p>
+              ))}
+            </div>
             {installEvt && <Button onClick={async () => { installEvt.prompt(); setInstallEvt(null) }}>Install on this device</Button>}
             <p className="text-xs text-muted-foreground">Phrases: {PHRASES.length} (all drafts until you keep them). Source links are on each card.</p>
           </div>

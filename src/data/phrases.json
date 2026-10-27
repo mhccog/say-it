@@ -2633,5 +2633,435 @@
   "delivery": "Open palm, warm greeting, sincere smile.",
   "basis": "adapted",
   "ctx": "Works well with someone shy or nervous"
+ },
+ {
+  "id": "p240",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "VIG1"
+  ],
+  "text": "Hi! I've been looking forward to this. What's the best thing that's happened to you this week?",
+  "delivery": "Skip the forgettable \"nice to meet you\" and open with something specific and warm. Bright tone, genuine smile.",
+  "basis": "social"
+ },
+ {
+  "id": "p241",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "VIG1"
+  ],
+  "text": "Before anything else: what's something you're excited about right now?",
+  "delivery": "Say it lightly, with a smile, then really wait for the answer.",
+  "basis": "social"
+ },
+ {
+  "id": "p242",
+  "need": "any",
+  "feeling": "important",
+  "situation": "close",
+  "sources": [
+   "VTK2"
+  ],
+  "text": "I've really valued this chat. Thank you for your time, and I'd love to carry on another day.",
+  "delivery": "Finish warmly, with a falling tone and a clear, unhurried step away. Leaving them feeling valued is the aim.",
+  "basis": "social"
+ },
+ {
+  "id": "p243",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "close",
+  "sources": [
+   "VTK2"
+  ],
+  "text": "Your take on [X] has stuck with me. I'll let you get back to your evening, and let's pick this up soon.",
+  "delivery": "Name one specific thing they said, then exit cleanly without lingering.",
+  "basis": "social"
+ },
+ {
+  "id": "p244",
+  "need": "any",
+  "feeling": "curious",
+  "situation": "rapport",
+  "sources": [
+   "VX2"
+  ],
+  "text": "What's one thing about [topic] that surprised you?",
+  "delivery": "Aim to learn one new thing about the person, then stay curious a little longer than feels natural.",
+  "basis": "social"
+ },
+ {
+  "id": "p245",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "VX2"
+  ],
+  "text": "Can I ask one more thing about that?",
+  "delivery": "One more follow-up question shows you were really listening. Lean in slightly.",
+  "basis": "social"
+ },
+ {
+  "id": "p246",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "VX2"
+  ],
+  "text": "What's the thing most people get wrong about what you do?",
+  "delivery": "Ask, then stop talking. Let them go as far as they like.",
+  "basis": "social"
+ },
+ {
+  "id": "p247",
+  "need": "any",
+  "feeling": "appreciated",
+  "situation": "rapport",
+  "sources": [
+   "VX3"
+  ],
+  "text": "I've been meaning to say thank you for [specific thing]. It genuinely helped.",
+  "delivery": "Send or say the thank-you you have been putting off. Be specific, and say it plainly.",
+  "basis": "social"
+ },
+ {
+  "id": "p248",
+  "need": "any",
+  "feeling": "important",
+  "situation": "rapport",
+  "sources": [
+   "VX3"
+  ],
+  "text": "What you did with [specific thing] mattered to me more than you probably know.",
+  "delivery": "Calm and sincere. A small pause after the key word.",
+  "basis": "social"
+ },
+ {
+  "id": "p249",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "disagree",
+  "sources": [
+   "VTK4"
+  ],
+  "text": "Help me understand how this looked from your side.",
+  "delivery": "Be curious before critical: ask yourself what you would have done in their place. Soft tone, relaxed face.",
+  "basis": "social"
+ },
+ {
+  "id": "p250",
+  "need": "any",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "VTK4"
+  ],
+  "text": "I may have jumped to a conclusion. What was going on for you?",
+  "delivery": "Own your part first, then ask. Keep your tone steady and warm.",
+  "basis": "social"
+ },
+ {
+  "id": "p251",
+  "need": "any",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "VTK4"
+  ],
+  "text": "I'd rather understand this than argue about it. Can you walk me through it?",
+  "delivery": "Lower your volume a notch. Let them finish before you answer.",
+  "basis": "social"
+ },
+ {
+  "id": "p252",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "disagree",
+  "sources": [
+   "VTK4"
+  ],
+  "text": "If I'd been in your shoes, I might have done the same. What led to it?",
+  "delivery": "Only say this if it is true. Curious, not leading.",
+  "basis": "social",
+  "ctx": "Only say this if it is true for you"
+ },
+ {
+  "id": "p253",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "VTK5"
+  ],
+  "text": "Honestly, I'm a bit nervous at these things too.",
+  "delivery": "People watch you far less than you fear, so a light touch of honesty relaxes everyone. Smile as you say it.",
+  "basis": "social",
+  "ctx": "Only say this if it is true for you"
+ },
+ {
+  "id": "p254",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "VTK6"
+  ],
+  "text": "Let's take a breath. We've got time.",
+  "delivery": "People tend to mirror your energy, so set the calm you want to see. Slow your pace first.",
+  "basis": "social"
+ },
+ {
+  "id": "p255",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "GIG1"
+  ],
+  "text": "Yes, and what happened next?",
+  "delivery": "\"Yes, and...\" keeps a conversation flowing instead of closing it down. Show interest on your face.",
+  "basis": "social"
+ },
+ {
+  "id": "p256",
+  "need": "any",
+  "feeling": "included",
+  "situation": "rapport",
+  "sources": [
+   "GIG1"
+  ],
+  "text": "Yes, and that links to what [name] said earlier.",
+  "delivery": "Bring others into the thread by name. Turn your body slightly towards the person you are mentioning.",
+  "basis": "social"
+ },
+ {
+  "id": "p257",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "GIG1"
+  ],
+  "text": "The one thing I'm taking from that is [X]. Have I got it right?",
+  "delivery": "Distil what you heard into one line, then check. Falling tone on the statement, rising on the check.",
+  "basis": "social"
+ },
+ {
+  "id": "p258",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "GTK2"
+  ],
+  "text": "I noticed your face change when you mentioned [X]. What's behind that?",
+  "delivery": "Listen for threads: a flash of emotion, folded arms, a shift in tone. Follow gently, and let it go if they don't want to go there.",
+  "basis": "social",
+  "ctx": "They can say no. Don't push."
+ },
+ {
+  "id": "p259",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "GTK2"
+  ],
+  "text": "Your tone shifted just then. Is there more to that?",
+  "delivery": "Soft voice, plenty of pause. This opens a door but never pulls them through it.",
+  "basis": "social",
+  "ctx": "They can say no. Don't push."
+ },
+ {
+  "id": "p260",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "GTK3"
+  ],
+  "text": "Okay, I have to ask: what's the most ridiculous thing that's happened to you at work?",
+  "delivery": "Playfulness is an underrated way to connect. Grin, raise your eyebrows, and keep it kind.",
+  "basis": "social"
+ },
+ {
+  "id": "p261",
+  "need": "any",
+  "feeling": "included",
+  "situation": "opener",
+  "sources": [
+   "GTK3"
+  ],
+  "text": "We were just debating [fun question]. Which side are you on?",
+  "delivery": "Light and playful. Make space with an open gesture so they can step in.",
+  "basis": "social"
+ },
+ {
+  "id": "p262",
+  "need": "any",
+  "feeling": "included",
+  "situation": "opener",
+  "sources": [
+   "GTK3"
+  ],
+  "text": "Come and join us, we're only just getting started.",
+  "delivery": "Open palm, warm smile, shift your body to make room.",
+  "basis": "social"
+ },
+ {
+  "id": "p263",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "GIG2"
+  ],
+  "text": "I want to be sure I'm really hearing you. Can you take me through it from the start?",
+  "delivery": "Listening is one of the strongest communication skills. Put the phone down, slow nod, no interrupting.",
+  "basis": "social"
+ },
+ {
+  "id": "p264",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "GIG2"
+  ],
+  "text": "Take your time. I'm not going anywhere.",
+  "delivery": "Soft voice and an easy pace. Stay quiet longer than feels natural.",
+  "basis": "social"
+ },
+ {
+  "id": "p265",
+  "need": "any",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "GTK4"
+  ],
+  "text": "What you went through is part of why you are good at this.",
+  "delivery": "Helping someone re-tell a painful story in a way that empowers them. Only say it if it's true.",
+  "basis": "social",
+  "ctx": "Only say this if it is true for you"
+ },
+ {
+  "id": "p266",
+  "need": "any",
+  "feeling": "important",
+  "situation": "rapport",
+  "sources": [
+   "GTK4"
+  ],
+  "text": "The way you handled that says a lot about you.",
+  "delivery": "Say it unhurried, end on a lower note, and leave a pause.",
+  "basis": "social"
+ },
+ {
+  "id": "p267",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "GTK1"
+  ],
+  "text": "I'll come back to you by Friday.",
+  "delivery": "End statements on a falling pitch so you sound certain and credible. Then actually do it.",
+  "basis": "social"
+ },
+ {
+  "id": "p268",
+  "need": "any",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "GTK1"
+  ],
+  "text": "We'll sort this out together.",
+  "delivery": "Falling pitch at the end, steady pace, warm face.",
+  "basis": "social"
+ },
+ {
+  "id": "p269",
+  "need": "any",
+  "feeling": "control",
+  "situation": "rapport",
+  "sources": [
+   "GTK1",
+   "GIG1"
+  ],
+  "text": "The one thing I'd do first is [X]. Does that work for you?",
+  "delivery": "Keep your statement short with a falling pitch, then hand the decision back to them.",
+  "basis": "social"
+ },
+ {
+  "id": "p270",
+  "need": "any",
+  "feeling": "control",
+  "situation": "rapport",
+  "sources": [
+   "GTK1"
+  ],
+  "text": "You make the call, and I'll back it.",
+  "delivery": "Calm, slow and clear. Mean it before you say it.",
+  "basis": "social"
+ },
+ {
+  "id": "p271",
+  "need": "any",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "VX2",
+   "VTK1"
+  ],
+  "text": "What's one thing about this that most people miss?",
+  "delivery": "Ask, then stop talking and let them be the expert. Being warm as well as informed is what makes people trust your judgement.",
+  "basis": "social"
+ },
+ {
+  "id": "p272",
+  "need": "any",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "VTK1"
+  ],
+  "text": "That's a clever way to put it. How did you work that out?",
+  "delivery": "Sincere interest, a slight head tilt. Specific beats general.",
+  "basis": "social"
+ },
+ {
+  "id": "p273",
+  "need": "acceptance",
+  "feeling": "included",
+  "situation": "rapport",
+  "sources": [
+   "GTK3",
+   "GIG1"
+  ],
+  "text": "You're one of us here, you know. We'd notice if you weren't around.",
+  "delivery": "Use \"we\" and \"us\" language and say it with a smile.",
+  "basis": "social"
+ },
+ {
+  "id": "p274",
+  "need": "intelligence",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "VTK1",
+   "VX2"
+  ],
+  "text": "I'd trust your read on this more than most. What would you do?",
+  "delivery": "Only say this if you mean it. Ask, then listen to the full answer.",
+  "basis": "social",
+  "ctx": "Only say this if it is true for you"
  }
 ]

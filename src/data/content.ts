@@ -120,7 +120,7 @@ export const FEELING_TIPS: Record<string, string[]> = {
   curious: ['melody', 'lean', 'askstop'],
 }
 
-export interface Source { label: string; url?: string; video?: string } // Notion notes are private, so they have no link
+export interface Source { label: string; url?: string; video?: string; platform?: 'Instagram' | 'TikTok' | 'X' } // Notion notes are private, so they have no link
 export const SOURCES: Record<string, Source> = {
   NM: { label: 'Notion: Needs-Map (Chase Hughes)' },
   NG: { label: 'Notion: Who I\u2019m Becoming' },
@@ -145,6 +145,21 @@ export const SOURCES: Record<string, Source> = {
   VGQ: { label: 'Vinh: how to enter conversations', video: '-X13GINFYOY' },
   VVC: { label: 'Vanessa: memorable compliments', video: 'MOre3dRqHlA' },
   NCI: { label: 'NCI University: six social needs (secondary, not Chase\u2019s own words)', url: 'https://merlinobrecht.com/behavior-profiling/the-six-social-needs/' },
+  // Social posts (Saturday section 8). Read from captions only; summarised, no timestamps.
+  VIG1: { platform: 'Instagram', label: 'Vanessa, Instagram reel: a better opener than "nice to meet you"', url: 'https://www.instagram.com/vvanedwards/reel/DSvJHzLDula/' },
+  VTK1: { platform: 'TikTok', label: 'Vanessa, TikTok: likable makes you more credible', url: 'https://www.tiktok.com/@vvanedwards/video/7699563694350421279' },
+  VTK2: { platform: 'TikTok', label: 'Vanessa, TikTok: leave a conversation gracefully', url: 'https://www.tiktok.com/@vvanedwards/video/7696611449283611935' },
+  VTK4: { platform: 'TikTok', label: 'Vanessa, TikTok: curious before critical', url: 'https://www.tiktok.com/@vvanedwards/video/7698857415135071518' },
+  VTK5: { platform: 'TikTok', label: 'Vanessa, TikTok: people watch you less than you think', url: 'https://www.tiktok.com/@vvanedwards/video/7697376668339555614' },
+  VTK6: { platform: 'TikTok', label: 'Vanessa, TikTok: change your energy first', url: 'https://www.tiktok.com/@vvanedwards/video/7699181704648461599' },
+  VX2: { platform: 'X', label: 'Vanessa, X: learn one new thing about the person', url: 'https://x.com/vvanedwards/status/2095555287851913413' },
+  VX3: { platform: 'X', label: 'Vanessa, X: send the thank-you you have been putting off', url: 'https://x.com/vvanedwards/status/2113352794451120522' },
+  GIG1: { platform: 'Instagram', label: 'Vinh, Instagram: "Yes, and", "tell me more", "the one thing is"', url: 'https://www.instagram.com/askvinh/p/DLC7Ae2xYFn/' },
+  GIG2: { platform: 'Instagram', label: 'Vinh, Instagram: listening is a superpower', url: 'https://www.instagram.com/askvinh/p/De8pSzdDNLd/' },
+  GTK1: { platform: 'TikTok', label: 'Vinh, TikTok: end on a downward pitch', url: 'https://www.tiktok.com/@askvinh/video/7258996715020094728' },
+  GTK2: { platform: 'TikTok', label: 'Vinh, TikTok: follow the threads', url: 'https://www.tiktok.com/@askvinh/video/7699530755352923413' },
+  GTK3: { platform: 'TikTok', label: 'Vinh, TikTok: playfulness connects', url: 'https://www.tiktok.com/@askvinh/video/7700263406732872978' },
+  GTK4: { platform: 'TikTok', label: 'Vinh, TikTok: reframe a painful story', url: 'https://www.tiktok.com/@askvinh/video/7700073827564277010' },
 }
 
 /** Turn "h:mm:ss" or "m:ss" into seconds. */
@@ -164,3 +179,10 @@ export function sourceHref(key: string, ts?: string): string | undefined {
 export const CHASE_SPOT: Record<NeedId, string> = {
   significance: '0:41:13', approval: '0:41:43', acceptance: '0:42:17', intelligence: '0:42:48', pity: '0:42:48', power: '0:43:18',
 }
+
+/** Official profiles Saturday confirmed (Chase: Instagram only). */
+export const PROFILES = [
+  { who: 'Vanessa Van Edwards', links: [['Instagram', 'https://www.instagram.com/vvanedwards/'], ['TikTok', 'https://www.tiktok.com/@vvanedwards'], ['X', 'https://x.com/vvanedwards']] },
+  { who: 'Vinh Giang', links: [['Instagram', 'https://www.instagram.com/askvinh/'], ['TikTok', 'https://www.tiktok.com/@askvinh'], ['X', 'https://x.com/AskVinh']] },
+  { who: 'Chase Hughes', links: [['Instagram', 'https://www.instagram.com/chasehughesofficial/']] },
+] as const

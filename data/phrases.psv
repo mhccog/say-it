@@ -241,3 +241,39 @@ any|comfortable|opener|V26@0:09:42,V26@0:32:26,VGQ@4:26|No pressure, I'll start.
 any|comfortable|rapport|V26@0:09:42,V26@0:32:26,VGQ@4:26|Take your time.|Keep questions light and not too deep, give processing time, and let silences breathe.|adapted|Works well with someone shy or nervous
 any|heard|disagree|VGQ@4:26,VG@0:48:44|I'd love your take, especially if it's different.|Make space with a pause and look their way; ask a direct but easy question.|adapted|Works well with someone shy or nervous
 any|liked|opener|V24@0:43:38,V24@1:19:56|I'm glad you came.|Open palm, warm greeting, sincere smile.|adapted|Works well with someone shy or nervous
+# ---- merged from Saturday section 8: Instagram / TikTok / X posts (2026-10-27) ----
+any|liked|opener|VIG1|Hi! I've been looking forward to this. What's the best thing that's happened to you this week?|Skip the forgettable "nice to meet you" and open with something specific and warm. Bright tone, genuine smile.|social|
+any|liked|opener|VIG1|Before anything else: what's something you're excited about right now?|Say it lightly, with a smile, then really wait for the answer.|social|
+any|important|close|VTK2|I've really valued this chat. Thank you for your time, and I'd love to carry on another day.|Finish warmly, with a falling tone and a clear, unhurried step away. Leaving them feeling valued is the aim.|social|
+any|respected|close|VTK2|Your take on [X] has stuck with me. I'll let you get back to your evening, and let's pick this up soon.|Name one specific thing they said, then exit cleanly without lingering.|social|
+any|curious|rapport|VX2|What's one thing about [topic] that surprised you?|Aim to learn one new thing about the person, then stay curious a little longer than feels natural.|social|
+any|heard|rapport|VX2|Can I ask one more thing about that?|One more follow-up question shows you were really listening. Lean in slightly.|social|
+any|understood|rapport|VX2|What's the thing most people get wrong about what you do?|Ask, then stop talking. Let them go as far as they like.|social|
+any|appreciated|rapport|VX3|I've been meaning to say thank you for [specific thing]. It genuinely helped.|Send or say the thank-you you have been putting off. Be specific, and say it plainly.|social|
+any|important|rapport|VX3|What you did with [specific thing] mattered to me more than you probably know.|Calm and sincere. A small pause after the key word.|social|
+any|understood|disagree|VTK4|Help me understand how this looked from your side.|Be curious before critical: ask yourself what you would have done in their place. Soft tone, relaxed face.|social|
+any|reconciled|disagree|VTK4|I may have jumped to a conclusion. What was going on for you?|Own your part first, then ask. Keep your tone steady and warm.|social|
+any|reconciled|disagree|VTK4|I'd rather understand this than argue about it. Can you walk me through it?|Lower your volume a notch. Let them finish before you answer.|social|
+any|understood|disagree|VTK4|If I'd been in your shoes, I might have done the same. What led to it?|Only say this if it is true. Curious, not leading.|social|Only say this if it is true for you
+any|comfortable|opener|VTK5|Honestly, I'm a bit nervous at these things too.|People watch you far less than you fear, so a light touch of honesty relaxes everyone. Smile as you say it.|social|Only say this if it is true for you
+any|comfortable|rapport|VTK6|Let's take a breath. We've got time.|People tend to mirror your energy, so set the calm you want to see. Slow your pace first.|social|
+any|heard|rapport|GIG1|Yes, and what happened next?|"Yes, and..." keeps a conversation flowing instead of closing it down. Show interest on your face.|social|
+any|included|rapport|GIG1|Yes, and that links to what [name] said earlier.|Bring others into the thread by name. Turn your body slightly towards the person you are mentioning.|social|
+any|understood|rapport|GIG1|The one thing I'm taking from that is [X]. Have I got it right?|Distil what you heard into one line, then check. Falling tone on the statement, rising on the check.|social|
+any|understood|rapport|GTK2|I noticed your face change when you mentioned [X]. What's behind that?|Listen for threads: a flash of emotion, folded arms, a shift in tone. Follow gently, and let it go if they don't want to go there.|social|They can say no. Don't push.
+any|understood|rapport|GTK2|Your tone shifted just then. Is there more to that?|Soft voice, plenty of pause. This opens a door but never pulls them through it.|social|They can say no. Don't push.
+any|liked|rapport|GTK3|Okay, I have to ask: what's the most ridiculous thing that's happened to you at work?|Playfulness is an underrated way to connect. Grin, raise your eyebrows, and keep it kind.|social|
+any|included|opener|GTK3|We were just debating [fun question]. Which side are you on?|Light and playful. Make space with an open gesture so they can step in.|social|
+any|included|opener|GTK3|Come and join us, we're only just getting started.|Open palm, warm smile, shift your body to make room.|social|
+any|heard|rapport|GIG2|I want to be sure I'm really hearing you. Can you take me through it from the start?|Listening is one of the strongest communication skills. Put the phone down, slow nod, no interrupting.|social|
+any|comfortable|rapport|GIG2|Take your time. I'm not going anywhere.|Soft voice and an easy pace. Stay quiet longer than feels natural.|social|
+any|reassured|rapport|GTK4|What you went through is part of why you are good at this.|Helping someone re-tell a painful story in a way that empowers them. Only say it if it's true.|social|Only say this if it is true for you
+any|important|rapport|GTK4|The way you handled that says a lot about you.|Say it unhurried, end on a lower note, and leave a pause.|social|
+any|trusted|rapport|GTK1|I'll come back to you by Friday.|End statements on a falling pitch so you sound certain and credible. Then actually do it.|social|
+any|reassured|rapport|GTK1|We'll sort this out together.|Falling pitch at the end, steady pace, warm face.|social|
+any|control|rapport|GTK1,GIG1|The one thing I'd do first is [X]. Does that work for you?|Keep your statement short with a falling pitch, then hand the decision back to them.|social|
+any|control|rapport|GTK1|You make the call, and I'll back it.|Calm, slow and clear. Mean it before you say it.|social|
+any|smart|rapport|VX2,VTK1|What's one thing about this that most people miss?|Ask, then stop talking and let them be the expert. Being warm as well as informed is what makes people trust your judgement.|social|
+any|smart|rapport|VTK1|That's a clever way to put it. How did you work that out?|Sincere interest, a slight head tilt. Specific beats general.|social|
+acceptance|included|rapport|GTK3,GIG1|You're one of us here, you know. We'd notice if you weren't around.|Use "we" and "us" language and say it with a smile.|social|
+intelligence|smart|rapport|VTK1,VX2|I'd trust your read on this more than most. What would you do?|Only say this if you mean it. Ask, then listen to the full answer.|social|Only say this if it is true for you
