@@ -1,0 +1,175 @@
+# need|feeling|situation|sources|text   (all drafts; written fresh from Notion rules + coach websites)
+significance|heard|opener|NM|You've clearly built something real here. Walk me through how it came together.
+significance|heard|rapport|NM,VVEA|Let me check I've got this right: you took it from nothing to what it is today?
+significance|understood|rapport|NM,VVEA|It sounds like what matters most to you is the difference it makes for people. Is that fair?
+significance|understood|rapport|NM|So the part that really drives you is seeing the impact. Have I got that right?
+significance|liked|rapport|VVEL|I really enjoyed hearing about that. I'd happily hear more.
+significance|liked|close|VVEL,NG|I'm glad we got talking. Your story is one I'll remember.
+significance|trusted|rapport|NG|I'll be straight with you: I'm not here to take your time, only to see if there's a real fit.
+significance|trusted|rapport|NG|I won't oversell this. If it isn't right for what you're building, I'll say so.
+significance|respected|opener|NM|From everything I've seen, you're the person who really knows this area.
+significance|respected|rapport|NM|I'd value your take before I decide anything.
+significance|comfortable|opener|VVEC|No rush at all. Tell me as much or as little as you like.
+significance|comfortable|rapport|NG|Is this a comfortable thing to talk about? Happy to switch if not.
+significance|reassured|rapport|NM|You've already done the hard part. This next step builds on it.
+significance|reassured|rapport|NM|None of this takes away from what you've built. It only adds to it.
+significance|included|rapport|NM|I'd love you in the room for this. Your experience would shape it.
+significance|included|close|NG|We're on the same side here, and your experience is exactly what this needs.
+significance|important|close|NM|The work you did on this made a real difference, and I wanted to say it plainly.
+significance|important|rapport|NM|What you decided there changed how the whole team worked. That counts.
+significance|smart|rapport|NM,VVEC|You've seen this from the inside. What do most people get wrong about it?
+significance|smart|rapport|NM|What would you tell someone just starting out in your shoes?
+significance|control|close|NM|You know best, so it's your call. I'll back whichever way you go.
+significance|control|rapport|NM|I'll lay out the options and you steer.
+significance|reconciled|disagree|VGA|I think I undersold what you've done there. That's on me, and I'm sorry.
+significance|reconciled|disagree|NG|Yes, and I can see why you made that call. Can we find a way to build on it?
+approval|heard|opener|NM|Take your time. I'm listening, and there are no silly questions.
+approval|heard|rapport|VVEA|Thanks for telling me that. I can tell you've thought about it.
+approval|understood|rapport|NM|It makes sense that you'd want to check. That's a careful way to do it.
+approval|understood|rapport|NG|So you want to be sure it's right before moving on. That's completely fair.
+approval|liked|close|VVEL|I really enjoyed working through this with you.
+approval|liked|rapport|VVEL|You're easy to talk to, and I mean that.
+approval|trusted|rapport|NM|I'll tell you honestly how it looks: you're on the right track.
+approval|trusted|rapport|VGF|If something's off, I'll say it kindly and straight away, so you're never left guessing.
+approval|respected|rapport|NM|That was a good call, and here's why it worked.
+approval|respected|rapport|NM|I'd trust your judgment on this one.
+approval|comfortable|opener|NM|There's no wrong answer here. We're just working it out together.
+approval|comfortable|rapport|NG|It's fine not to have it all figured out yet.
+approval|reassured|rapport|NM|You're doing this right. The way you handled the first step is exactly what's needed.
+approval|reassured|rapport|NM|Nobody expects it to be perfect, and what you've done is solid.
+approval|included|rapport|NG|You're not the only one who's felt unsure about this. Most people do.
+approval|included|close|NG|We'll do this together. Check in with me as often as you like.
+approval|important|rapport|NP|What you think matters to how this turns out.
+approval|important|close|NM|I wanted to say it in person: your effort didn't go unnoticed.
+approval|smart|rapport|NM|You asked exactly the right question.
+approval|smart|rapport|NM|That's a sharp point, and not many people spot it.
+approval|control|opener|NG|You choose the pace. I'll follow.
+approval|control|rapport|NP|Tell me what would help most, and we'll do that.
+approval|reconciled|disagree|VGF|I'm not saying you did it wrong. I'd like us to look at one part together.
+approval|reconciled|disagree|VGF|Thank you for trusting me with that. Can we work out the next step together?
+acceptance|heard|opener|NM|Tell me about your team. I'd love to hear how you all work together.
+acceptance|heard|rapport|NM|It sounds like the group means a lot to you. Tell me more.
+acceptance|understood|rapport|NM|Being part of something that works well together is what counts for you, isn't it?
+acceptance|understood|rapport|NM|You want everyone on the same page. I get that.
+acceptance|liked|rapport|VVEL|I like how you talk about the people you work with.
+acceptance|liked|close|VVEC,NG|It's been lovely talking. I hope we cross paths again soon.
+acceptance|trusted|rapport|NM|Plenty of people in your position started right where you are, and it worked for them.
+acceptance|trusted|rapport|NG|Word of mouth matters a lot in a group like yours, so I'll keep this honest.
+acceptance|respected|rapport|NM|Everyone I've met from your group has been generous with their time. I can see why.
+acceptance|respected|rapport|NM|People like you are what make a community like this work.
+acceptance|comfortable|opener|VVEC|Come and join us. No pressure at all.
+acceptance|comfortable|opener|VVEC|You're among friends here. Ask me anything.
+acceptance|reassured|rapport|NM|You wouldn't be the first to do it this way. Plenty of people like you have.
+acceptance|reassured|rapport|NM|Nobody here is going to judge you for it.
+acceptance|included|close|NM|We'd love to have you with us on this. Does that sound good?
+acceptance|included|close|VVEC|Would it be all right if I joined you all next time?
+acceptance|important|rapport|NM|The group would feel it if you weren't part of this.
+acceptance|important|close|NM|We'd miss you if you weren't in this with us.
+acceptance|smart|rapport|NM|You all clearly know your stuff as a group. What's the best thing you've learned together?
+acceptance|smart|rapport|NM|That's exactly what a good team figures out, and you've done it.
+acceptance|control|rapport|NM|We'll go with whatever works for the group. You all decide.
+acceptance|control|rapport|NM|How would you and the team like to handle this?
+acceptance|reconciled|disagree|NG|We're on the same side. Let's find the way that works for all of us.
+acceptance|reconciled|disagree|NG|I think we both want the best for the group. Can I share where I'm stuck?
+intelligence|heard|opener|NM|You obviously know this field well. Where would you start?
+intelligence|heard|rapport|VVEA|Let me check I've followed your reasoning: you'd start there because of the cost, right?
+intelligence|understood|rapport|NM|That's a subtle distinction. I want to make sure I follow it.
+intelligence|understood|rapport|NM|So your point is that the usual approach misses something. What is it?
+intelligence|liked|rapport|VVEL|I learn a lot from talking to you.
+intelligence|liked|close|VVEL|I really enjoyed that conversation. I came away with new things to think about.
+intelligence|trusted|rapport|NG|I'll show you the evidence behind this so you can judge it yourself.
+intelligence|trusted|rapport|NG|If I'm wrong, I'd like you to tell me. I'd rather get it right.
+intelligence|respected|rapport|NM|I'd value your expert take before I decide.
+intelligence|respected|opener|NM|You've studied this a lot, haven't you? I'd value your view.
+intelligence|comfortable|opener|NM|I'm not an expert, so please stop me if I get anything wrong.
+intelligence|comfortable|opener|NM|Take me through it as if I'm new to it. I don't mind at all.
+intelligence|reassured|rapport|NM|The way you're reasoning this through is sound.
+intelligence|reassured|rapport|NM|You've thought this through more than most people do.
+intelligence|included|rapport|NM|I'd like you on this one. We need someone who understands the detail.
+intelligence|included|close|NM|Would you read this over before it goes out? You'd catch what I'd miss.
+intelligence|important|rapport|NM|Your view on the details will shape what we do.
+intelligence|important|close|NM|That insight changed how I see this.
+intelligence|smart|rapport|NG,NM|What do most people get wrong about this?
+intelligence|smart|rapport|NG,NM|What's the one thing about this you wish more people understood?
+intelligence|control|rapport|NM|You know the subject best. How would you want to approach it?
+intelligence|control|close|NM|I'll leave the method to you.
+intelligence|reconciled|disagree|NG|Good point. You've got more depth on this than I do. Can I add one thing I'm seeing?
+intelligence|reconciled|disagree|NG|Yes, and what if we also looked at the other side of it?
+pity|heard|rapport|NM,VVEA|That sounds really hard. (Pause.) Tell me more about what happened.
+pity|heard|rapport|NM|I'm sorry, that's a lot to have dealt with.
+pity|understood|rapport|NM|I don't know how you've kept going through all of that.
+pity|understood|rapport|NM|Most people can't see what you've been through. I'm glad you told me.
+pity|liked|rapport|VVEL|I'm glad you shared that with me.
+pity|liked|close|NM|You've got real strength, and it comes through in how you talk.
+pity|trusted|opener|NG|I'm happy to listen, and I won't rush you.
+pity|trusted|rapport|NG|I'll be honest with you, and I'll be kind about it.
+pity|respected|rapport|NM|What you've come through says a lot about you.
+pity|respected|rapport|NM|You've handled more than most people would have to.
+pity|comfortable|rapport|NG|No need to rush. We can pause whenever you like.
+pity|comfortable|rapport|NG|Is this okay to talk about right now? We can leave it if you'd rather.
+pity|reassured|rapport|NM|You're not alone with this.
+pity|reassured|rapport|NM|It makes complete sense that you feel that way.
+pity|included|rapport|NM|I'm here with you in this. What would help?
+pity|included|close|NM|Thank you for letting me in on that.
+pity|important|rapport|NM|What you've been through matters, and so do you.
+pity|important|close|NM|I wanted you to know I took what you said seriously.
+pity|smart|rapport|NM|You've learned a lot the hard way. What would you tell someone going through the same thing?
+pity|smart|rapport|NM|You've got real insight from all of this.
+pity|control|rapport|NM|What would you like to happen next? It's up to you.
+pity|control|close|NM|We'll do whatever feels right to you.
+pity|reconciled|disagree|VGA|I'm sorry for the extra stress I caused. I'd like to put it right.
+pity|reconciled|disagree|NM|That sounds like it's been really hard. Can we find a way through it together?
+power|heard|opener|NM|You've got the final say here. Tell me what you'd like to see.
+power|heard|rapport|NM|Let me play it back: you want it done this way, by this date. Right?
+power|understood|rapport|NM|You want to be the one steering this, and that makes sense.
+power|understood|rapport|NM|You like clear decisions and quick answers. I'll keep it tight.
+power|liked|rapport|VVEL|I like working with people who know what they want.
+power|liked|close|VVEL|I enjoyed how direct you were. It saved us both time.
+power|trusted|rapport|NG|I'll do what I said I'd do, and I'll tell you early if anything changes.
+power|trusted|rapport|NG|Straight answer: here's the risk, and here's how we cover it.
+power|respected|rapport|NM|It's your decision, and I respect that.
+power|respected|close|NM|You know the stakes better than anyone, so I'd like your call.
+power|comfortable|opener|NM|Short version first. I'll add detail only if you want it.
+power|comfortable|opener|NM|I'll keep this brief and let you ask for whatever you need.
+power|reassured|rapport|NM|Nothing moves forward without your sign-off.
+power|reassured|rapport|NM|You'll stay in control of this from start to finish.
+power|included|close|NM|I'd like you leading this. What do you need from me?
+power|included|rapport|NM|Would you chair this, or would you rather I did?
+power|important|close|NM|This doesn't happen without your lead.
+power|important|rapport|NM|Your direction is what makes this work.
+power|smart|rapport|NM|That's a strategic call. How did you decide?
+power|smart|rapport|NM|What are you weighing up here? I'd like to understand your thinking.
+power|control|rapport|NP|Here are two options. Which would you like?
+power|control|close|NM|You choose. I'll make it happen.
+power|reconciled|disagree|NG|You may be right, and I'd like to hear your reasoning first. Then I'll tell you what worries me.
+power|reconciled|disagree|NG|Let's find a way for you to keep the lead and still cover this risk.
+any|heard|rapport|VVEA,NG|What I'm hearing is ___. Did I get that right?
+any|understood|rapport|VVER,NG|It sounds like you're feeling ___. Is that close?
+any|liked|close|VVEL,NG|I really enjoyed our chat about ___.
+any|trusted|rapport|NG|I'll be straight with you, and I'll say what I know and what I don't.
+any|respected|rapport|VVEA|Thanks for explaining that. I can see how much thought has gone into it.
+any|comfortable|rapport|NG|Is this a comfortable thing to talk about? Happy to change the subject.
+any|reassured|rapport|NG|That makes sense, and you're not alone in feeling that.
+any|included|rapport|NG|We're on the same side here. Let's work this out together.
+any|important|close|NM|I wanted to say thank you. It made a real difference.
+any|smart|rapport|NG|What's the one thing about this you'd tell someone new?
+any|control|rapport|NP|Here are the options. What would you like to do?
+any|reconciled|disagree|NG|I think we both want ___. Can we start from there?
+any|liked|opener|VVEC|Working on anything exciting lately?
+any|liked|opener|VVEC|What was the highlight of your day so far?
+any|liked|opener|VGS|What's the most exciting thing you've got planned for today?
+any|liked|opener|VVEC|What's your story?
+any|comfortable|opener|VVEC|How's the ___? Is it any good?
+any|comfortable|opener|VVEC|I'm a bit nervous about ___. Have you done it before?
+any|heard|opener|VVEC|Has this been a busy time for you?
+any|liked|close|VVEC,NG|It's been lovely talking. Good luck with ___. I'm going to grab a coffee.
+any|liked|rapport|VVEC|Who's someone who's inspired you?
+any|smart|rapport|VGS|If you had to name the most important lesson from the last twelve months, what would it be?
+any|reconciled|disagree|VGA|I'm sorry for ___. I know it caused ___. Here's what I'll do so it doesn't happen again.
+any|reconciled|disagree|VGA|I think I could have put that better. Can I try again?
+any|reconciled|disagree|VGF|You did well on ___. There's one thing I'd change, and I'm saying it because I want you to succeed.
+any|control|close|NG|If you'd rather, we can come back to this another time.
+any|heard|rapport|VVER|Before I answer: what's the most important part of this for you?
+any|included|opener|VVEC|How do you know the host?
+any|important|rapport|VVEL|I really enjoyed talking with you, and I wanted you to know it.
+any|trusted|close|NG|I'll message you tomorrow with the next step, as promised.

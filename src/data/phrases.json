@@ -1,0 +1,1754 @@
+[
+ {
+  "id": "p001",
+  "need": "significance",
+  "feeling": "heard",
+  "situation": "opener",
+  "sources": [
+   "NM"
+  ],
+  "text": "You've clearly built something real here. Walk me through how it came together."
+ },
+ {
+  "id": "p002",
+  "need": "significance",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "NM",
+   "VVEA"
+  ],
+  "text": "Let me check I've got this right: you took it from nothing to what it is today?"
+ },
+ {
+  "id": "p003",
+  "need": "significance",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NM",
+   "VVEA"
+  ],
+  "text": "It sounds like what matters most to you is the difference it makes for people. Is that fair?"
+ },
+ {
+  "id": "p004",
+  "need": "significance",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "So the part that really drives you is seeing the impact. Have I got that right?"
+ },
+ {
+  "id": "p005",
+  "need": "significance",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "VVEL"
+  ],
+  "text": "I really enjoyed hearing about that. I'd happily hear more."
+ },
+ {
+  "id": "p006",
+  "need": "significance",
+  "feeling": "liked",
+  "situation": "close",
+  "sources": [
+   "VVEL",
+   "NG"
+  ],
+  "text": "I'm glad we got talking. Your story is one I'll remember."
+ },
+ {
+  "id": "p007",
+  "need": "significance",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "I'll be straight with you: I'm not here to take your time, only to see if there's a real fit."
+ },
+ {
+  "id": "p008",
+  "need": "significance",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "I won't oversell this. If it isn't right for what you're building, I'll say so."
+ },
+ {
+  "id": "p009",
+  "need": "significance",
+  "feeling": "respected",
+  "situation": "opener",
+  "sources": [
+   "NM"
+  ],
+  "text": "From everything I've seen, you're the person who really knows this area."
+ },
+ {
+  "id": "p010",
+  "need": "significance",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'd value your take before I decide anything."
+ },
+ {
+  "id": "p011",
+  "need": "significance",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "VVEC"
+  ],
+  "text": "No rush at all. Tell me as much or as little as you like."
+ },
+ {
+  "id": "p012",
+  "need": "significance",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "Is this a comfortable thing to talk about? Happy to switch if not."
+ },
+ {
+  "id": "p013",
+  "need": "significance",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You've already done the hard part. This next step builds on it."
+ },
+ {
+  "id": "p014",
+  "need": "significance",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "None of this takes away from what you've built. It only adds to it."
+ },
+ {
+  "id": "p015",
+  "need": "significance",
+  "feeling": "included",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'd love you in the room for this. Your experience would shape it."
+ },
+ {
+  "id": "p016",
+  "need": "significance",
+  "feeling": "included",
+  "situation": "close",
+  "sources": [
+   "NG"
+  ],
+  "text": "We're on the same side here, and your experience is exactly what this needs."
+ },
+ {
+  "id": "p017",
+  "need": "significance",
+  "feeling": "important",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "The work you did on this made a real difference, and I wanted to say it plainly."
+ },
+ {
+  "id": "p018",
+  "need": "significance",
+  "feeling": "important",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "What you decided there changed how the whole team worked. That counts."
+ },
+ {
+  "id": "p019",
+  "need": "significance",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NM",
+   "VVEC"
+  ],
+  "text": "You've seen this from the inside. What do most people get wrong about it?"
+ },
+ {
+  "id": "p020",
+  "need": "significance",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "What would you tell someone just starting out in your shoes?"
+ },
+ {
+  "id": "p021",
+  "need": "significance",
+  "feeling": "control",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "You know best, so it's your call. I'll back whichever way you go."
+ },
+ {
+  "id": "p022",
+  "need": "significance",
+  "feeling": "control",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'll lay out the options and you steer."
+ },
+ {
+  "id": "p023",
+  "need": "significance",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "VGA"
+  ],
+  "text": "I think I undersold what you've done there. That's on me, and I'm sorry."
+ },
+ {
+  "id": "p024",
+  "need": "significance",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "Yes, and I can see why you made that call. Can we find a way to build on it?"
+ },
+ {
+  "id": "p025",
+  "need": "approval",
+  "feeling": "heard",
+  "situation": "opener",
+  "sources": [
+   "NM"
+  ],
+  "text": "Take your time. I'm listening, and there are no silly questions."
+ },
+ {
+  "id": "p026",
+  "need": "approval",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "VVEA"
+  ],
+  "text": "Thanks for telling me that. I can tell you've thought about it."
+ },
+ {
+  "id": "p027",
+  "need": "approval",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "It makes sense that you'd want to check. That's a careful way to do it."
+ },
+ {
+  "id": "p028",
+  "need": "approval",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "So you want to be sure it's right before moving on. That's completely fair."
+ },
+ {
+  "id": "p029",
+  "need": "approval",
+  "feeling": "liked",
+  "situation": "close",
+  "sources": [
+   "VVEL"
+  ],
+  "text": "I really enjoyed working through this with you."
+ },
+ {
+  "id": "p030",
+  "need": "approval",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "VVEL"
+  ],
+  "text": "You're easy to talk to, and I mean that."
+ },
+ {
+  "id": "p031",
+  "need": "approval",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'll tell you honestly how it looks: you're on the right track."
+ },
+ {
+  "id": "p032",
+  "need": "approval",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "VGF"
+  ],
+  "text": "If something's off, I'll say it kindly and straight away, so you're never left guessing."
+ },
+ {
+  "id": "p033",
+  "need": "approval",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "That was a good call, and here's why it worked."
+ },
+ {
+  "id": "p034",
+  "need": "approval",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'd trust your judgment on this one."
+ },
+ {
+  "id": "p035",
+  "need": "approval",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "NM"
+  ],
+  "text": "There's no wrong answer here. We're just working it out together."
+ },
+ {
+  "id": "p036",
+  "need": "approval",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "It's fine not to have it all figured out yet."
+ },
+ {
+  "id": "p037",
+  "need": "approval",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You're doing this right. The way you handled the first step is exactly what's needed."
+ },
+ {
+  "id": "p038",
+  "need": "approval",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "Nobody expects it to be perfect, and what you've done is solid."
+ },
+ {
+  "id": "p039",
+  "need": "approval",
+  "feeling": "included",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "You're not the only one who's felt unsure about this. Most people do."
+ },
+ {
+  "id": "p040",
+  "need": "approval",
+  "feeling": "included",
+  "situation": "close",
+  "sources": [
+   "NG"
+  ],
+  "text": "We'll do this together. Check in with me as often as you like."
+ },
+ {
+  "id": "p041",
+  "need": "approval",
+  "feeling": "important",
+  "situation": "rapport",
+  "sources": [
+   "NP"
+  ],
+  "text": "What you think matters to how this turns out."
+ },
+ {
+  "id": "p042",
+  "need": "approval",
+  "feeling": "important",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "I wanted to say it in person: your effort didn't go unnoticed."
+ },
+ {
+  "id": "p043",
+  "need": "approval",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You asked exactly the right question."
+ },
+ {
+  "id": "p044",
+  "need": "approval",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "That's a sharp point, and not many people spot it."
+ },
+ {
+  "id": "p045",
+  "need": "approval",
+  "feeling": "control",
+  "situation": "opener",
+  "sources": [
+   "NG"
+  ],
+  "text": "You choose the pace. I'll follow."
+ },
+ {
+  "id": "p046",
+  "need": "approval",
+  "feeling": "control",
+  "situation": "rapport",
+  "sources": [
+   "NP"
+  ],
+  "text": "Tell me what would help most, and we'll do that."
+ },
+ {
+  "id": "p047",
+  "need": "approval",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "VGF"
+  ],
+  "text": "I'm not saying you did it wrong. I'd like us to look at one part together."
+ },
+ {
+  "id": "p048",
+  "need": "approval",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "VGF"
+  ],
+  "text": "Thank you for trusting me with that. Can we work out the next step together?"
+ },
+ {
+  "id": "p049",
+  "need": "acceptance",
+  "feeling": "heard",
+  "situation": "opener",
+  "sources": [
+   "NM"
+  ],
+  "text": "Tell me about your team. I'd love to hear how you all work together."
+ },
+ {
+  "id": "p050",
+  "need": "acceptance",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "It sounds like the group means a lot to you. Tell me more."
+ },
+ {
+  "id": "p051",
+  "need": "acceptance",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "Being part of something that works well together is what counts for you, isn't it?"
+ },
+ {
+  "id": "p052",
+  "need": "acceptance",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You want everyone on the same page. I get that."
+ },
+ {
+  "id": "p053",
+  "need": "acceptance",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "VVEL"
+  ],
+  "text": "I like how you talk about the people you work with."
+ },
+ {
+  "id": "p054",
+  "need": "acceptance",
+  "feeling": "liked",
+  "situation": "close",
+  "sources": [
+   "VVEC",
+   "NG"
+  ],
+  "text": "It's been lovely talking. I hope we cross paths again soon."
+ },
+ {
+  "id": "p055",
+  "need": "acceptance",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "Plenty of people in your position started right where you are, and it worked for them."
+ },
+ {
+  "id": "p056",
+  "need": "acceptance",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "Word of mouth matters a lot in a group like yours, so I'll keep this honest."
+ },
+ {
+  "id": "p057",
+  "need": "acceptance",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "Everyone I've met from your group has been generous with their time. I can see why."
+ },
+ {
+  "id": "p058",
+  "need": "acceptance",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "People like you are what make a community like this work."
+ },
+ {
+  "id": "p059",
+  "need": "acceptance",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "VVEC"
+  ],
+  "text": "Come and join us. No pressure at all."
+ },
+ {
+  "id": "p060",
+  "need": "acceptance",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "VVEC"
+  ],
+  "text": "You're among friends here. Ask me anything."
+ },
+ {
+  "id": "p061",
+  "need": "acceptance",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You wouldn't be the first to do it this way. Plenty of people like you have."
+ },
+ {
+  "id": "p062",
+  "need": "acceptance",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "Nobody here is going to judge you for it."
+ },
+ {
+  "id": "p063",
+  "need": "acceptance",
+  "feeling": "included",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "We'd love to have you with us on this. Does that sound good?"
+ },
+ {
+  "id": "p064",
+  "need": "acceptance",
+  "feeling": "included",
+  "situation": "close",
+  "sources": [
+   "VVEC"
+  ],
+  "text": "Would it be all right if I joined you all next time?"
+ },
+ {
+  "id": "p065",
+  "need": "acceptance",
+  "feeling": "important",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "The group would feel it if you weren't part of this."
+ },
+ {
+  "id": "p066",
+  "need": "acceptance",
+  "feeling": "important",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "We'd miss you if you weren't in this with us."
+ },
+ {
+  "id": "p067",
+  "need": "acceptance",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You all clearly know your stuff as a group. What's the best thing you've learned together?"
+ },
+ {
+  "id": "p068",
+  "need": "acceptance",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "That's exactly what a good team figures out, and you've done it."
+ },
+ {
+  "id": "p069",
+  "need": "acceptance",
+  "feeling": "control",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "We'll go with whatever works for the group. You all decide."
+ },
+ {
+  "id": "p070",
+  "need": "acceptance",
+  "feeling": "control",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "How would you and the team like to handle this?"
+ },
+ {
+  "id": "p071",
+  "need": "acceptance",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "We're on the same side. Let's find the way that works for all of us."
+ },
+ {
+  "id": "p072",
+  "need": "acceptance",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "I think we both want the best for the group. Can I share where I'm stuck?"
+ },
+ {
+  "id": "p073",
+  "need": "intelligence",
+  "feeling": "heard",
+  "situation": "opener",
+  "sources": [
+   "NM"
+  ],
+  "text": "You obviously know this field well. Where would you start?"
+ },
+ {
+  "id": "p074",
+  "need": "intelligence",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "VVEA"
+  ],
+  "text": "Let me check I've followed your reasoning: you'd start there because of the cost, right?"
+ },
+ {
+  "id": "p075",
+  "need": "intelligence",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "That's a subtle distinction. I want to make sure I follow it."
+ },
+ {
+  "id": "p076",
+  "need": "intelligence",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "So your point is that the usual approach misses something. What is it?"
+ },
+ {
+  "id": "p077",
+  "need": "intelligence",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "VVEL"
+  ],
+  "text": "I learn a lot from talking to you."
+ },
+ {
+  "id": "p078",
+  "need": "intelligence",
+  "feeling": "liked",
+  "situation": "close",
+  "sources": [
+   "VVEL"
+  ],
+  "text": "I really enjoyed that conversation. I came away with new things to think about."
+ },
+ {
+  "id": "p079",
+  "need": "intelligence",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "I'll show you the evidence behind this so you can judge it yourself."
+ },
+ {
+  "id": "p080",
+  "need": "intelligence",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "If I'm wrong, I'd like you to tell me. I'd rather get it right."
+ },
+ {
+  "id": "p081",
+  "need": "intelligence",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'd value your expert take before I decide."
+ },
+ {
+  "id": "p082",
+  "need": "intelligence",
+  "feeling": "respected",
+  "situation": "opener",
+  "sources": [
+   "NM"
+  ],
+  "text": "You've studied this a lot, haven't you? I'd value your view."
+ },
+ {
+  "id": "p083",
+  "need": "intelligence",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'm not an expert, so please stop me if I get anything wrong."
+ },
+ {
+  "id": "p084",
+  "need": "intelligence",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "NM"
+  ],
+  "text": "Take me through it as if I'm new to it. I don't mind at all."
+ },
+ {
+  "id": "p085",
+  "need": "intelligence",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "The way you're reasoning this through is sound."
+ },
+ {
+  "id": "p086",
+  "need": "intelligence",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You've thought this through more than most people do."
+ },
+ {
+  "id": "p087",
+  "need": "intelligence",
+  "feeling": "included",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'd like you on this one. We need someone who understands the detail."
+ },
+ {
+  "id": "p088",
+  "need": "intelligence",
+  "feeling": "included",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "Would you read this over before it goes out? You'd catch what I'd miss."
+ },
+ {
+  "id": "p089",
+  "need": "intelligence",
+  "feeling": "important",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "Your view on the details will shape what we do."
+ },
+ {
+  "id": "p090",
+  "need": "intelligence",
+  "feeling": "important",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "That insight changed how I see this."
+ },
+ {
+  "id": "p091",
+  "need": "intelligence",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NG",
+   "NM"
+  ],
+  "text": "What do most people get wrong about this?"
+ },
+ {
+  "id": "p092",
+  "need": "intelligence",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NG",
+   "NM"
+  ],
+  "text": "What's the one thing about this you wish more people understood?"
+ },
+ {
+  "id": "p093",
+  "need": "intelligence",
+  "feeling": "control",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You know the subject best. How would you want to approach it?"
+ },
+ {
+  "id": "p094",
+  "need": "intelligence",
+  "feeling": "control",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'll leave the method to you."
+ },
+ {
+  "id": "p095",
+  "need": "intelligence",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "Good point. You've got more depth on this than I do. Can I add one thing I'm seeing?"
+ },
+ {
+  "id": "p096",
+  "need": "intelligence",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "Yes, and what if we also looked at the other side of it?"
+ },
+ {
+  "id": "p097",
+  "need": "pity",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "NM",
+   "VVEA"
+  ],
+  "text": "That sounds really hard. (Pause.) Tell me more about what happened."
+ },
+ {
+  "id": "p098",
+  "need": "pity",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'm sorry, that's a lot to have dealt with."
+ },
+ {
+  "id": "p099",
+  "need": "pity",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "I don't know how you've kept going through all of that."
+ },
+ {
+  "id": "p100",
+  "need": "pity",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "Most people can't see what you've been through. I'm glad you told me."
+ },
+ {
+  "id": "p101",
+  "need": "pity",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "VVEL"
+  ],
+  "text": "I'm glad you shared that with me."
+ },
+ {
+  "id": "p102",
+  "need": "pity",
+  "feeling": "liked",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "You've got real strength, and it comes through in how you talk."
+ },
+ {
+  "id": "p103",
+  "need": "pity",
+  "feeling": "trusted",
+  "situation": "opener",
+  "sources": [
+   "NG"
+  ],
+  "text": "I'm happy to listen, and I won't rush you."
+ },
+ {
+  "id": "p104",
+  "need": "pity",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "I'll be honest with you, and I'll be kind about it."
+ },
+ {
+  "id": "p105",
+  "need": "pity",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "What you've come through says a lot about you."
+ },
+ {
+  "id": "p106",
+  "need": "pity",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You've handled more than most people would have to."
+ },
+ {
+  "id": "p107",
+  "need": "pity",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "No need to rush. We can pause whenever you like."
+ },
+ {
+  "id": "p108",
+  "need": "pity",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "Is this okay to talk about right now? We can leave it if you'd rather."
+ },
+ {
+  "id": "p109",
+  "need": "pity",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You're not alone with this."
+ },
+ {
+  "id": "p110",
+  "need": "pity",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "It makes complete sense that you feel that way."
+ },
+ {
+  "id": "p111",
+  "need": "pity",
+  "feeling": "included",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'm here with you in this. What would help?"
+ },
+ {
+  "id": "p112",
+  "need": "pity",
+  "feeling": "included",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "Thank you for letting me in on that."
+ },
+ {
+  "id": "p113",
+  "need": "pity",
+  "feeling": "important",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "What you've been through matters, and so do you."
+ },
+ {
+  "id": "p114",
+  "need": "pity",
+  "feeling": "important",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "I wanted you to know I took what you said seriously."
+ },
+ {
+  "id": "p115",
+  "need": "pity",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You've learned a lot the hard way. What would you tell someone going through the same thing?"
+ },
+ {
+  "id": "p116",
+  "need": "pity",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You've got real insight from all of this."
+ },
+ {
+  "id": "p117",
+  "need": "pity",
+  "feeling": "control",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "What would you like to happen next? It's up to you."
+ },
+ {
+  "id": "p118",
+  "need": "pity",
+  "feeling": "control",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "We'll do whatever feels right to you."
+ },
+ {
+  "id": "p119",
+  "need": "pity",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "VGA"
+  ],
+  "text": "I'm sorry for the extra stress I caused. I'd like to put it right."
+ },
+ {
+  "id": "p120",
+  "need": "pity",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "NM"
+  ],
+  "text": "That sounds like it's been really hard. Can we find a way through it together?"
+ },
+ {
+  "id": "p121",
+  "need": "power",
+  "feeling": "heard",
+  "situation": "opener",
+  "sources": [
+   "NM"
+  ],
+  "text": "You've got the final say here. Tell me what you'd like to see."
+ },
+ {
+  "id": "p122",
+  "need": "power",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "Let me play it back: you want it done this way, by this date. Right?"
+ },
+ {
+  "id": "p123",
+  "need": "power",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You want to be the one steering this, and that makes sense."
+ },
+ {
+  "id": "p124",
+  "need": "power",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You like clear decisions and quick answers. I'll keep it tight."
+ },
+ {
+  "id": "p125",
+  "need": "power",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "VVEL"
+  ],
+  "text": "I like working with people who know what they want."
+ },
+ {
+  "id": "p126",
+  "need": "power",
+  "feeling": "liked",
+  "situation": "close",
+  "sources": [
+   "VVEL"
+  ],
+  "text": "I enjoyed how direct you were. It saved us both time."
+ },
+ {
+  "id": "p127",
+  "need": "power",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "I'll do what I said I'd do, and I'll tell you early if anything changes."
+ },
+ {
+  "id": "p128",
+  "need": "power",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "Straight answer: here's the risk, and here's how we cover it."
+ },
+ {
+  "id": "p129",
+  "need": "power",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "It's your decision, and I respect that."
+ },
+ {
+  "id": "p130",
+  "need": "power",
+  "feeling": "respected",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "You know the stakes better than anyone, so I'd like your call."
+ },
+ {
+  "id": "p131",
+  "need": "power",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "NM"
+  ],
+  "text": "Short version first. I'll add detail only if you want it."
+ },
+ {
+  "id": "p132",
+  "need": "power",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'll keep this brief and let you ask for whatever you need."
+ },
+ {
+  "id": "p133",
+  "need": "power",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "Nothing moves forward without your sign-off."
+ },
+ {
+  "id": "p134",
+  "need": "power",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You'll stay in control of this from start to finish."
+ },
+ {
+  "id": "p135",
+  "need": "power",
+  "feeling": "included",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'd like you leading this. What do you need from me?"
+ },
+ {
+  "id": "p136",
+  "need": "power",
+  "feeling": "included",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "Would you chair this, or would you rather I did?"
+ },
+ {
+  "id": "p137",
+  "need": "power",
+  "feeling": "important",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "This doesn't happen without your lead."
+ },
+ {
+  "id": "p138",
+  "need": "power",
+  "feeling": "important",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "Your direction is what makes this work."
+ },
+ {
+  "id": "p139",
+  "need": "power",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "That's a strategic call. How did you decide?"
+ },
+ {
+  "id": "p140",
+  "need": "power",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "What are you weighing up here? I'd like to understand your thinking."
+ },
+ {
+  "id": "p141",
+  "need": "power",
+  "feeling": "control",
+  "situation": "rapport",
+  "sources": [
+   "NP"
+  ],
+  "text": "Here are two options. Which would you like?"
+ },
+ {
+  "id": "p142",
+  "need": "power",
+  "feeling": "control",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "You choose. I'll make it happen."
+ },
+ {
+  "id": "p143",
+  "need": "power",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "You may be right, and I'd like to hear your reasoning first. Then I'll tell you what worries me."
+ },
+ {
+  "id": "p144",
+  "need": "power",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "Let's find a way for you to keep the lead and still cover this risk."
+ },
+ {
+  "id": "p145",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "VVEA",
+   "NG"
+  ],
+  "text": "What I'm hearing is ___. Did I get that right?"
+ },
+ {
+  "id": "p146",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "VVER",
+   "NG"
+  ],
+  "text": "It sounds like you're feeling ___. Is that close?"
+ },
+ {
+  "id": "p147",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "close",
+  "sources": [
+   "VVEL",
+   "NG"
+  ],
+  "text": "I really enjoyed our chat about ___."
+ },
+ {
+  "id": "p148",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "I'll be straight with you, and I'll say what I know and what I don't."
+ },
+ {
+  "id": "p149",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "VVEA"
+  ],
+  "text": "Thanks for explaining that. I can see how much thought has gone into it."
+ },
+ {
+  "id": "p150",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "Is this a comfortable thing to talk about? Happy to change the subject."
+ },
+ {
+  "id": "p151",
+  "need": "any",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "That makes sense, and you're not alone in feeling that."
+ },
+ {
+  "id": "p152",
+  "need": "any",
+  "feeling": "included",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "We're on the same side here. Let's work this out together."
+ },
+ {
+  "id": "p153",
+  "need": "any",
+  "feeling": "important",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "I wanted to say thank you. It made a real difference."
+ },
+ {
+  "id": "p154",
+  "need": "any",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "What's the one thing about this you'd tell someone new?"
+ },
+ {
+  "id": "p155",
+  "need": "any",
+  "feeling": "control",
+  "situation": "rapport",
+  "sources": [
+   "NP"
+  ],
+  "text": "Here are the options. What would you like to do?"
+ },
+ {
+  "id": "p156",
+  "need": "any",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "I think we both want ___. Can we start from there?"
+ },
+ {
+  "id": "p157",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "VVEC"
+  ],
+  "text": "Working on anything exciting lately?"
+ },
+ {
+  "id": "p158",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "VVEC"
+  ],
+  "text": "What was the highlight of your day so far?"
+ },
+ {
+  "id": "p159",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "VGS"
+  ],
+  "text": "What's the most exciting thing you've got planned for today?"
+ },
+ {
+  "id": "p160",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "VVEC"
+  ],
+  "text": "What's your story?"
+ },
+ {
+  "id": "p161",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "VVEC"
+  ],
+  "text": "How's the ___? Is it any good?"
+ },
+ {
+  "id": "p162",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "VVEC"
+  ],
+  "text": "I'm a bit nervous about ___. Have you done it before?"
+ },
+ {
+  "id": "p163",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "opener",
+  "sources": [
+   "VVEC"
+  ],
+  "text": "Has this been a busy time for you?"
+ },
+ {
+  "id": "p164",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "close",
+  "sources": [
+   "VVEC",
+   "NG"
+  ],
+  "text": "It's been lovely talking. Good luck with ___. I'm going to grab a coffee."
+ },
+ {
+  "id": "p165",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "rapport",
+  "sources": [
+   "VVEC"
+  ],
+  "text": "Who's someone who's inspired you?"
+ },
+ {
+  "id": "p166",
+  "need": "any",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "VGS"
+  ],
+  "text": "If you had to name the most important lesson from the last twelve months, what would it be?"
+ },
+ {
+  "id": "p167",
+  "need": "any",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "VGA"
+  ],
+  "text": "I'm sorry for ___. I know it caused ___. Here's what I'll do so it doesn't happen again."
+ },
+ {
+  "id": "p168",
+  "need": "any",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "VGA"
+  ],
+  "text": "I think I could have put that better. Can I try again?"
+ },
+ {
+  "id": "p169",
+  "need": "any",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "VGF"
+  ],
+  "text": "You did well on ___. There's one thing I'd change, and I'm saying it because I want you to succeed."
+ },
+ {
+  "id": "p170",
+  "need": "any",
+  "feeling": "control",
+  "situation": "close",
+  "sources": [
+   "NG"
+  ],
+  "text": "If you'd rather, we can come back to this another time."
+ },
+ {
+  "id": "p171",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "VVER"
+  ],
+  "text": "Before I answer: what's the most important part of this for you?"
+ },
+ {
+  "id": "p172",
+  "need": "any",
+  "feeling": "included",
+  "situation": "opener",
+  "sources": [
+   "VVEC"
+  ],
+  "text": "How do you know the host?"
+ },
+ {
+  "id": "p173",
+  "need": "any",
+  "feeling": "important",
+  "situation": "rapport",
+  "sources": [
+   "VVEL"
+  ],
+  "text": "I really enjoyed talking with you, and I wanted you to know it."
+ },
+ {
+  "id": "p174",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "close",
+  "sources": [
+   "NG"
+  ],
+  "text": "I'll message you tomorrow with the next step, as promised."
+ }
+]
