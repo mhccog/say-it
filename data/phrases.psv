@@ -352,3 +352,22 @@ any|understood|rapport|NS|Does this {feel/sound/look} right to you?|Match their 
 any|trusted|rapport|NS|Does that {feel/sound/look} like the right fit?|Match their words, then pause and let them answer.|adapted|||
 any|heard|rapport|NS|That {feels/sounds/looks} really important to you.|Slow down on "important".|adapted|||
 power|control|close|NS|How does that {feel/sound/look} to you?|Ask, then stop. Let them decide.|adapted|||
+# --- 28 Oct 2026 sources review: re-cites and softer claims (see "replaces" in the last field) ---
+any|heard|rapport|V26@0:17:51,V26@0:09:12,V24@1:16:24,V26@0:41:35|Last time you mentioned ___. How's that going?|A slow nod, look at them while they speak, and let them finish. Vanessa's rule of thumb: about 15-30 seconds a turn.|source-example/adapted|||p175
+any|heard|rapport|V26@0:17:51,V26@0:09:12,V24@1:16:24,V26@0:41:35|Tell me more about that.|A slow nod, look at them while they speak, and let them finish. Vanessa's rule of thumb: about 15-30 seconds a turn.|source-example/adapted|||p176
+approval|reassured|rapport|C24@0:41:43|You've done this well before, and you'll do it well again.|Calm, steady pace; warm face. Don't over-reassure.|adapted|||p200
+approval|reassured|rapport|C24@0:41:43|Nerves often just mean you care. You've got this.|Calm, steady pace; warm face. Don't over-reassure.|adapted|||p201
+pity|comfortable|rapport|V24@1:16:24|There's no rush. Take your time.|Slow nod, soft tone.|adapted|||p214
+any|liked|opener|V24@0:43:38,V24@1:20:22|I'm glad you came.|Warm greeting, open hands, a real smile.|adapted|Works well with someone shy or nervous||p239
+any|understood|rapport|NG|Does this seem right to you?|Ask, then pause and let them answer.|adapted|||p342
+any|trusted|rapport|NG|Does that seem like the right fit for you?|Ask, then pause and let them answer.|adapted|||p343
+any|heard|rapport|NG|That's clearly important to you.|Slow down on "important".|adapted|||p344
+power|control|close|NG|What do you think of that?|Ask, then stop. Let them decide.|adapted|||p345
+any|comfortable|rapport|VG@1:44:21,V26@0:09:42|Hold on, I'll take that slow.|Go at their pace. Light questions can help someone settle, but don't shy away from going deeper: people often enjoy deeper questions more than they expect.|adapted|||p187
+any|comfortable|rapport|VG@1:44:21,V26@0:09:42|That's a great question; no rush.|Go at their pace. Light questions can help someone settle, but don't shy away from going deeper: people often enjoy deeper questions more than they expect.|adapted|||p188
+any|comfortable|rapport|VG@1:44:21,V26@0:09:42|Let me ask something easier first.|Go at their pace. Light questions can help someone settle, but don't shy away from going deeper: people often enjoy deeper questions more than they expect.|adapted|||p189
+any|comfortable|opener|V26@0:09:42,V26@0:32:26,VGQ@4:26|No pressure, I'll start. ___. Does that ever happen to you?|Give them time to think and let silences breathe. Start light if they seem nervous, then feel free to go a little deeper.|adapted|Works well with someone shy or nervous. Fill in: a light story.||p236
+any|comfortable|rapport|V26@0:09:42,V26@0:32:26,VGQ@4:26|Take your time.|Give them time to think and let silences breathe.|adapted|Works well with someone shy or nervous||p237
+any|respected|rapport|V26@1:44:43,VG@1:44:21|That's a big step forward. What's next for you?|Bring a bit of energy to meet theirs, subtly. Obvious copying can backfire.|adapted|Works well with an ambitious, driven person||p220
+any|trusted|rapport|V24@1:51:13,V24@0:56:46,V24@0:57:17|Honestly, I was nervous about this one.|If it fits, share a small, real imperfection. It can make you easier to relate to, though the research on this is mixed.|adapted|Only say this if it is true for you||p179
+any|trusted|rapport|V24@1:51:13,V24@0:56:46,V24@0:57:17|I'm still working on ___, but I'm getting better.|If it fits, share a small, real imperfection. It can make you easier to relate to, though the research on this is mixed.|adapted|Only say this if it is true for you. Fill in: something you are genuinely working on.||p180
