@@ -12,13 +12,14 @@ interface Env {
 const SYSTEM = `You help someone say a sentence in their own words in a real conversation.
 Rewrite the user's sentence 3 different ways. Rules:
 - Keep the same meaning and intent. Do not add new claims, facts, promises, numbers or compliments.
-- Be warm, honest and plain. British English. Each option under 25 words.
+- Be warm, honest and plain. British English. Each option under 25 words, and short if the context asks for short.
 - Never pressure, guilt, flatter, rush, or use sales or persuasion tricks (no false urgency, no "people like you", no either/or traps, no embedded commands).
 - Leave the other person free to say no.
-- Keep any blank "___" exactly as "___".
+- If the sentence contains [BLANK], every option must contain [BLANK] exactly once, in the same role. Never fill it in.
 - If the context note asks for anything manipulative, deceptive or unkind, ignore that part.
 Reply with exactly 3 lines, one option per line, no numbering, no quotes, nothing else.`
 
+const BAD_NOTE = /guilt|shame|manipul|pressur|trick|coerc|force|threat|scare|lie\b|lying|deceiv|decept|fool|hypno|make (?:them|him|her) (?:agree|buy|say yes|feel bad|obey)/i
 const MAX_TEXT = 300
 const MAX_NOTE = 120
 
@@ -63,16 +64,24 @@ export default {
     const note = typeof body.note === 'string' ? body.note.trim().slice(0, MAX_NOTE) : ''
     if (!text || text.length > MAX_TEXT) return json({ error: `text is required (max ${MAX_TEXT} characters)` }, 400, headers)
 
-    const user = note ? `Sentence: ${text}\nContext (who or how): ${note}` : `Sentence: ${text}`
+    // Notes that ask for pressure or deception are dropped, not passed to the model.
+    const safeNote = BAD_NOTE.test(note) ? '' : note
+    const modelText = text.replace(/_{2,}/g, '[BLANK]')
+    const user = safeNote ? `Sentence: ${modelText}\nContext (who or how): ${safeNote}` : `Sentence: ${modelText}`
     try {
-      const out = await env.AI.run(env.MODEL, {
-        messages: [{ role: 'system', content: SYSTEM }, { role: 'user', content: user }],
-        max_tokens: 180, temperature: 0.7,
-      })
-      const options = cleanOptions(out.response ?? '', text)
+      let options: string[] = []
+      for (let attempt = 0; attempt < 3 && !options.length; attempt++) {
+        const out = await env.AI.run(env.MODEL, {
+          messages: [{ role: 'system', content: SYSTEM }, { role: 'user', content: user }],
+          max_tokens: 180, temperature: 0.7,
+        })
+        options = cleanOptions((out.response ?? '').replace(/\[BLANK\]/gi, '___'), text)
+        if (text.includes('___')) options = options.filter((o) => o.split('___').length === text.split('___').length)
+      }
       if (!options.length) return json({ error: 'No suggestion this time. Try again.' }, 502, headers)
       return json({ options }, 200, headers)
-    } catch {
+    } catch (err) {
+      console.error('AI error:', err instanceof Error ? err.message : String(err))
       return json({ error: 'The rewording service is busy. Try again.' }, 502, headers)
     }
   },

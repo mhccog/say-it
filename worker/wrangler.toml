@@ -1,5 +1,5 @@
 # "Say it differently": a tiny Cloudflare Worker that rewords one phrase with Workers AI.
-# No AI provider key: the model runs on Cloudflare through the AI binding. Deploy: cd worker && npx wrangler deploy
+# No AI provider key: the model runs on Cloudflare through the AI binding. Deploy: cd worker && npx wrangler deploy (Node 22)
 name = "say-it-reword"
 main = "src/index.ts"
 compatibility_date = "2026-10-01"
@@ -16,4 +16,4 @@ simple = { limit = 20, period = 60 }
 
 [vars]
 ALLOWED_ORIGINS = "https://mhccog.github.io,http://localhost:5173,http://localhost:4173"
-MODEL = "@cf/meta/llama-3.1-8b-instruct"
+MODEL = "@cf/meta/llama-3.1-8b-instruct-fp8"
