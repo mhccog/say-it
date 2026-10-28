@@ -441,7 +441,8 @@
   "sources": [
    "NM"
   ],
-  "text": "That's a sharp point, and not many people spot it."
+  "text": "That's a sharp point, and not many people spot it.",
+  "supersededBy": "p318"
  },
  {
   "id": "p045",
@@ -552,7 +553,8 @@
   "sources": [
    "NM"
   ],
-  "text": "Plenty of people in your position started right where you are, and it worked for them."
+  "text": "Plenty of people in your position started right where you are, and it worked for them.",
+  "supersededBy": "p308"
  },
  {
   "id": "p056",
@@ -582,7 +584,8 @@
   "sources": [
    "NM"
   ],
-  "text": "People like you are what make a community like this work."
+  "text": "People like you are what make a community like this work.",
+  "supersededBy": "p310"
  },
  {
   "id": "p059",
@@ -612,7 +615,8 @@
   "sources": [
    "NM"
   ],
-  "text": "You wouldn't be the first to do it this way. Plenty of people like you have."
+  "text": "You wouldn't be the first to do it this way. Plenty of people like you have.",
+  "supersededBy": "p309"
  },
  {
   "id": "p062",
@@ -652,7 +656,8 @@
   "sources": [
    "NM"
   ],
-  "text": "The group would feel it if you weren't part of this."
+  "text": "The group would feel it if you weren't part of this.",
+  "supersededBy": "p305"
  },
  {
   "id": "p066",
@@ -662,7 +667,8 @@
   "sources": [
    "NM"
   ],
-  "text": "We'd miss you if you weren't in this with us."
+  "text": "We'd miss you if you weren't in this with us.",
+  "supersededBy": "p306"
  },
  {
   "id": "p067",
@@ -862,7 +868,8 @@
   "sources": [
    "NM"
   ],
-  "text": "You've thought this through more than most people do."
+  "text": "You've thought this through more than most people do.",
+  "supersededBy": "p319"
  },
  {
   "id": "p087",
@@ -995,7 +1002,8 @@
   "sources": [
    "NM"
   ],
-  "text": "I don't know how you've kept going through all of that."
+  "text": "I don't know how you've kept going through all of that.",
+  "supersededBy": "p314"
  },
  {
   "id": "p100",
@@ -1005,7 +1013,8 @@
   "sources": [
    "NM"
   ],
-  "text": "Most people can't see what you've been through. I'm glad you told me."
+  "text": "Most people can't see what you've been through. I'm glad you told me.",
+  "supersededBy": "p315"
  },
  {
   "id": "p101",
@@ -1335,7 +1344,8 @@
   "sources": [
    "NM"
   ],
-  "text": "Nothing moves forward without your sign-off."
+  "text": "Nothing moves forward without your sign-off.",
+  "supersededBy": "p321"
  },
  {
   "id": "p134",
@@ -1345,7 +1355,8 @@
   "sources": [
    "NM"
   ],
-  "text": "You'll stay in control of this from start to finish."
+  "text": "You'll stay in control of this from start to finish.",
+  "supersededBy": "p322"
  },
  {
   "id": "p135",
@@ -1415,7 +1426,8 @@
   "sources": [
    "NP"
   ],
-  "text": "Here are two options. Which would you like?"
+  "text": "Here are two options. Which would you like?",
+  "supersededBy": "p311"
  },
  {
   "id": "p142",
@@ -1763,7 +1775,7 @@
    "V24@1:17:25",
    "V26@0:41:35"
   ],
-  "text": "Last time you mentioned [X]. How's that going?",
+  "text": "Last time you mentioned ___. How's that going?",
   "delivery": "Slow triple nod, head tilt, look at them while they speak, let them finish. Keep your turns to 15-30 seconds.",
   "basis": "source-example/adapted"
  },
@@ -1840,10 +1852,10 @@
    "V24@0:56:46",
    "V24@0:57:17"
   ],
-  "text": "I'm still working on [small flaw], but I'm getting better.",
+  "text": "I'm still working on ___, but I'm getting better.",
   "delivery": "Share a small, real imperfection early. Keep warmth and confidence balanced; too much of either makes people suspicious.",
   "basis": "adapted",
-  "ctx": "Only say this if it is true for you"
+  "ctx": "Only say this if it is true for you Fill in: small flaw."
  },
  {
   "id": "p181",
@@ -1916,9 +1928,10 @@
    "VVC@1:23",
    "VVC@2:04"
   ],
-  "text": "I wanted to say I appreciated how you handled [specific thing].",
+  "text": "I wanted to say I appreciated how you handled ___.",
   "delivery": "Be specific and about something real. Avoid the obvious thing (e.g. someone's height). Praise something they value or worked hard on.",
-  "basis": "adapted"
+  "basis": "adapted",
+  "ctx": "Fill in: specific thing."
  },
  {
   "id": "p186",
@@ -1929,9 +1942,10 @@
    "VVC@1:23",
    "VVC@2:04"
   ],
-  "text": "The way you [specific action] made a real difference to me.",
+  "text": "The way you ___ made a real difference to me.",
   "delivery": "Be specific and about something real. Avoid the obvious thing (e.g. someone's height). Praise something they value or worked hard on.",
-  "basis": "adapted"
+  "basis": "adapted",
+  "ctx": "Fill in: specific action."
  },
  {
   "id": "p187",
@@ -2010,9 +2024,10 @@
    "V26@1:55:54",
    "V26@1:57:25"
   ],
-  "text": "It was lovely talking to you. I hope [their future plan] goes well. I'm going to grab a coffee.",
+  "text": "It was lovely talking to you. I hope ___ goes well. I'm going to grab a coffee.",
   "delivery": "Use a 'closing' tone, step back slightly, angle towards the exit. Be clear. Lingering awkwardly is worse than a short, warm exit.",
-  "basis": "source-example"
+  "basis": "source-example",
+  "ctx": "Fill in: their future plan."
  },
  {
   "id": "p193",
@@ -2104,9 +2119,10 @@
    "NCI",
    "C24@0:41:43"
   ],
-  "text": "I noticed how much effort you put into [specific thing].",
+  "text": "I noticed how much effort you put into ___.",
   "delivery": "Direct and specific. Then pause so it can land.",
-  "basis": "nci"
+  "basis": "nci",
+  "ctx": "Fill in: specific thing."
  },
  {
   "id": "p200",
@@ -2259,7 +2275,8 @@
   ],
   "text": "I don't know how you keep it together.",
   "delivery": "Slow down, lower volume a little, pause after the line. Don't try to fix it or minimise it.",
-  "basis": "source-example"
+  "basis": "source-example",
+  "supersededBy": "p316"
  },
  {
   "id": "p212",
@@ -2285,7 +2302,8 @@
   ],
   "text": "Most people have no idea what you've been through to get here.",
   "delivery": "Sincere and unhurried. Avoid 'it's not that bad'. Chase says that is the instinct to resist.",
-  "basis": "source-example"
+  "basis": "source-example",
+  "supersededBy": "p317"
  },
  {
   "id": "p214",
@@ -2586,10 +2604,10 @@
    "V26@0:32:26",
    "VGQ@4:26"
   ],
-  "text": "No pressure, I'll start. [light story]. Does that ever happen to you?",
+  "text": "No pressure, I'll start. ___. Does that ever happen to you?",
   "delivery": "Keep questions light and not too deep, give processing time, and let silences breathe.",
   "basis": "adapted",
-  "ctx": "Works well with someone shy or nervous"
+  "ctx": "Works well with someone shy or nervous Fill in: light story."
  },
  {
   "id": "p237",
@@ -2678,7 +2696,7 @@
   "sources": [
    "VTK2"
   ],
-  "text": "Your take on [X] has stuck with me. I'll let you get back to your evening, and let's pick this up soon.",
+  "text": "Your take on ___ has stuck with me. I'll let you get back to your evening, and let's pick this up soon.",
   "delivery": "Name one specific thing they said, then exit cleanly without lingering.",
   "basis": "social"
  },
@@ -2690,9 +2708,10 @@
   "sources": [
    "VX2"
   ],
-  "text": "What's one thing about [topic] that surprised you?",
+  "text": "What's one thing about ___ that surprised you?",
   "delivery": "Aim to learn one new thing about the person, then stay curious a little longer than feels natural.",
-  "basis": "social"
+  "basis": "social",
+  "ctx": "Fill in: topic."
  },
  {
   "id": "p245",
@@ -2726,9 +2745,10 @@
   "sources": [
    "VX3"
   ],
-  "text": "I've been meaning to say thank you for [specific thing]. It genuinely helped.",
+  "text": "I've been meaning to say thank you for ___. It genuinely helped.",
   "delivery": "Send or say the thank-you you have been putting off. Be specific, and say it plainly.",
-  "basis": "social"
+  "basis": "social",
+  "ctx": "Fill in: specific thing."
  },
  {
   "id": "p248",
@@ -2738,9 +2758,10 @@
   "sources": [
    "VX3"
   ],
-  "text": "What you did with [specific thing] mattered to me more than you probably know.",
+  "text": "What you did with ___ mattered to me more than you probably know.",
   "delivery": "Calm and sincere. A small pause after the key word.",
-  "basis": "social"
+  "basis": "social",
+  "ctx": "Fill in: specific thing."
  },
  {
   "id": "p249",
@@ -2836,9 +2857,10 @@
   "sources": [
    "GIG1"
   ],
-  "text": "Yes, and that links to what [name] said earlier.",
+  "text": "Yes, and that links to what ___ said earlier.",
   "delivery": "Bring others into the thread by name. Turn your body slightly towards the person you are mentioning.",
-  "basis": "social"
+  "basis": "social",
+  "ctx": "Fill in: name."
  },
  {
   "id": "p257",
@@ -2848,7 +2870,7 @@
   "sources": [
    "GIG1"
   ],
-  "text": "The one thing I'm taking from that is [X]. Have I got it right?",
+  "text": "The one thing I'm taking from that is ___. Have I got it right?",
   "delivery": "Distil what you heard into one line, then check. Falling tone on the statement, rising on the check.",
   "basis": "social"
  },
@@ -2860,10 +2882,11 @@
   "sources": [
    "GTK2"
   ],
-  "text": "I noticed your face change when you mentioned [X]. What's behind that?",
+  "text": "I noticed your face change when you mentioned ___. What's behind that?",
   "delivery": "Listen for threads: a flash of emotion, folded arms, a shift in tone. Follow gently, and let it go if they don't want to go there.",
   "basis": "social",
-  "ctx": "They can say no. Don't push."
+  "ctx": "They can say no. Don't push.",
+  "supersededBy": "p312"
  },
  {
   "id": "p259",
@@ -2876,7 +2899,8 @@
   "text": "Your tone shifted just then. Is there more to that?",
   "delivery": "Soft voice, plenty of pause. This opens a door but never pulls them through it.",
   "basis": "social",
-  "ctx": "They can say no. Don't push."
+  "ctx": "They can say no. Don't push.",
+  "supersededBy": "p313"
  },
  {
   "id": "p260",
@@ -2898,9 +2922,10 @@
   "sources": [
    "GTK3"
   ],
-  "text": "We were just debating [fun question]. Which side are you on?",
+  "text": "We were just debating ___. Which side are you on?",
   "delivery": "Light and playful. Make space with an open gesture so they can step in.",
-  "basis": "social"
+  "basis": "social",
+  "ctx": "Fill in: fun question."
  },
  {
   "id": "p262",
@@ -2996,7 +3021,7 @@
    "GTK1",
    "GIG1"
   ],
-  "text": "The one thing I'd do first is [X]. Does that work for you?",
+  "text": "The one thing I'd do first is ___. Does that work for you?",
   "delivery": "Keep your statement short with a falling pitch, then hand the decision back to them.",
   "basis": "social"
  },
@@ -3048,7 +3073,8 @@
   ],
   "text": "You're one of us here, you know. We'd notice if you weren't around.",
   "delivery": "Use \"we\" and \"us\" language and say it with a smile.",
-  "basis": "social"
+  "basis": "social",
+  "supersededBy": "p307"
  },
  {
   "id": "p274",
@@ -3062,7 +3088,8 @@
   "text": "I'd trust your read on this more than most. What would you do?",
   "delivery": "Only say this if you mean it. Ask, then listen to the full answer.",
   "basis": "social",
-  "ctx": "Only say this if it is true for you"
+  "ctx": "Only say this if it is true for you",
+  "supersededBy": "p320"
  },
  {
   "id": "p275",
@@ -3309,7 +3336,8 @@
   "text": "Didn't see that coming, did you? What's going through your mind?",
   "delivery": "Surprise fades in seconds. Ask while it is fresh, and smile if it is good news.",
   "basis": "adapted",
-  "emotion": "surprise"
+  "emotion": "surprise",
+  "supersededBy": "p324"
  },
  {
   "id": "p294",
@@ -3387,7 +3415,8 @@
   "text": "I take your standards seriously. We'll do it your way.",
   "delivery": "Say it only if you will. Level voice, steady eye contact.",
   "basis": "adapted",
-  "emotion": "disgust"
+  "emotion": "disgust",
+  "supersededBy": "p323"
  },
  {
   "id": "p300",
@@ -3453,5 +3482,554 @@
   "delivery": "Say it only if it's true. Even pace, no flattery.",
   "basis": "adapted",
   "emotion": "contempt"
+ },
+ {
+  "id": "p305",
+  "need": "acceptance",
+  "feeling": "important",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "It's good having you part of this. Your voice adds something.",
+  "replaces": [
+   "p065"
+  ]
+ },
+ {
+  "id": "p306",
+  "need": "acceptance",
+  "feeling": "important",
+  "situation": "close",
+  "sources": [
+   "NM"
+  ],
+  "text": "I've really enjoyed doing this with you. Thank you for being part of it.",
+  "replaces": [
+   "p066"
+  ]
+ },
+ {
+  "id": "p307",
+  "need": "acceptance",
+  "feeling": "included",
+  "situation": "rapport",
+  "sources": [
+   "GTK3",
+   "GIG1"
+  ],
+  "text": "It's good having you here. Come along next time if you fancy it.",
+  "delivery": "Use \"we\" and \"us\" language and say it with a smile.",
+  "basis": "social",
+  "ctx": "No pressure either way.",
+  "replaces": [
+   "p273"
+  ]
+ },
+ {
+  "id": "p308",
+  "need": "acceptance",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "Lots of people start right where you are. If it helps, I can share what worked for people I know.",
+  "ctx": "Only say this if it is true.",
+  "replaces": [
+   "p055"
+  ]
+ },
+ {
+  "id": "p309",
+  "need": "acceptance",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "There's more than one right way to do this, and yours makes sense.",
+  "replaces": [
+   "p061"
+  ]
+ },
+ {
+  "id": "p310",
+  "need": "acceptance",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You clearly put a lot into this group. I can see why people value you.",
+  "ctx": "Only if it is true. Be specific about what you have seen.",
+  "replaces": [
+   "p058"
+  ]
+ },
+ {
+  "id": "p311",
+  "need": "power",
+  "feeling": "control",
+  "situation": "rapport",
+  "sources": [
+   "NP"
+  ],
+  "text": "Here are two options, or we can do neither. What would you like?",
+  "ctx": "Saying no to both is a real option.",
+  "replaces": [
+   "p141"
+  ]
+ },
+ {
+  "id": "p312",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "GTK2"
+  ],
+  "text": "You mentioned ___ there. Is there more to that?",
+  "delivery": "Listen for threads: a flash of emotion, a shift in tone. Follow gently, and let it go if they don't want to go there.",
+  "basis": "social",
+  "ctx": "They can say no. Don't push.",
+  "replaces": [
+   "p258"
+  ]
+ },
+ {
+  "id": "p313",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "GTK2"
+  ],
+  "text": "Is there more you'd like to say about that? No pressure.",
+  "delivery": "Soft voice, plenty of pause. This opens a door but never pulls them through it.",
+  "basis": "social",
+  "ctx": "They can say no. Don't push.",
+  "replaces": [
+   "p259"
+  ]
+ },
+ {
+  "id": "p314",
+  "need": "pity",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "That's a lot to have carried. What's helped you most so far?",
+  "delivery": "Acknowledge first and pause, then gently move the conversation on.",
+  "replaces": [
+   "p099"
+  ]
+ },
+ {
+  "id": "p315",
+  "need": "pity",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "Thank you for telling me. That sounds hard. What would make the next bit easier?",
+  "delivery": "Acknowledge first and pause, then gently move the conversation on.",
+  "replaces": [
+   "p100"
+  ]
+ },
+ {
+  "id": "p316",
+  "need": "pity",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "CS@0:00:50",
+   "C24@0:42:48",
+   "VG@0:48:44"
+  ],
+  "text": "That sounds really heavy. How are you doing with it now?",
+  "delivery": "Slow down, lower volume a little, pause after the first line. Don't minimise it, then gently move on.",
+  "basis": "source-example/adapted",
+  "replaces": [
+   "p211"
+  ]
+ },
+ {
+  "id": "p317",
+  "need": "pity",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "CS@0:00:50"
+  ],
+  "text": "You've come through a lot to get here, and it shows in how you handle things.",
+  "delivery": "Sincere and unhurried. Avoid 'it's not that bad'. Then let the conversation move on.",
+  "basis": "source-example/adapted",
+  "replaces": [
+   "p213"
+  ]
+ },
+ {
+  "id": "p318",
+  "need": "approval",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "That's a sharp point. What made you think of it?",
+  "replaces": [
+   "p044"
+  ]
+ },
+ {
+  "id": "p319",
+  "need": "intelligence",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You've clearly thought this through. Your reasoning holds up.",
+  "replaces": [
+   "p086"
+  ]
+ },
+ {
+  "id": "p320",
+  "need": "intelligence",
+  "feeling": "smart",
+  "situation": "rapport",
+  "sources": [
+   "VTK1",
+   "VX2"
+  ],
+  "text": "I'd value your read on this. What would you do?",
+  "delivery": "Only say this if you mean it. Ask, then listen to the full answer.",
+  "basis": "social",
+  "replaces": [
+   "p274"
+  ]
+ },
+ {
+  "id": "p321",
+  "need": "power",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "You'll see it before anything is final, and I'll flag anything that needs your call.",
+  "ctx": "Only promise what you can deliver.",
+  "replaces": [
+   "p133"
+  ]
+ },
+ {
+  "id": "p322",
+  "need": "power",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "NM"
+  ],
+  "text": "I'll keep you updated at each step, so nothing comes as a surprise.",
+  "ctx": "Only promise what you can deliver.",
+  "replaces": [
+   "p134"
+  ]
+ },
+ {
+  "id": "p323",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "EK"
+  ],
+  "text": "I take your standards seriously. Tell me what \"right\" looks like for you.",
+  "delivery": "Level voice, steady eye contact.",
+  "basis": "adapted",
+  "emotion": "disgust",
+  "replaces": [
+   "p299"
+  ]
+ },
+ {
+  "id": "p324",
+  "need": "any",
+  "feeling": "curious",
+  "situation": "opener",
+  "sources": [
+   "EK"
+  ],
+  "text": "That's a surprise! What's going through your mind?",
+  "delivery": "Surprise fades in seconds. Ask while it is fresh, and smile if it is good news.",
+  "basis": "adapted",
+  "emotion": "surprise",
+  "replaces": [
+   "p293"
+  ]
+ },
+ {
+  "id": "p325",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "What was that like?",
+  "delivery": "Ask, then stop. Let them take their time.",
+  "basis": "source-example",
+  "ctx": "A follow-up question. Follow-ups raise liking."
+ },
+ {
+  "id": "p326",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "How did that happen?",
+  "delivery": "Ask, then stop. Let them take their time.",
+  "basis": "source-example",
+  "ctx": "A follow-up question."
+ },
+ {
+  "id": "p327",
+  "need": "any",
+  "feeling": "curious",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "Why that one?",
+  "delivery": "Light and curious, not testing.",
+  "basis": "source-example",
+  "ctx": "A follow-up question."
+ },
+ {
+  "id": "p328",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "NG"
+  ],
+  "text": "Is your family from around here?",
+  "basis": "source-example/adapted",
+  "ctx": "FORD topic: Family. Skip it if they seem private."
+ },
+ {
+  "id": "p329",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "NG"
+  ],
+  "text": "What are you working on at the moment?",
+  "basis": "source-example/adapted",
+  "ctx": "FORD topic: Occupation."
+ },
+ {
+  "id": "p330",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "NG"
+  ],
+  "text": "What do you do to switch off?",
+  "basis": "source-example/adapted",
+  "ctx": "FORD topic: Recreation."
+ },
+ {
+  "id": "p331",
+  "need": "any",
+  "feeling": "curious",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "If you had a free year, what would you do with it?",
+  "basis": "source-example/adapted",
+  "ctx": "FORD topic: Dreams."
+ },
+ {
+  "id": "p332",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "NG"
+  ],
+  "text": "What do you do in your free time?",
+  "delivery": "Ask it warmly, then follow the thread they give you.",
+  "basis": "source-example",
+  "ctx": "Vinh's favourite question."
+ },
+ {
+  "id": "p333",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "Are you upset? I might have that wrong.",
+  "delivery": "Name the feeling gently and let them correct you.",
+  "basis": "source-example/adapted"
+ },
+ {
+  "id": "p334",
+  "need": "any",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "Do we both want the same thing here?",
+  "delivery": "Calm, curious tone. Then pause.",
+  "basis": "source-example"
+ },
+ {
+  "id": "p335",
+  "need": "any",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "It's completely fine to change your mind. We both know more now than we did.",
+  "basis": "adapted",
+  "ctx": "A dignified way to back down (a \"golden bridge\")."
+ },
+ {
+  "id": "p336",
+  "need": "any",
+  "feeling": "reconciled",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "You made a fair call with what you knew then. Let's look at it fresh.",
+  "basis": "adapted",
+  "ctx": "A dignified way to back down."
+ },
+ {
+  "id": "p337",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "I can't do that, but here's what I can do: ___.",
+  "basis": "adapted",
+  "ctx": "When you say no, offer something else."
+ },
+ {
+  "id": "p338",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "Let's both sleep on it. There's no need to decide today.",
+  "basis": "adapted",
+  "ctx": "A dignified way to pause."
+ },
+ {
+  "id": "p339",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "disagree",
+  "sources": [
+   "NG"
+  ],
+  "text": "Thanks, I'll come to that in a moment.",
+  "delivery": "Warm, not sharp. Keep going, then come back to them.",
+  "basis": "source-example",
+  "ctx": "If someone cuts in."
+ },
+ {
+  "id": "p340",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "Give me five minutes to share the whole idea, then I'd love your input.",
+  "basis": "source-example"
+ },
+ {
+  "id": "p341",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "NG"
+  ],
+  "text": "Enough about me. What would make this useful for you?",
+  "delivery": "Nervous? Breathe out slowly, name it to yourself (\"that's nerves\"), then think about them, not you.",
+  "basis": "adapted",
+  "ctx": "Vinh: nerves fade when you think about the other person."
+ },
+ {
+  "id": "p342",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NS"
+  ],
+  "text": "Does this {feel/sound/look} right to you?",
+  "delivery": "Match their words: \"feel\" if they talk in feelings, \"sound\" if they talk in sounds, \"look\" if they talk in pictures.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p343",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NS"
+  ],
+  "text": "Does that {feel/sound/look} like the right fit?",
+  "delivery": "Match their words, then pause and let them answer.",
+  "basis": "adapted"
+ },
+ {
+  "id": "p344",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "NS"
+  ],
+  "text": "That {feels/sounds/looks} really important to you.",
+  "delivery": "Slow down on \"important\".",
+  "basis": "adapted"
+ },
+ {
+  "id": "p345",
+  "need": "power",
+  "feeling": "control",
+  "situation": "close",
+  "sources": [
+   "NS"
+  ],
+  "text": "How does that {feel/sound/look} to you?",
+  "delivery": "Ask, then stop. Let them decide.",
+  "basis": "adapted"
  }
 ]

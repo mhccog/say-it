@@ -308,3 +308,47 @@ any|respected|disagree|EK|I get the sense you're not convinced. What would you n
 any|trusted|rapport|EK|Fair challenge. Let me show you rather than tell you.|Calm and unhurried. Then follow through.|adapted||contempt
 any|respected|disagree|EK|I'd value your honest view, even if it's blunt.|Mean it, and listen to the whole answer.|adapted||contempt
 any|important|rapport|EK|Your standards are high, and I'd like to meet them.|Say it only if it's true. Even pace, no flattery.|adapted||contempt
+# --- 28 Oct 2026 audit fixes ---
+# Optional 10th field "replaces": old IDs (comma-separated) that this row supersedes. Superseded rows stay in the file (IDs never change) but the app hides them.
+# Word swap: {feel/sound/look} picks one word to match how the person talks (Kinesthetic / Auditory / Visual). Blanks to fill in are written ___.
+acceptance|important|rapport|NM|It's good having you part of this. Your voice adds something.|||||p065
+acceptance|important|close|NM|I've really enjoyed doing this with you. Thank you for being part of it.|||||p066
+acceptance|included|rapport|GTK3,GIG1|It's good having you here. Come along next time if you fancy it.|Use "we" and "us" language and say it with a smile.|social|No pressure either way.||p273
+acceptance|trusted|rapport|NM|Lots of people start right where you are. If it helps, I can share what worked for people I know.|||Only say this if it is true.||p055
+acceptance|reassured|rapport|NM|There's more than one right way to do this, and yours makes sense.|||||p061
+acceptance|respected|rapport|NM|You clearly put a lot into this group. I can see why people value you.|||Only if it is true. Be specific about what you have seen.||p058
+power|control|rapport|NP|Here are two options, or we can do neither. What would you like?|||Saying no to both is a real option.||p141
+any|understood|rapport|GTK2|You mentioned ___ there. Is there more to that?|Listen for threads: a flash of emotion, a shift in tone. Follow gently, and let it go if they don't want to go there.|social|They can say no. Don't push.||p258
+any|understood|rapport|GTK2|Is there more you'd like to say about that? No pressure.|Soft voice, plenty of pause. This opens a door but never pulls them through it.|social|They can say no. Don't push.||p259
+pity|understood|rapport|NM|That's a lot to have carried. What's helped you most so far?|Acknowledge first and pause, then gently move the conversation on.||||p099
+pity|understood|rapport|NM|Thank you for telling me. That sounds hard. What would make the next bit easier?|Acknowledge first and pause, then gently move the conversation on.||||p100
+pity|heard|rapport|CS@0:00:50,C24@0:42:48,VG@0:48:44|That sounds really heavy. How are you doing with it now?|Slow down, lower volume a little, pause after the first line. Don't minimise it, then gently move on.|source-example/adapted|||p211
+pity|respected|rapport|CS@0:00:50|You've come through a lot to get here, and it shows in how you handle things.|Sincere and unhurried. Avoid 'it's not that bad'. Then let the conversation move on.|source-example/adapted|||p213
+approval|smart|rapport|NM|That's a sharp point. What made you think of it?|||||p044
+intelligence|reassured|rapport|NM|You've clearly thought this through. Your reasoning holds up.|||||p086
+intelligence|smart|rapport|VTK1,VX2|I'd value your read on this. What would you do?|Only say this if you mean it. Ask, then listen to the full answer.|social|||p274
+power|reassured|rapport|NM|You'll see it before anything is final, and I'll flag anything that needs your call.|||Only promise what you can deliver.||p133
+power|reassured|rapport|NM|I'll keep you updated at each step, so nothing comes as a surprise.|||Only promise what you can deliver.||p134
+any|trusted|rapport|EK|I take your standards seriously. Tell me what "right" looks like for you.|Level voice, steady eye contact.|adapted||disgust|p299
+any|curious|opener|EK|That's a surprise! What's going through your mind?|Surprise fades in seconds. Ask while it is fresh, and smile if it is good news.|adapted||surprise|p293
+any|heard|rapport|NG|What was that like?|Ask, then stop. Let them take their time.|source-example|A follow-up question. Follow-ups raise liking.||
+any|heard|rapport|NG|How did that happen?|Ask, then stop. Let them take their time.|source-example|A follow-up question.||
+any|curious|rapport|NG|Why that one?|Light and curious, not testing.|source-example|A follow-up question.||
+any|liked|opener|NG|Is your family from around here?||source-example/adapted|FORD topic: Family. Skip it if they seem private.||
+any|liked|opener|NG|What are you working on at the moment?||source-example/adapted|FORD topic: Occupation.||
+any|liked|opener|NG|What do you do to switch off?||source-example/adapted|FORD topic: Recreation.||
+any|curious|rapport|NG|If you had a free year, what would you do with it?||source-example/adapted|FORD topic: Dreams.||
+any|liked|opener|NG|What do you do in your free time?|Ask it warmly, then follow the thread they give you.|source-example|Vinh's favourite question.||
+any|understood|rapport|NG|Are you upset? I might have that wrong.|Name the feeling gently and let them correct you.|source-example/adapted|||
+any|reconciled|disagree|NG|Do we both want the same thing here?|Calm, curious tone. Then pause.|source-example|||
+any|reconciled|disagree|NG|It's completely fine to change your mind. We both know more now than we did.||adapted|A dignified way to back down (a "golden bridge").||
+any|reconciled|disagree|NG|You made a fair call with what you knew then. Let's look at it fresh.||adapted|A dignified way to back down.||
+any|respected|disagree|NG|I can't do that, but here's what I can do: ___.||adapted|When you say no, offer something else.||
+any|comfortable|disagree|NG|Let's both sleep on it. There's no need to decide today.||adapted|A dignified way to pause.||
+any|respected|disagree|NG|Thanks, I'll come to that in a moment.|Warm, not sharp. Keep going, then come back to them.|source-example|If someone cuts in.||
+any|respected|rapport|NG|Give me five minutes to share the whole idea, then I'd love your input.||source-example|||
+any|comfortable|opener|NG|Enough about me. What would make this useful for you?|Nervous? Breathe out slowly, name it to yourself ("that's nerves"), then think about them, not you.|adapted|Vinh: nerves fade when you think about the other person.||
+any|understood|rapport|NS|Does this {feel/sound/look} right to you?|Match their words: "feel" if they talk in feelings, "sound" if they talk in sounds, "look" if they talk in pictures.|adapted|||
+any|trusted|rapport|NS|Does that {feel/sound/look} like the right fit?|Match their words, then pause and let them answer.|adapted|||
+any|heard|rapport|NS|That {feels/sounds/looks} really important to you.|Slow down on "important".|adapted|||
+power|control|close|NS|How does that {feel/sound/look} to you?|Ask, then stop. Let them decide.|adapted|||

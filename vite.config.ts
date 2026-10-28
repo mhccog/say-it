@@ -18,9 +18,9 @@ export default defineConfig({
       manifest: {
         name: 'Say it',
         short_name: 'Say it',
-        description: 'Pick who they are and how you want them to feel, then get words to use.',
-        theme_color: '#f7f4ee',
-        background_color: '#f7f4ee',
+        description: 'Listen for what they need, pick how you want them to feel, then get kind, honest words to use.',
+        theme_color: '#f8f4ee',
+        background_color: '#f8f4ee',
         display: 'standalone',
         orientation: 'portrait',
         start_url: base,
