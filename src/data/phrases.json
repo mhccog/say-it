@@ -1777,7 +1777,8 @@
   ],
   "text": "Last time you mentioned ___. How's that going?",
   "delivery": "Slow triple nod, head tilt, look at them while they speak, let them finish. Keep your turns to 15-30 seconds.",
-  "basis": "source-example/adapted"
+  "basis": "source-example/adapted",
+  "supersededBy": "p346"
  },
  {
   "id": "p176",
@@ -1793,7 +1794,8 @@
   ],
   "text": "Tell me more about that.",
   "delivery": "Slow triple nod, head tilt, look at them while they speak, let them finish. Keep your turns to 15-30 seconds.",
-  "basis": "source-example/adapted"
+  "basis": "source-example/adapted",
+  "supersededBy": "p347"
  },
  {
   "id": "p177",
@@ -1840,7 +1842,8 @@
   "text": "Honestly, I was nervous about this one.",
   "delivery": "Share a small, real imperfection early. Keep warmth and confidence balanced; too much of either makes people suspicious.",
   "basis": "adapted",
-  "ctx": "Only say this if it is true for you"
+  "ctx": "Only say this if it is true for you",
+  "supersededBy": "p362"
  },
  {
   "id": "p180",
@@ -1855,7 +1858,8 @@
   "text": "I'm still working on ___, but I'm getting better.",
   "delivery": "Share a small, real imperfection early. Keep warmth and confidence balanced; too much of either makes people suspicious.",
   "basis": "adapted",
-  "ctx": "Only say this if it is true for you Fill in: small flaw."
+  "ctx": "Only say this if it is true for you Fill in: small flaw.",
+  "supersededBy": "p363"
  },
  {
   "id": "p181",
@@ -1958,7 +1962,8 @@
   ],
   "text": "Hold on, I'll take that slow.",
   "delivery": "Match their pace and volume first, then gently lead. Keep early questions light, not too deep.",
-  "basis": "adapted"
+  "basis": "adapted",
+  "supersededBy": "p356"
  },
  {
   "id": "p188",
@@ -1971,7 +1976,8 @@
   ],
   "text": "That's a great question; no rush.",
   "delivery": "Match their pace and volume first, then gently lead. Keep early questions light, not too deep.",
-  "basis": "adapted"
+  "basis": "adapted",
+  "supersededBy": "p357"
  },
  {
   "id": "p189",
@@ -1984,7 +1990,8 @@
   ],
   "text": "Let me ask something easier first.",
   "delivery": "Match their pace and volume first, then gently lead. Keep early questions light, not too deep.",
-  "basis": "adapted"
+  "basis": "adapted",
+  "supersededBy": "p358"
  },
  {
   "id": "p190",
@@ -2135,7 +2142,8 @@
   ],
   "text": "You've done this well before, and you'll do it well again.",
   "delivery": "Calm, steady pace; warm face. Don't over-reassure.",
-  "basis": "adapted"
+  "basis": "adapted",
+  "supersededBy": "p348"
  },
  {
   "id": "p201",
@@ -2148,7 +2156,8 @@
   ],
   "text": "Nerves usually mean you care. You've got this.",
   "delivery": "Calm, steady pace; warm face. Don't over-reassure.",
-  "basis": "adapted"
+  "basis": "adapted",
+  "supersededBy": "p349"
  },
  {
   "id": "p202",
@@ -2316,7 +2325,8 @@
   ],
   "text": "There's no rush. Take your time.",
   "delivery": "Head tilt, slow nod, soft tone.",
-  "basis": "adapted"
+  "basis": "adapted",
+  "supersededBy": "p350"
  },
  {
   "id": "p215",
@@ -2393,7 +2403,8 @@
   "text": "That's a big step forward. What's next for you?",
   "delivery": "Match their energy; speak at a lively pace.",
   "basis": "adapted",
-  "ctx": "Works well with an ambitious, driven person"
+  "ctx": "Works well with an ambitious, driven person",
+  "supersededBy": "p361"
  },
  {
   "id": "p221",
@@ -2607,7 +2618,8 @@
   "text": "No pressure, I'll start. ___. Does that ever happen to you?",
   "delivery": "Keep questions light and not too deep, give processing time, and let silences breathe.",
   "basis": "adapted",
-  "ctx": "Works well with someone shy or nervous Fill in: light story."
+  "ctx": "Works well with someone shy or nervous Fill in: light story.",
+  "supersededBy": "p359"
  },
  {
   "id": "p237",
@@ -2622,7 +2634,8 @@
   "text": "Take your time.",
   "delivery": "Keep questions light and not too deep, give processing time, and let silences breathe.",
   "basis": "adapted",
-  "ctx": "Works well with someone shy or nervous"
+  "ctx": "Works well with someone shy or nervous",
+  "supersededBy": "p360"
  },
  {
   "id": "p238",
@@ -2650,7 +2663,8 @@
   "text": "I'm glad you came.",
   "delivery": "Open palm, warm greeting, sincere smile.",
   "basis": "adapted",
-  "ctx": "Works well with someone shy or nervous"
+  "ctx": "Works well with someone shy or nervous",
+  "supersededBy": "p351"
  },
  {
   "id": "p240",
@@ -3994,7 +4008,8 @@
   ],
   "text": "Does this {feel/sound/look} right to you?",
   "delivery": "Match their words: \"feel\" if they talk in feelings, \"sound\" if they talk in sounds, \"look\" if they talk in pictures.",
-  "basis": "adapted"
+  "basis": "adapted",
+  "supersededBy": "p352"
  },
  {
   "id": "p343",
@@ -4006,7 +4021,8 @@
   ],
   "text": "Does that {feel/sound/look} like the right fit?",
   "delivery": "Match their words, then pause and let them answer.",
-  "basis": "adapted"
+  "basis": "adapted",
+  "supersededBy": "p353"
  },
  {
   "id": "p344",
@@ -4018,7 +4034,8 @@
   ],
   "text": "That {feels/sounds/looks} really important to you.",
   "delivery": "Slow down on \"important\".",
-  "basis": "adapted"
+  "basis": "adapted",
+  "supersededBy": "p354"
  },
  {
   "id": "p345",
@@ -4030,6 +4047,302 @@
   ],
   "text": "How does that {feel/sound/look} to you?",
   "delivery": "Ask, then stop. Let them decide.",
-  "basis": "adapted"
+  "basis": "adapted",
+  "supersededBy": "p355"
+ },
+ {
+  "id": "p346",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "V26@0:17:51",
+   "V26@0:09:12",
+   "V24@1:16:24",
+   "V26@0:41:35"
+  ],
+  "text": "Last time you mentioned ___. How's that going?",
+  "delivery": "A slow nod, look at them while they speak, and let them finish. Vanessa's rule of thumb: about 15-30 seconds a turn.",
+  "basis": "source-example/adapted",
+  "replaces": [
+   "p175"
+  ]
+ },
+ {
+  "id": "p347",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "V26@0:17:51",
+   "V26@0:09:12",
+   "V24@1:16:24",
+   "V26@0:41:35"
+  ],
+  "text": "Tell me more about that.",
+  "delivery": "A slow nod, look at them while they speak, and let them finish. Vanessa's rule of thumb: about 15-30 seconds a turn.",
+  "basis": "source-example/adapted",
+  "replaces": [
+   "p176"
+  ]
+ },
+ {
+  "id": "p348",
+  "need": "approval",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "C24@0:41:43"
+  ],
+  "text": "You've done this well before, and you'll do it well again.",
+  "delivery": "Calm, steady pace; warm face. Don't over-reassure.",
+  "basis": "adapted",
+  "replaces": [
+   "p200"
+  ]
+ },
+ {
+  "id": "p349",
+  "need": "approval",
+  "feeling": "reassured",
+  "situation": "rapport",
+  "sources": [
+   "C24@0:41:43"
+  ],
+  "text": "Nerves often just mean you care. You've got this.",
+  "delivery": "Calm, steady pace; warm face. Don't over-reassure.",
+  "basis": "adapted",
+  "replaces": [
+   "p201"
+  ]
+ },
+ {
+  "id": "p350",
+  "need": "pity",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "V24@1:16:24"
+  ],
+  "text": "There's no rush. Take your time.",
+  "delivery": "Slow nod, soft tone.",
+  "basis": "adapted",
+  "replaces": [
+   "p214"
+  ]
+ },
+ {
+  "id": "p351",
+  "need": "any",
+  "feeling": "liked",
+  "situation": "opener",
+  "sources": [
+   "V24@0:43:38",
+   "V24@1:20:22"
+  ],
+  "text": "I'm glad you came.",
+  "delivery": "Warm greeting, open hands, a real smile.",
+  "basis": "adapted",
+  "ctx": "Works well with someone shy or nervous",
+  "replaces": [
+   "p239"
+  ]
+ },
+ {
+  "id": "p352",
+  "need": "any",
+  "feeling": "understood",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "Does this seem right to you?",
+  "delivery": "Ask, then pause and let them answer.",
+  "basis": "adapted",
+  "replaces": [
+   "p342"
+  ]
+ },
+ {
+  "id": "p353",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "Does that seem like the right fit for you?",
+  "delivery": "Ask, then pause and let them answer.",
+  "basis": "adapted",
+  "replaces": [
+   "p343"
+  ]
+ },
+ {
+  "id": "p354",
+  "need": "any",
+  "feeling": "heard",
+  "situation": "rapport",
+  "sources": [
+   "NG"
+  ],
+  "text": "That's clearly important to you.",
+  "delivery": "Slow down on \"important\".",
+  "basis": "adapted",
+  "replaces": [
+   "p344"
+  ]
+ },
+ {
+  "id": "p355",
+  "need": "power",
+  "feeling": "control",
+  "situation": "close",
+  "sources": [
+   "NG"
+  ],
+  "text": "What do you think of that?",
+  "delivery": "Ask, then stop. Let them decide.",
+  "basis": "adapted",
+  "replaces": [
+   "p345"
+  ]
+ },
+ {
+  "id": "p356",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "VG@1:44:21",
+   "V26@0:09:42"
+  ],
+  "text": "Hold on, I'll take that slow.",
+  "delivery": "Go at their pace. Light questions can help someone settle, but don't shy away from going deeper: people often enjoy deeper questions more than they expect.",
+  "basis": "adapted",
+  "replaces": [
+   "p187"
+  ]
+ },
+ {
+  "id": "p357",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "VG@1:44:21",
+   "V26@0:09:42"
+  ],
+  "text": "That's a great question; no rush.",
+  "delivery": "Go at their pace. Light questions can help someone settle, but don't shy away from going deeper: people often enjoy deeper questions more than they expect.",
+  "basis": "adapted",
+  "replaces": [
+   "p188"
+  ]
+ },
+ {
+  "id": "p358",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "VG@1:44:21",
+   "V26@0:09:42"
+  ],
+  "text": "Let me ask something easier first.",
+  "delivery": "Go at their pace. Light questions can help someone settle, but don't shy away from going deeper: people often enjoy deeper questions more than they expect.",
+  "basis": "adapted",
+  "replaces": [
+   "p189"
+  ]
+ },
+ {
+  "id": "p359",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "opener",
+  "sources": [
+   "V26@0:09:42",
+   "V26@0:32:26",
+   "VGQ@4:26"
+  ],
+  "text": "No pressure, I'll start. ___. Does that ever happen to you?",
+  "delivery": "Give them time to think and let silences breathe. Start light if they seem nervous, then feel free to go a little deeper.",
+  "basis": "adapted",
+  "ctx": "Works well with someone shy or nervous. Fill in: a light story.",
+  "replaces": [
+   "p236"
+  ]
+ },
+ {
+  "id": "p360",
+  "need": "any",
+  "feeling": "comfortable",
+  "situation": "rapport",
+  "sources": [
+   "V26@0:09:42",
+   "V26@0:32:26",
+   "VGQ@4:26"
+  ],
+  "text": "Take your time.",
+  "delivery": "Give them time to think and let silences breathe.",
+  "basis": "adapted",
+  "ctx": "Works well with someone shy or nervous",
+  "replaces": [
+   "p237"
+  ]
+ },
+ {
+  "id": "p361",
+  "need": "any",
+  "feeling": "respected",
+  "situation": "rapport",
+  "sources": [
+   "V26@1:44:43",
+   "VG@1:44:21"
+  ],
+  "text": "That's a big step forward. What's next for you?",
+  "delivery": "Bring a bit of energy to meet theirs, subtly. Obvious copying can backfire.",
+  "basis": "adapted",
+  "ctx": "Works well with an ambitious, driven person",
+  "replaces": [
+   "p220"
+  ]
+ },
+ {
+  "id": "p362",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "V24@1:51:13",
+   "V24@0:56:46",
+   "V24@0:57:17"
+  ],
+  "text": "Honestly, I was nervous about this one.",
+  "delivery": "If it fits, share a small, real imperfection. It can make you easier to relate to, though the research on this is mixed.",
+  "basis": "adapted",
+  "ctx": "Only say this if it is true for you",
+  "replaces": [
+   "p179"
+  ]
+ },
+ {
+  "id": "p363",
+  "need": "any",
+  "feeling": "trusted",
+  "situation": "rapport",
+  "sources": [
+   "V24@1:51:13",
+   "V24@0:56:46",
+   "V24@0:57:17"
+  ],
+  "text": "I'm still working on ___, but I'm getting better.",
+  "delivery": "If it fits, share a small, real imperfection. It can make you easier to relate to, though the research on this is mixed.",
+  "basis": "adapted",
+  "ctx": "Only say this if it is true for you. Fill in: something you are genuinely working on.",
+  "replaces": [
+   "p180"
+  ]
  }
 ]

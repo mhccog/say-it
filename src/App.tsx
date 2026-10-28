@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { cn } from '@/lib/utils'
 import {
-  ANYONE, CHASE_SPOT, COACH_NOTE, EMOTIONS, EMOTION_NOTE, FEELINGS, PROFILES, FEELING_TIPS, NEEDS, SENSES, SITUATIONS, SOURCES, TIPS,
-  fillSlots, sourceHref, type NeedId, type Situation,
+  ANYONE, CHASE_SPOT, COACH_FACTS, COACH_NOTE, EMOTIONS, EMOTION_BADGE, EMOTION_NOTE, EVIDENCE_KEY, FEELINGS, MIXED, ONLY_IF_TRUE, PROFILES,
+  FEELING_TIPS, NEEDS, RESEARCH, SITUATIONS, SOURCES, STORY_TYPES, STUDIES, TIPS, isResearchTip, sourceHref, type NeedId, type Situation,
 } from '@/data/content'
 import phrasesRaw from '@/data/phrases.json'
 
@@ -88,7 +88,6 @@ export default function App() {
   const [emotion, setEmotion] = useState<string | null>(null)
   const [mode, setMode] = useState<Mode>('feel')
   const [situation, setSituation] = useState<Situation | 'all'>('all')
-  const [sense, setSense] = useState(0)
   const [needOpen, setNeedOpen] = useState(true)
   const [feelOpen, setFeelOpen] = useState(true)
   const [spotOpen, setSpotOpen] = useState(false)
@@ -117,7 +116,7 @@ export default function App() {
   const say = (m: string) => { setToast(m); window.clearTimeout(toastTimer.current); toastTimer.current = window.setTimeout(() => setToast(null), 1800) }
   const baseText = (p: Phrase) => p.editedText ?? p.text
   const rawTextOf = (p: Phrase) => review[p.id]?.text ?? baseText(p)
-  const textOf = (p: Phrase) => fillSlots(rawTextOf(p), sense)
+  const textOf = (p: Phrase) => rawTextOf(p)
   const statusOf = (p: Phrase): Status => review[p.id]?.status ?? p.status ?? 'draft'
   const setStatus = (id: string, status: Status) => setReview((r) => ({ ...r, [id]: { ...r[id], status } }))
 
@@ -147,7 +146,6 @@ export default function App() {
   const listKey = [need, feeling, emotion, situation, keptOnly].join('|') // "show more" resets when the picks change
   const showAll = showAllKey === listKey
   const shown = showAll ? best : best.slice(0, LIMIT)
-  const hasSlots = [...shown, ...more].some((p) => /\{[^}]+\}/.test(rawTextOf(p)))
 
   const counts = useMemo(() => {
     let keep = 0, bin = 0, edited = 0
@@ -280,7 +278,11 @@ export default function App() {
     const st = statusOf(p)
     const tipIds = FEELING_TIPS[p.feeling] ?? []
     const tip = TIPS[tipIds[hash(p.id) % Math.max(tipIds.length, 1)]]
-    const example = p.basis === 'source-example' ? "Coach's own example" : p.basis === 'source-example/adapted' ? "Based on a coach's example" : p.basis === 'nci' ? 'From NCI (secondary)' : p.basis === 'social' ? "From a coach's post" : null
+    const example = p.basis === 'source-example' ? "Coach's own example" : p.basis === 'source-example/adapted' ? "Based on a coach's example" : p.basis === 'nci' ? 'From NCI (secondary)' : p.basis === 'social' ? "From a coach's post (opinion clip)" : null
+    const study = RESEARCH[p.id] ? STUDIES[RESEARCH[p.id]] : null
+    const coachView = STORY_TYPES.has(p.id) || p.basis === 'social'
+    const tipText = p.delivery ?? tip.text
+    const tipResearch = isResearchTip(tipText)
     const sit = SITUATIONS.find((s) => s.id === p.situation)!
     const isEditing = editing === p.id
     const text = textOf(p)
@@ -288,10 +290,13 @@ export default function App() {
     return (
       <article key={p.id} aria-label={text} className={cn('pop rounded-2xl border bg-card p-4 shadow-soft', st === 'bin' && 'opacity-55', st === 'keep' ? 'border-primary/40' : 'border-border')}>
         <div className="mb-2 flex flex-wrap items-center gap-1.5">
-          <span className={cn(tag, 'bg-secondary text-secondary-foreground')}>{sit.label}</span>
+          <span className={cn(tag, 'border border-border text-muted-foreground')}>{sit.label}</span>
           {general && <span className={cn(tag, 'border border-border text-muted-foreground')}>General</span>}
           {p.emotion && <span className={cn(tag, 'bg-accent text-accent-foreground')}>For {EMOTIONS.find((e) => e.id === p.emotion)?.label.toLowerCase()}</span>}
-          {example && <span className={cn(tag, 'border border-border text-muted-foreground')}>{example}</span>}
+          {study
+            ? <span className={cn(tag, 'bg-[oklch(0.94_0.05_150)] text-[oklch(0.36_0.08_150)]')}>Backed by research</span>
+            : <span className={cn(tag, 'bg-secondary text-secondary-foreground')}>{coachView ? 'Coach\u2019s view' : 'Coach\u2019s tip'}</span>}
+          {ONLY_IF_TRUE.has(p.id) && <span className={cn(tag, 'border border-[oklch(0.8_0.07_70)] bg-[oklch(0.97_0.03_80)] text-[oklch(0.42_0.08_60)]')}>Only if true</span>}
           {st === 'draft' && <span className={cn(tag, 'border border-dashed border-border text-muted-foreground')}>Draft</span>}
           {st === 'keep' && <span className={cn(tag, 'bg-primary text-primary-foreground')}>Kept</span>}
           {st === 'bin' && <span className={cn(tag, 'bg-destructive/10 text-destructive')}>Binned</span>}
@@ -304,7 +309,8 @@ export default function App() {
             <span aria-hidden className="mt-1 flex items-center gap-1 text-xs text-muted-foreground"><Copy className="size-3" /> Tap to copy</span>
           </button>
         )}
-        {!isEditing && p.ctx && <p className="mt-1 text-[0.8rem] text-muted-foreground">{p.ctx}</p>}
+        {!isEditing && p.ctx && <p className="mt-1 text-[0.8rem] text-muted-foreground">{p.ctx}{STORY_TYPES.has(p.id) && ' (Vanessa\u2019s story type: how they see their life right now, not who they are.)'}</p>}
+        {!isEditing && MIXED[p.id] && <p className="mt-1 text-[0.8rem] text-muted-foreground">{MIXED[p.id]}</p>}
         {isEditing && (
           <div>
             <label htmlFor={`edit-${p.id}`} className="sr-only">Edit phrase</label>
@@ -317,11 +323,13 @@ export default function App() {
           </div>
         )}
         <div className="mt-3 rounded-xl bg-accent/55 p-3 text-sm text-accent-foreground">
-          <span className="font-semibold">How to say it: </span>{p.delivery ?? tip.text}
+          <span className="font-semibold">How to say it: </span>{tipText}
+          <span className="mt-1 block text-xs opacity-75">{tipResearch ? 'Falling pitch: backed by research. The rest is a coach\u2019s tip.' : 'Stagecraft (coach\u2019s tip): try it and keep what feels natural.'}</span>
         </div>
         <div className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
-          <span>Source:</span>
+          <span>{example ? `${example}. Source:` : 'Source:'}</span>
           {srcGroups(p.sources)}
+          {study && <span className="inline-flex flex-wrap items-center gap-1.5">Why this works: {study.url ? <a href={study.url} target="_blank" rel="noreferrer" className="inline-flex min-h-6 items-center underline decoration-border underline-offset-2 hover:text-foreground">{study.label}</a> : <span>{study.label}</span>}</span>}
           {!p.delivery && srcGroups([tip.source], 'Tip: ')}
         </div>
         {reviewMode && !isEditing && (
@@ -441,6 +449,7 @@ export default function App() {
                 )}
                 {mode === 'now' && (
                   <>
+                    <p className="mb-2.5 inline-flex min-h-6 items-center rounded-full bg-[oklch(0.96_0.035_80)] px-2.5 text-xs font-medium text-[oklch(0.42_0.08_60)]">{EMOTION_BADGE}</p>
                     <p className="mb-2 text-sm text-muted-foreground">What are they feeling right now? We&rsquo;ll suggest what to aim for.</p>
                     <div className="flex flex-wrap gap-2">
                       {EMOTIONS.map((e) => <Chip key={e.id} active={emotion === e.id} onClick={() => pickEmotion(e.id)}><span aria-hidden className="mr-1.5">{e.emoji}</span>{e.label}</Chip>)}
@@ -450,6 +459,7 @@ export default function App() {
                 )}
                 {mode === 'map' && (
                   <div>
+                    <p className="mb-2.5 inline-flex min-h-6 items-center rounded-full bg-[oklch(0.96_0.035_80)] px-2.5 text-xs font-medium text-[oklch(0.42_0.08_60)]">{EMOTION_BADGE}</p>
                     <div aria-hidden className="mb-1.5 grid grid-cols-[6.6rem_1fr] gap-2 px-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                       <span>They feel</span><span>Aim for</span>
                     </div>
@@ -504,17 +514,6 @@ export default function App() {
               {!need && <p className="mt-0.5 text-xs text-muted-foreground">Showing general phrases. Pick what you&rsquo;re hearing to tailor them.</p>}
               {emotionObj && !feelOpen && <p className="mt-2 rounded-xl bg-accent/50 p-2.5 text-sm"><span className="font-semibold">They seem to feel {emotionObj.label.toLowerCase()}. </span>{emotionObj.respond}</p>}
               {keptOnly && <p className="mt-2 text-xs text-muted-foreground">Showing kept phrases only. <button type="button" className="inline-flex min-h-6 items-center font-medium text-primary underline" onClick={() => setKeptOnly(false)}>Show all</button></p>}
-              {hasSlots && (
-                <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
-                  <span id="sense-label" className="text-muted-foreground">Match their words:</span>
-                  <div role="group" aria-labelledby="sense-label" className="inline-flex gap-1 rounded-full bg-secondary p-1">
-                    {SENSES.map((s) => (
-                      <button key={s.id} type="button" title={s.hint} aria-pressed={sense === s.id} onClick={() => setSense(s.id)}
-                        className={cn('min-h-7 rounded-full px-3 text-xs font-medium', sense === s.id ? 'bg-card text-primary shadow-sm' : 'text-muted-foreground')}>{s.label}</button>
-                    ))}
-                  </div>
-                </div>
-              )}
               {best.length === 0 && more.length === 0 && <p className="mt-3 rounded-2xl border border-dashed border-border p-4 text-sm text-muted-foreground">Nothing here for this mix yet. Try &ldquo;All&rdquo; in the bar above, or another feeling.</p>}
               <div className="mt-3 space-y-3">{shown.map((p) => renderCard(p, !!need && need !== 'any' && p.need === 'any'))}</div>
               {!showAll && best.length > LIMIT && <Button variant="outline" className="mt-3 min-h-10 w-full rounded-full" onClick={() => setShowAllKey(listKey)}>Show {best.length - LIMIT} more</Button>}
@@ -563,6 +562,15 @@ export default function App() {
           </DialogHeader>
           <div className="space-y-3 text-sm">
             <p><b>How it works.</b> Step 1 uses Chase Hughes&rsquo;s six social needs as things to listen for. That&rsquo;s a coach&rsquo;s view and untested, so it&rsquo;s optional. Phrases are original drafts, and each cites where the idea came from. The &ldquo;How to say it&rdquo; tips are delivery ideas, mainly Vinh Giang&rsquo;s.</p>
+            <p>The 14 feelings in step 2 are goals from personal notes, not a research list.</p>
+            <div className="rounded-xl border border-border p-3">
+              <p className="mb-1.5 font-semibold">Evidence key</p>
+              <dl className="space-y-1 text-xs">{EVIDENCE_KEY.map(([k, v]) => <div key={k}><dt className="inline font-semibold">{k}: </dt><dd className="inline text-muted-foreground">{v}</dd></div>)}</dl>
+            </div>
+            <div className="rounded-xl border border-border p-3">
+              <p className="mb-1.5 font-semibold">About the sources</p>
+              <dl className="space-y-1 text-xs">{COACH_FACTS.map(([k, v]) => <div key={k}><dt className="inline font-semibold">{k}: </dt><dd className="inline text-muted-foreground">{v}</dd></div>)}</dl>
+            </div>
             <p><b>Please use it kindly.</b> These are things you might hear, never labels for a person. The aim is that the other person feels heard, respected or at ease, never pressured. No hidden tricks are included, and every phrase leaves them free to say no.</p>
             <p><b>Review mode.</b> Tap Review to keep, edit or bin phrases. Choices live on this device. Export saves them as a file; Import loads a file back (for example on another phone).</p>
             <p><b>Add to your home screen.</b> iPhone: Safari &rarr; Share &rarr; Add to Home Screen. Android: Chrome menu &rarr; Install app. It then works offline.</p>
