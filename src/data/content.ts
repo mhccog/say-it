@@ -61,7 +61,7 @@ export const NEEDS: Need[] = [
 
 /** The "Not sure / anyone" choice: general phrases that suit anyone. */
 export const ANYONE = { id: 'any' as const, label: 'Not sure / anyone', hint: 'General phrases that suit anyone' }
-export const COACH_NOTE = "Coach\u2019s view, untested. These are Chase Hughes\u2019s six needs, used as listening prompts, never as labels. Most people show a mix. If unsure, pick \u201cNot sure\u201d or just ask."
+export const COACH_NOTE = "Coach\u2019s view, untested. Listening prompts from Chase Hughes\u2019s six needs, not a tested model and never a label. Most people show a mix. If unsure, pick \u201cNot sure\u201d or just ask."
 
 export interface Feeling { id: string; label: string; emoji: string }
 export const FEELINGS: Feeling[] = [
@@ -91,16 +91,16 @@ export const SITUATIONS: { id: Situation; label: string }[] = [
 export interface Tip { id: string; text: string; source: string }
 export const TIPS: Record<string, Tip> = {
   computer: { id: 'computer', text: 'Hand to chin or a slight head tilt while they talk. It shows you are taking it in.', source: 'VGB' },
-  slownod: { id: 'slownod', text: 'Slow, triple nod at their emotional moments.', source: 'VVEA' },
+  slownod: { id: 'slownod', text: 'A slow nod at their emotional moments encourages them to keep going.', source: 'VVEA' },
   pause: { id: 'pause', text: 'Pause just before and after the key words. A pause gives them weight.', source: 'NG' },
   highlight: { id: 'highlight', text: 'Briefly show their feeling on your face and voice, then relax your face.', source: 'VVEA' },
   soft: { id: 'soft', text: 'Drop your volume a touch. People relax when you do.', source: 'VGR' },
   smile: { id: 'smile', text: 'A relaxed, slight smile and a little melody keep it warm.', source: 'VGP' },
   triangle: { id: 'triangle', text: 'Eye contact: left eye, right eye, nose, shifting every few seconds.', source: 'VGB' },
-  melody: { id: 'melody', text: 'Add melody, then end the sentence on a lower note. Rising at the end sounds like asking permission.', source: 'VGP' },
+  melody: { id: 'melody', text: 'Add melody, then end the sentence on a lower note. A falling pitch sounds more sure of itself.', source: 'VGP' },
   slowdown: { id: 'slowdown', text: 'Slow right down on the one line that matters most.', source: 'NG' },
   palmsdown: { id: 'palmsdown', text: 'Palms down for a firm point; palms up to welcome.', source: 'NG' },
-  match: { id: 'match', text: 'Match their pace and volume for the first minute, then lift a notch at a time.', source: 'VGR' },
+  match: { id: 'match', text: 'Start near their pace and volume, subtly (obvious copying can backfire), then lift a notch at a time.', source: 'VGR' },
   warm: { id: 'warm', text: 'Keep the same warm tone all the way through, including the hard part.', source: 'VGF' },
   lean: { id: 'lean', text: 'Lean in a little when they say something that matters.', source: 'VVEA' },
   congruent: { id: 'congruent', text: 'Make your face match the message: serious when serious, bright for good news.', source: 'VGB' },
@@ -131,9 +131,9 @@ export const SOURCES: Record<string, Source> = {
   NG: { label: 'Notion: Who I\u2019m Becoming' },
   NP: { label: 'Notion: Persuasion & relatability notes' },
   NS: { label: 'Notion: Sensory-Preference (Chase Hughes)' },
-  VVEC: { label: 'Vanessa: conversation starters', url: 'https://www.scienceofpeople.com/conversation-starters/' },
-  VVEL: { label: 'Vanessa: how to be likable', url: 'https://www.scienceofpeople.com/how-to-be-likable/' },
-  VVEA: { label: 'Vanessa: listening cues', url: 'https://www.scienceofpeople.com/active-listening/' },
+  VVEC: { label: 'Vanessa: conversation starters', url: 'https://www.scienceofpeople.com/conversation-starters-topics/' },
+  VVEL: { label: 'Vanessa: how to be likable', url: 'https://www.scienceofpeople.com/likable/' },
+  VVEA: { label: 'Vanessa: listening cues', url: 'https://www.scienceofpeople.com/listening-skills/' },
   VVER: { label: 'Vanessa: how to read people', url: 'https://www.scienceofpeople.com/how-to-read-people/' },
   VGR: { label: 'Vinh: build rapport', url: 'https://vinhgiang.com/blog/how-to-build-rapport-with-absolutely-anyone' },
   VGS: { label: 'Vinh: small talk', url: 'https://vinhgiang.com/blog/how-to-make-small-talk' },
@@ -188,15 +188,6 @@ export const CHASE_SPOT: Record<NeedId, [string, string]> = {
   significance: ['C24', '0:41:13'], approval: ['C24', '0:41:43'], acceptance: ['C24', '0:42:17'], intelligence: ['C24', '0:42:48'], pity: ['CS', '0:00:42'], power: ['C24', '0:43:18'],
 }
 
-/** Word swap for phrases with a {feel/sound/look} slot: match how the person talks. */
-export const SENSES = [
-  { id: 0, label: 'Feel', hint: 'They say things like "it doesn\u2019t feel right"' },
-  { id: 1, label: 'Sound', hint: 'They say things like "that sounds good"' },
-  { id: 2, label: 'Look', hint: 'They say things like "I see what you mean"' },
-] as const
-export function fillSlots(text: string, sense: number): string {
-  return text.replace(/\{([^}]+)\}/g, (_, opts: string) => { const o = opts.split('/'); return o[Math.min(sense, o.length - 1)] })
-}
 
 /** Official profiles Saturday confirmed (Chase: Instagram only). */
 export const PROFILES = [
@@ -249,4 +240,70 @@ export const EMOTIONS: Emotion[] = [
     words: '"Whatever", "obviously", put-downs.',
     respond: 'Stay level and skip the sarcasm. Ask what they would need to see, and show quiet competence.' },
 ]
-export const EMOTION_NOTE = 'Faces and voices are clues, not proof. If you are unsure, ask how they are.'
+export const EMOTION_NOTE = 'Faces and voices are clues, not proof. They vary by person, culture and context, and contempt is the least certain of the seven. When unsure, ask how they are.'
+export const EMOTION_BADGE = 'Mixed evidence: Faces are clues, not proof. When unsure, ask.'
+
+// ---- Evidence (from the sources review, 28 Oct 2026) ----
+export type Evidence = 'research' | 'coach'
+/** Published studies behind the research-backed phrases. Studies are public, so they can be linked. */
+export const STUDIES: Record<string, { label: string; url?: string }> = {
+  LG: { label: 'Liking gap: Boothby et al. 2018', url: 'https://doi.org/10.1177/0956797618783714' },
+  FU: { label: 'Follow-up questions: Huang et al. 2017', url: 'https://doi.org/10.1037/pspi0000097' },
+  AD: { label: 'Asking for advice: Brooks, Gino & Schweitzer 2015', url: 'https://doi.org/10.1287/mnsc.2014.2054' },
+  GR: { label: 'Thank-yous land better than we expect: Kumar & Epley 2018', url: 'https://doi.org/10.1177/0956797618772506' },
+  FP: { label: 'Falling pitch sounds confident: Guyer et al. 2019', url: 'https://doi.org/10.1177/0146167218787805' },
+  RE: { label: 'Choice lowers resistance: Brehm\u2019s reactance theory (1966)' },
+  AP: { label: 'Responsibility + repair in apologies: Lewicki et al. 2016', url: 'https://doi.org/10.1111/ncmr.12073' },
+  CU: { label: 'Curiosity from information gaps: Loewenstein 1994', url: 'https://doi.org/10.1037/0033-2909.116.1.75' },
+  EX: { label: 'Conversations rarely end on time: Mastroianni et al. 2021', url: 'https://doi.org/10.1073/pnas.2011809118' },
+  AL: { label: 'Naming a feeling helps: Lieberman et al. 2007', url: 'https://doi.org/10.1111/j.1467-9280.2007.01916.x' },
+  SP: { label: 'Spotlight effect: Gilovich et al. 2000', url: 'https://doi.org/10.1037/0022-3514.78.2.211' },
+  EC: { label: 'Moods spread: Hatfield et al. 1993', url: 'https://doi.org/10.1111/1467-8721.ep10770953' },
+}
+const group = (key: string, ids: string) => ids.split(' ').map((id) => [id, key] as const)
+/** Phrase ID -> study. Everything else is a coach's tip. */
+export const RESEARCH: Record<string, string> = Object.fromEntries([
+  ...group('LG', 'p005 p029 p030 p053 p077 p078 p147 p173'),
+  ...group('FU', 'p325 p326 p327 p245 p347'),
+  ...group('AD', 'p019 p020 p081 p082 p215 p320'),
+  ...group('GR', 'p247 p248 p185 p186 p153'),
+  ...group('FP', 'p267 p268 p269 p270'),
+  ...group('RE', 'p117 p155 p311'),
+  ...group('AP', 'p167 p292'),
+  ...group('CU', 'p190 p191'),
+  ...group('EX', 'p164 p192 p242 p243'),
+  ...group('AL', 'p333 p341'),
+  ...group('SP', 'p253'),
+  ...group('EC', 'p254 p286'),
+])
+/** Lines that state something you can't know is true in the moment. */
+export const ONLY_IF_TRUE = new Set('p039 p044 p086 p100 p106 p213 p274 p281 p308 p310 p317 p320 p362 p363'.split(' '))
+/** Coach's view: Vanessa's story types (p218-p235) and lines from social posts. */
+export const STORY_TYPES = new Set([...Array.from({ length: 18 }, (_, i) => 'p' + String(218 + i).padStart(3, '0')), 'p361'])
+/** Claims with mixed research: shown softly on the card. */
+export const MIXED: Record<string, string> = {
+  p169: 'Mixed evidence: this \u201cwise feedback\u201d framing helped in school studies but not in a later replication. Say it only if it is true.',
+  p229: 'Mixed evidence: this \u201cwise feedback\u201d framing helped in school studies but not in a later replication. Say it only if it is true.',
+  p349: 'Mixed evidence: reframing nerves helps some people, not everyone.',
+  p271: 'Mixed evidence: warmth and know-how both matter, but warmth alone doesn\u2019t make you credible.',
+  p177: 'Mixed evidence: smiling and leaning in have some support; the open-palm advice is untested.',
+  p178: 'Mixed evidence: smiling and leaning in have some support; the open-palm advice is untested.',
+  p351: 'Mixed evidence: smiling and leaning in have some support; the open-palm advice is untested.',
+}
+/** Delivery tips are stagecraft, except ending on a falling pitch. */
+export const isResearchTip = (text: string) => /lower note|falling pitch|downward pitch|end on a lower/i.test(text)
+
+export const EVIDENCE_KEY = [
+  ['Backed by research', 'Published, peer-reviewed findings. Each card links the study.'],
+  ['Mixed evidence', 'Real research, but disputed or weaker than the claim. Shown as a note.'],
+  ['Coach\u2019s tip', 'Practitioner advice or stagecraft. May work well, but untested.'],
+  ['Only if true', 'Says something about them or \u201cmost people\u201d that you need to believe first.'],
+] as const
+
+/** One neutral, factual line per source. */
+export const COACH_FACTS = [
+  ['Vanessa Van Edwards', 'Founder of Science of People (B.A., Emory). Curates published research and runs her own studies, which are not peer-reviewed. Sells courses.'],
+  ['Vinh Giang', 'Former professional magician, now a speaking coach. No research background; his tips are stagecraft. Sells courses.'],
+  ['Chase Hughes', 'Retired US Navy chief and author of self-published books. His profiling methods have not been tested in peer-reviewed research, and some of his background claims have been publicly questioned. Sells courses.'],
+  ['Paul Ekman', 'Psychologist with decades of peer-reviewed work on emotion. How universal and readable facial expressions are is now debated. His group sells training.'],
+] as const
