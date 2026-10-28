@@ -3,60 +3,65 @@ export type Situation = 'opener' | 'rapport' | 'disagree' | 'close'
 
 export interface Need {
   id: NeedId
+  /** What you're hearing, e.g. "Wants to belong". Never a label for the person. */
   label: string
   tier: 'Primary' | 'Secondary'
   hint: string
-  question: string
+  /** The quiet question underneath, from the notes. Left out where the notes give none. */
+  question?: string
   listenFor: string[]
   mightSay: string[]
   speakTo: string
 }
 
-// From personal notes (Needs-Map, Chase Hughes) - framed as things to LISTEN FOR, not labels.
+// From personal notes (Needs-Map, Chase Hughes). Coach's view, untested: framed as things to LISTEN FOR, never labels.
 export const NEEDS: Need[] = [
   {
-    id: 'significance', label: 'Significance', tier: 'Primary', hint: 'Wants to matter',
+    id: 'significance', label: 'Wants to matter', tier: 'Primary', hint: 'Talks about impact and what they have built',
     question: 'Do others see me as important, as making an impact?',
     listenFor: ['Talks about what they have achieved or built', 'Wants to stand out; status or standout style', 'Mentions their reach or how many people rely on them'],
     mightSay: ['"I built that from scratch."', '"People still call me for advice."'],
     speakTo: 'Acknowledge their specific impact, not just a general compliment.',
   },
   {
-    id: 'approval', label: 'Approval', tier: 'Primary', hint: 'Wants to get it right',
+    id: 'approval', label: 'Wants to get it right', tier: 'Primary', hint: 'Checks in and looks for reassurance',
     question: 'Am I doing this right?',
     listenFor: ['Checks in a lot', 'Seeks reassurance or permission', 'Plays themselves down before they start'],
     mightSay: ['"Is that okay?"', '"I\'m sure I\'ll mess it up."'],
     speakTo: 'Give clear, explicit validation. Say what is good and why.',
   },
   {
-    id: 'acceptance', label: 'Acceptance', tier: 'Primary', hint: 'Wants to belong',
+    id: 'acceptance', label: 'Wants to belong', tier: 'Primary', hint: 'Says "we" and talks about the group',
     question: 'Do I belong?',
     listenFor: ['"We", "us", "our" language', 'Talks about teams, groups and shared outings', 'Notices who is in and out of the group'],
     mightSay: ['"We all get on really well."', '"Everyone goes out on Thursdays."'],
     speakTo: 'Use shared group language, such as "people like you".',
   },
   {
-    id: 'intelligence', label: 'Intelligence', tier: 'Secondary', hint: 'Wants to be seen as smart',
+    id: 'intelligence', label: 'Wants to be seen as smart', tier: 'Secondary', hint: 'Mentions expertise and explains how things work',
     question: 'Do others see me as smart?',
     listenFor: ['Mentions education, research or expertise', 'Uses deliberately rich vocabulary', 'Tests whether you know what they know'],
     mightSay: ['"When I was at university..."', '"I wrote a paper on that."'],
     speakTo: 'Ask for their expert opinion, and mean it.',
   },
   {
-    id: 'pity', label: 'Pity', tier: 'Secondary', hint: 'Wants it known how hard it has been',
+    id: 'pity', label: 'Wants it known it\'s been hard', tier: 'Secondary', hint: 'Talks about what they have been through',
     question: 'Do others realise how bad I have had it?',
     listenFor: ['Talks about tragedy, misfortune or everyday annoyances', 'Seeks sympathy', 'Sometimes tired posture or look'],
     mightSay: ['"You wouldn\'t believe my week."', '"Nobody sees what I deal with."'],
     speakTo: 'Briefly confirm how hard it was, pause so they feel heard, THEN gently move on. Do not say "it\'s not that bad".',
   },
   {
-    id: 'power', label: 'Power', tier: 'Secondary', hint: 'Wants control of the call',
-    question: 'Am I the one in charge here?',
+    id: 'power', label: 'Wants to steer', tier: 'Secondary', hint: 'Directs the conversation and wants the final say',
     listenFor: ['Directs the conversation', 'Wants the final say', 'Leadership or decision language'],
     mightSay: ['"Here\'s how we\'re doing it."', '"Just give me the headline."'],
     speakTo: 'Let them make the call, and keep it clear and short.',
   },
 ]
+
+/** The "Not sure / anyone" choice: general phrases that suit anyone. */
+export const ANYONE = { id: 'any' as const, label: 'Not sure / anyone', hint: 'General phrases that suit anyone' }
+export const COACH_NOTE = "Coach\u2019s view, untested. These are Chase Hughes\u2019s six needs, used as listening prompts, never as labels. Most people show a mix. If unsure, pick \u201cNot sure\u201d or just ask."
 
 export interface Feeling { id: string; label: string; emoji: string }
 export const FEELINGS: Feeling[] = [
@@ -78,7 +83,7 @@ export const FEELINGS: Feeling[] = [
 
 export const SITUATIONS: { id: Situation; label: string }[] = [
   { id: 'opener', label: 'Opener' },
-  { id: 'rapport', label: 'Build rapport' },
+  { id: 'rapport', label: 'Rapport' },
   { id: 'disagree', label: 'Disagree' },
   { id: 'close', label: 'Close' },
 ]
@@ -125,6 +130,7 @@ export const SOURCES: Record<string, Source> = {
   NM: { label: 'Notion: Needs-Map (Chase Hughes)' },
   NG: { label: 'Notion: Who I\u2019m Becoming' },
   NP: { label: 'Notion: Persuasion & relatability notes' },
+  NS: { label: 'Notion: Sensory-Preference (Chase Hughes)' },
   VVEC: { label: 'Vanessa: conversation starters', url: 'https://www.scienceofpeople.com/conversation-starters/' },
   VVEL: { label: 'Vanessa: how to be likable', url: 'https://www.scienceofpeople.com/how-to-be-likable/' },
   VVEA: { label: 'Vanessa: listening cues', url: 'https://www.scienceofpeople.com/active-listening/' },
@@ -176,9 +182,20 @@ export function sourceHref(key: string, ts?: string): string | undefined {
   return s.url
 }
 
-/** Where Chase explains how to spot each need (DOAC 2024), so people can hear it in his own words. */
-export const CHASE_SPOT: Record<NeedId, string> = {
-  significance: '0:41:13', approval: '0:41:43', acceptance: '0:42:17', intelligence: '0:42:48', pity: '0:42:48', power: '0:43:18',
+/** Where Chase explains how to spot each need, so people can hear it in his own words: [source key, timestamp].
+ *  Hardship uses his YouTube Short (0:00:42) because the DOAC 2024 timestamp was shared with Intelligence. */
+export const CHASE_SPOT: Record<NeedId, [string, string]> = {
+  significance: ['C24', '0:41:13'], approval: ['C24', '0:41:43'], acceptance: ['C24', '0:42:17'], intelligence: ['C24', '0:42:48'], pity: ['CS', '0:00:42'], power: ['C24', '0:43:18'],
+}
+
+/** Word swap for phrases with a {feel/sound/look} slot: match how the person talks. */
+export const SENSES = [
+  { id: 0, label: 'Feel', hint: 'They say things like "it doesn\u2019t feel right"' },
+  { id: 1, label: 'Sound', hint: 'They say things like "that sounds good"' },
+  { id: 2, label: 'Look', hint: 'They say things like "I see what you mean"' },
+] as const
+export function fillSlots(text: string, sense: number): string {
+  return text.replace(/\{([^}]+)\}/g, (_, opts: string) => { const o = opts.split('/'); return o[Math.min(sense, o.length - 1)] })
 }
 
 /** Official profiles Saturday confirmed (Chase: Instagram only). */
