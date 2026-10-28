@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent, type ReactNode } from 'react'
-import { Check, ChevronDown, Copy, Download, Info, Pencil, Trash2, Undo2, Upload, X, Eye } from 'lucide-react'
+import { Check, ChevronDown, Copy, Download, Info, Loader2, Pencil, Trash2, Undo2, Upload, Wand2, X, Eye } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { cn } from '@/lib/utils'
@@ -23,6 +23,9 @@ type Review = Record<string, { status?: Status; text?: string }>
 const KEY = 'say-it:review:v1'
 const KEPT_KEY = 'say-it:kept-only'
 const LIMIT = 8
+/** "Say it differently" is switched on only when the Pages build sets VITE_REWORD_URL (the Cloudflare Worker's address). */
+const REWORD_URL = (import.meta.env.VITE_REWORD_URL as string | undefined)?.trim() || ''
+type Reword = { id: string; note: string; loading: boolean; options: string[]; error?: string }
 type NeedChoice = NeedId | 'any'
 type Mode = 'feel' | 'now' | 'map'
 const MODES: [Mode, string][] = [['feel', 'Aim for'], ['now', 'They feel now'], ['map', 'Side by side']]
@@ -99,6 +102,7 @@ export default function App() {
   const [editing, setEditing] = useState<string | null>(null)
   const [draftText, setDraftText] = useState('')
   const [toast, setToast] = useState<string | null>(null)
+  const [reword, setReword] = useState<Reword | null>(null)
   const [about, setAbout] = useState(false)
   const [installEvt, setInstallEvt] = useState<(Event & { prompt: () => void }) | null>(null)
   const toastTimer = useRef<number>(0)
@@ -187,6 +191,19 @@ export default function App() {
       say(`Imported ${n} choice${n === 1 ? '' : 's'}${skipped ? `, skipped ${skipped}` : ''}`)
     } catch {
       say('That file is not a Say it export')
+    }
+  }
+
+  async function runReword(p: Phrase, note: string) {
+    if (!navigator.onLine) { setReword({ id: p.id, note, loading: false, options: [], error: 'You are offline. Try again when you have signal.' }); return }
+    setReword({ id: p.id, note, loading: true, options: [] })
+    try {
+      const r = await fetch(REWORD_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text: textOf(p), note }) })
+      const data = await r.json().catch(() => ({}))
+      if (!r.ok || !Array.isArray(data.options)) throw new Error(data.error || 'No suggestion this time. Try again.')
+      setReword({ id: p.id, note, loading: false, options: data.options.slice(0, 3) })
+    } catch (e) {
+      setReword({ id: p.id, note, loading: false, options: [], error: e instanceof Error ? e.message : 'Something went wrong. Try again.' })
     }
   }
 
@@ -332,6 +349,34 @@ export default function App() {
           {study && <span className="inline-flex flex-wrap items-center gap-1.5">Why this works: {study.url ? <a href={study.url} target="_blank" rel="noreferrer" className="inline-flex min-h-6 items-center underline decoration-border underline-offset-2 hover:text-foreground">{study.label}</a> : <span>{study.label}</span>}</span>}
           {!p.delivery && srcGroups([tip.source], 'Tip: ')}
         </div>
+        {REWORD_URL && !isEditing && (
+          reword?.id === p.id ? (
+            <div className="pop mt-3 rounded-xl border border-border bg-background p-3 text-sm">
+              <form className="flex gap-2" onSubmit={(e) => { e.preventDefault(); runReword(p, reword.note.trim()) }}>
+                <label htmlFor={`rw-${p.id}`} className="sr-only">Who or how (optional)</label>
+                <input id={`rw-${p.id}`} value={reword.note} maxLength={120} onChange={(e) => setReword({ ...reword, note: e.target.value })}
+                  placeholder="Who or how? e.g. my landlord, short" className="min-h-9 min-w-0 flex-1 rounded-full border border-input bg-card px-3 text-base outline-none focus:ring-3 focus:ring-ring/40" />
+                <Button type="submit" className="min-h-9 rounded-full px-3" disabled={reword.loading}>{reword.loading ? <Loader2 className="animate-spin" /> : <Wand2 />} Reword</Button>
+              </form>
+              {reword.error && <p className="mt-2 text-destructive">{reword.error}</p>}
+              {reword.options.length > 0 && (
+                <ul className="mt-2 space-y-1.5" aria-label="Suggestions">
+                  {reword.options.map((o) => (
+                    <li key={o}><button type="button" onClick={async () => say((await copyText(o)) ? 'Copied. Paste it anywhere.' : 'Could not copy')}
+                      className="w-full rounded-lg bg-card px-3 py-2 text-left shadow-soft hover:bg-accent/50"><span className="sr-only">Copy: </span>{o}</button></li>
+                  ))}
+                </ul>
+              )}
+              <p className="mt-2 text-xs text-muted-foreground">AI suggestions (Cloudflare Workers AI). Check each one sounds like you and is true. Your phrase and note are sent to the service, so leave out private details.</p>
+              <button type="button" className="mt-1 inline-flex min-h-6 items-center text-xs font-medium text-primary" onClick={() => setReword(null)}>Close</button>
+            </div>
+          ) : (
+            <button type="button" onClick={() => { setReword({ id: p.id, note: '', loading: false, options: [] }); runReword(p, '') }}
+              className="mt-2.5 inline-flex min-h-8 items-center gap-1.5 rounded-full border border-border px-3 text-[0.8rem] font-medium text-foreground/80 hover:bg-accent/60">
+              <Wand2 className="size-3.5" /> Say it differently
+            </button>
+          )
+        )}
         {reviewMode && !isEditing && (
           <div className="mt-3 flex flex-wrap gap-2 border-t border-border pt-3">
             <Button size="sm" className="min-h-8" variant={st === 'keep' ? 'default' : 'outline'} aria-pressed={st === 'keep'} onClick={() => setStatus(p.id, st === 'keep' ? 'draft' : 'keep')}><Check /> Keep</Button>
