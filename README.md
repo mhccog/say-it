@@ -4,7 +4,13 @@ A small phone-friendly app. Optionally pick what you're hearing from them (Chase
 
 - All phrases are **original drafts**, written from personal notes plus public writing by Vanessa Van Edwards, Vinh Giang and Chase Hughes (paraphrased, never copied). 
 - Types are things to *listen for*, not labels. No covert or manipulative techniques are included.
-- **Review mode** lets you keep, edit or bin each phrase (saved on your device), export the result as JSON, import it on another device, and show kept phrases only.
+- **Quick mode** (default) shows one best line per pick: research-backed first, then lines kept in review, then the rest. "Show more" reveals the list.
+- **My lines**: star a card to save it. Saved lines appear at the top, only when you have some. Your last picks are remembered too (all in `localStorage`).
+- **One "More" control** holds Quick mode, the situation filter, card details (sources, research, situation tags), bigger text, Review mode, the Prep card and About.
+- **Prep card**: pick what you hear and the feeling, and get three glanceable lines and one delivery tip, with Copy all and Share.
+- **Practice out loud** (in each card's "…" menu): pitch (does the sentence end lower?) and pace are measured on the device with Web Audio. Word and filler checks use Web Speech only when the browser can recognise speech on the device, or when you tick the opt-in that uses the browser's speech service. Nothing is recorded or uploaded by Say it.
+- **Share** a line with the system share sheet (copy fallback). The home-screen icon has shortcuts to My lines (`?view=favourites`) and Prep (`?view=prep`).
+- **Review mode** (under More) lets you keep, edit or bin each phrase (saved on your device), export the result as JSON, import it on another device, and show kept phrases only.
 - Installable (PWA) and works offline.
 
 ## Develop

@@ -30,6 +30,10 @@ export default defineConfig({
           { src: 'icon-512.png', sizes: '512x512', type: 'image/png' },
           { src: 'icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
+        shortcuts: [
+          { name: 'My lines', short_name: 'My lines', description: 'Lines you starred', url: base + '?view=favourites', icons: [{ src: 'icon-192.png', sizes: '192x192', type: 'image/png' }] },
+          { name: 'Prep card', short_name: 'Prep', description: 'Three lines and a tip before you go in', url: base + '?view=prep', icons: [{ src: 'icon-192.png', sizes: '192x192', type: 'image/png' }] },
+        ],
       },
       workbox: { globPatterns: ['**/*.{js,css,html,svg,png,json,woff2,webmanifest}'], navigateFallback: base + 'index.html' },
     }),
