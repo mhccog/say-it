@@ -3,6 +3,8 @@ export type Situation = 'opener' | 'rapport' | 'disagree' | 'close'
 
 export interface Need {
   id: NeedId
+  /** Short name shown first, e.g. "Significance". Chase's term, except Pity, shown as Hardship. */
+  name: string
   /** What you're hearing, e.g. "Wants to belong". Never a label for the person. */
   label: string
   tier: 'Primary' | 'Secondary'
@@ -17,42 +19,42 @@ export interface Need {
 // From personal notes (Needs-Map, Chase Hughes). Coach's view, untested: framed as things to LISTEN FOR, never labels.
 export const NEEDS: Need[] = [
   {
-    id: 'significance', label: 'Wants to matter', tier: 'Primary', hint: 'Talks about impact and what they have built',
+    id: 'significance', name: 'Significance', label: 'Wants to matter', tier: 'Primary', hint: 'Talks about impact and what they have built',
     question: 'Do others see me as important, as making an impact?',
     listenFor: ['Talks about what they have achieved or built', 'Wants to stand out; status or standout style', 'Mentions their reach or how many people rely on them'],
     mightSay: ['"I built that from scratch."', '"People still call me for advice."'],
     speakTo: 'Acknowledge their specific impact, not just a general compliment.',
   },
   {
-    id: 'approval', label: 'Wants to get it right', tier: 'Primary', hint: 'Checks in and looks for reassurance',
+    id: 'approval', name: 'Approval', label: 'Wants to get it right', tier: 'Primary', hint: 'Checks in and looks for reassurance',
     question: 'Am I doing this right?',
     listenFor: ['Checks in a lot', 'Seeks reassurance or permission', 'Plays themselves down before they start'],
     mightSay: ['"Is that okay?"', '"I\'m sure I\'ll mess it up."'],
     speakTo: 'Give clear, explicit validation. Say what is good and why.',
   },
   {
-    id: 'acceptance', label: 'Wants to belong', tier: 'Primary', hint: 'Says "we" and talks about the group',
+    id: 'acceptance', name: 'Acceptance', label: 'Wants to belong', tier: 'Primary', hint: 'Says "we" and talks about the group',
     question: 'Do I belong?',
     listenFor: ['"We", "us", "our" language', 'Talks about teams, groups and shared outings', 'Notices who is in and out of the group'],
     mightSay: ['"We all get on really well."', '"Everyone goes out on Thursdays."'],
     speakTo: 'Use shared group language, such as "people like you".',
   },
   {
-    id: 'intelligence', label: 'Wants to be seen as smart', tier: 'Secondary', hint: 'Mentions expertise and explains how things work',
+    id: 'intelligence', name: 'Intelligence', label: 'Wants to be seen as smart', tier: 'Secondary', hint: 'Mentions expertise and explains how things work',
     question: 'Do others see me as smart?',
     listenFor: ['Mentions education, research or expertise', 'Uses deliberately rich vocabulary', 'Tests whether you know what they know'],
     mightSay: ['"When I was at university..."', '"I wrote a paper on that."'],
     speakTo: 'Ask for their expert opinion, and mean it.',
   },
   {
-    id: 'pity', label: 'Wants it known it\'s been hard', tier: 'Secondary', hint: 'Talks about what they have been through',
+    id: 'pity', name: 'Hardship', label: 'Wants it known it\'s been hard', tier: 'Secondary', hint: 'Talks about what they have been through',
     question: 'Do others realise how bad I have had it?',
     listenFor: ['Talks about tragedy, misfortune or everyday annoyances', 'Seeks sympathy', 'Sometimes tired posture or look'],
     mightSay: ['"You wouldn\'t believe my week."', '"Nobody sees what I deal with."'],
     speakTo: 'Briefly confirm how hard it was, pause so they feel heard, THEN gently move on. Do not say "it\'s not that bad".',
   },
   {
-    id: 'power', label: 'Wants to steer', tier: 'Secondary', hint: 'Directs the conversation and wants the final say',
+    id: 'power', name: 'Power', label: 'Wants to steer', tier: 'Secondary', hint: 'Directs the conversation and wants the final say',
     listenFor: ['Directs the conversation', 'Wants the final say', 'Leadership or decision language'],
     mightSay: ['"Here\'s how we\'re doing it."', '"Just give me the headline."'],
     speakTo: 'Let them make the call, and keep it clear and short.',
@@ -60,6 +62,9 @@ export const NEEDS: Need[] = [
 ]
 
 /** The "Not sure / anyone" choice: general phrases that suit anyone. */
+/** "Significance – wants to matter": the name with its meaning beside it. */
+export const needText = (n: Need) => `${n.name} \u2013 ${n.label.charAt(0).toLowerCase()}${n.label.slice(1)}`
+
 export const ANYONE = { id: 'any' as const, label: 'Not sure / anyone', hint: 'General phrases that suit anyone' }
 export const COACH_NOTE = "Coach\u2019s view, untested. Listening prompts from Chase Hughes\u2019s six needs, not a tested model and never a label. Most people show a mix. If unsure, pick \u201cNot sure\u201d or just ask."
 
