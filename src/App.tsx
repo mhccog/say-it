@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 import { Practice } from '@/components/Practice'
 import {
   ANYONE, CHASE_SPOT, COACH_FACTS, COACH_NOTE, EMOTIONS, EMOTION_BADGE, EMOTION_NOTE, EVIDENCE_KEY, FEELINGS, MIXED, ONLY_IF_TRUE, PROFILES,
-  FEELING_TIPS, NEEDS, RESEARCH, SITUATIONS, SOURCES, STORY_TYPES, STUDIES, TIPS, isResearchTip, sourceHref, type NeedId, type Situation,
+  FEELING_TIPS, NEEDS, needText, RESEARCH, SITUATIONS, SOURCES, STORY_TYPES, STUDIES, TIPS, isResearchTip, sourceHref, type NeedId, type Situation,
 } from '@/data/content'
 import phrasesRaw from '@/data/phrases.json'
 
@@ -112,7 +112,7 @@ function Summary({ n, title, value, onChange }: { n: number; title: string; valu
       <span aria-hidden className="grid size-6 shrink-0 place-items-center rounded-full bg-primary text-xs font-bold text-primary-foreground"><Check className="size-3.5" /></span>
       <div className="min-w-0 flex-1 leading-tight">
         <p className="text-xs text-muted-foreground"><span className="sr-only">Step {n}: </span>{title}</p>
-        <p className="truncate text-[0.95rem] font-semibold">{value}</p>
+        <p className="line-clamp-2 text-[0.95rem] font-semibold leading-snug">{value}</p>
       </div>
       <Button variant="outline" size="sm" className="min-h-8 rounded-full px-3" onClick={onChange} aria-label={`Change: ${title}`}>Change</Button>
     </div>
@@ -201,7 +201,7 @@ export default function App() {
   const setStatus = (id: string, status: Status) => setReview((r) => ({ ...r, [id]: { ...r[id], status } }))
 
   const needObj = NEEDS.find((n) => n.id === need) ?? null
-  const needLabel = need === 'any' ? ANYONE.label : needObj?.label
+  const needLabel = need === 'any' ? ANYONE.label : needObj ? needText(needObj) : undefined
   const feelingObj = FEELINGS.find((f) => f.id === feeling) ?? null
   const emotionObj = EMOTIONS.find((e) => e.id === emotion) ?? null
   const hasResults = !!(feeling || emotion)
@@ -554,7 +554,7 @@ export default function App() {
           <div className="min-w-0 leading-tight">
             <h1 className="text-lg font-bold tracking-tight">Say it</h1>
             {hasResults
-              ? <button type="button" onClick={() => goTop('feel')} className="block min-h-6 max-w-full truncate text-left text-xs text-muted-foreground" aria-label="Change your picks">{needLabel ?? ANYONE.label} &rarr; {feelingObj?.label ?? emotionObj?.label}</button>
+              ? <button type="button" onClick={() => goTop('feel')} className="block min-h-6 max-w-full truncate text-left text-xs text-muted-foreground" aria-label="Change your picks">{needObj?.name ?? ANYONE.label} &rarr; {feelingObj?.label ?? emotionObj?.label}</button>
               : <p className="truncate text-xs text-muted-foreground">Listen first, then find the words</p>}
           </div>
           <div className="ml-auto flex items-center gap-1.5">
@@ -589,9 +589,21 @@ export default function App() {
           ) : (
             <>
               <Step n={1} id="who" title="What are you hearing from them?" />
-              <div className="flex flex-wrap gap-2">
-                <Chip active={need === 'any'} onClick={() => pickNeed('any')} title={ANYONE.hint}>{ANYONE.label}</Chip>
-                {NEEDS.map((n) => <Chip key={n.id} active={need === n.id} onClick={() => pickNeed(n.id)} title={n.hint}>{n.label}</Chip>)}
+              <div className="grid grid-cols-1 gap-2 min-[340px]:grid-cols-2">
+                {NEEDS.map((n) => {
+                  const on = need === n.id
+                  return (
+                    <button key={n.id} type="button" aria-pressed={on} onClick={() => pickNeed(n.id)}
+                      className={cn('flex min-h-14 flex-col items-start justify-center rounded-2xl border px-3.5 py-2 text-left transition-[background-color,border-color,transform] duration-150 active:scale-[0.98]',
+                        on ? 'border-primary bg-primary text-primary-foreground shadow-sm' : 'border-border bg-card hover:border-primary/40 hover:bg-accent/60')}>
+                      <span className="text-[0.95rem] font-semibold leading-tight">{n.name}</span>
+                      <span className={cn('mt-0.5 text-[0.8rem] leading-snug', on ? 'text-primary-foreground/85' : 'text-muted-foreground')}>{n.label.charAt(0).toLowerCase() + n.label.slice(1)}</span>
+                    </button>
+                  )
+                })}
+              </div>
+              <div className="mt-2">
+                <Chip small active={need === 'any'} onClick={() => pickNeed('any')} title={ANYONE.hint}>{ANYONE.label}</Chip>
               </div>
               <p className="mt-2 text-xs text-muted-foreground">
                 <span className="mr-1.5 inline-flex h-5 items-center rounded-full bg-secondary px-2 font-semibold text-foreground/75">Coach&rsquo;s view, untested</span>
@@ -802,7 +814,7 @@ export default function App() {
                   <label className="text-xs font-medium text-muted-foreground">You&rsquo;re hearing
                     <select className={cn(sel, 'mt-1 w-full text-foreground')} value={prepNeed} onChange={(e) => setPrepNeed(e.target.value as NeedChoice)}>
                       <option value="any">{ANYONE.label}</option>
-                      {NEEDS.map((n) => <option key={n.id} value={n.id}>{n.label}</option>)}
+                      {NEEDS.map((n) => <option key={n.id} value={n.id}>{needText(n)}</option>)}
                     </select>
                   </label>
                   <label className="text-xs font-medium text-muted-foreground">Help them feel
