@@ -345,11 +345,11 @@ export default function App() {
   }
 
   function pickNeed(id: NeedChoice) {
-    if (id === need) { setNeed(null); return }
+    if (id === need) { if (!SIMPLE_MODE) setNeed(null); return }
     setNeed(id); setNeedOpen(false); setSpotOpen(false)
   }
   function pickFeeling(id: string) {
-    if (id === feeling) { setFeeling(null); return }
+    if (id === feeling) { if (!SIMPLE_MODE) setFeeling(null); return }
     setFeeling(id); setNeedOpen(false); setSpotOpen(false)
     if (emotionObj && !emotionObj.targets.includes(id)) setEmotion(null)
     setFeelOpen(false)
@@ -563,7 +563,9 @@ export default function App() {
           <img src={`${import.meta.env.BASE_URL}icon-192.png`} alt="" className="size-9 rounded-xl" />
           <div className="min-w-0 leading-tight">
             <h1 className="text-lg font-bold tracking-tight">Say it</h1>
-            {hasResults
+            {hasResults && SIMPLE_MODE
+              ? <p className="truncate text-xs text-muted-foreground">{needObj?.name ?? ANYONE.label} &rarr; {feelingObj?.label ?? emotionObj?.label}</p>
+              : hasResults
               ? <button type="button" onClick={() => goTop('feel')} className="block min-h-6 max-w-full truncate text-left text-xs text-muted-foreground" aria-label="Change your picks">{needObj?.name ?? ANYONE.label} &rarr; {feelingObj?.label ?? emotionObj?.label}</button>
               : <p className="truncate text-xs text-muted-foreground">Listen first, then find the words</p>}
           </div>
@@ -591,7 +593,7 @@ export default function App() {
           </section>
         )}
         <section aria-labelledby="who">
-          {!needOpen ? (
+          {!needOpen && !SIMPLE_MODE ? ( /* simple version: both steps always stay open, no Change button */
             <>
               <h2 id="who" className="sr-only">What are you hearing?</h2>
               <Summary n={1} title="What you're hearing" value={needLabel ?? 'Not sure (optional)'} onChange={() => setNeedOpen(true)} />
@@ -604,14 +606,20 @@ export default function App() {
                   const on = need === n.id
                   return (
                     <button key={n.id} type="button" aria-pressed={on} onClick={() => pickNeed(n.id)}
-                      className={cn('flex min-h-14 flex-col items-start justify-center rounded-2xl border px-3.5 py-2 text-left transition-[background-color,border-color,transform] duration-150 active:scale-[0.98]',
+                      className={cn('flex flex-col items-start justify-center rounded-2xl border text-left', SIMPLE_MODE ? 'min-h-12 px-3 py-1.5' : 'min-h-14 px-3.5 py-2', ' transition-[background-color,border-color,transform] duration-150 active:scale-[0.98]',
                         on ? 'border-primary bg-primary text-primary-foreground shadow-sm' : 'border-border bg-card hover:border-primary/40 hover:bg-accent/60')}>
                       <span className="text-[0.95rem] font-semibold leading-tight">{n.name}</span>
-                      <span className={cn('mt-0.5 text-[0.8rem] leading-snug', on ? 'text-primary-foreground/85' : 'text-muted-foreground')}>{n.label.charAt(0).toLowerCase() + n.label.slice(1)}</span>
+                      <span className={cn(SIMPLE_MODE ? 'text-[0.75rem] leading-tight' : 'mt-0.5 text-[0.8rem] leading-snug', on ? 'text-primary-foreground/85' : 'text-muted-foreground')}>{n.label.charAt(0).toLowerCase() + n.label.slice(1)}</span>
                     </button>
                   )
                 })}
               </div>
+              {SIMPLE_MODE ? (
+                <div className="mt-2 flex items-center gap-2.5">
+                  <Chip small active={need === 'any'} onClick={() => pickNeed('any')} title={ANYONE.hint}>{ANYONE.label}</Chip>
+                  <p className="text-[0.7rem] leading-tight text-muted-foreground">Coach&rsquo;s view, untested. Clues, not labels.</p>
+                </div>
+              ) : <>
               <div className="mt-2">
                 <Chip small active={need === 'any'} onClick={() => pickNeed('any')} title={ANYONE.hint}>{ANYONE.label}</Chip>
               </div>
@@ -619,6 +627,7 @@ export default function App() {
                 <span className="mr-1.5 inline-flex h-5 items-center rounded-full bg-secondary px-2 font-semibold text-foreground/75">Coach&rsquo;s view, untested</span>
                 Optional. Things you might hear, not labels.
               </p>
+              </>}
             </>
           )}
           {!SIMPLE_MODE && needObj && (
@@ -642,8 +651,8 @@ export default function App() {
           )}
         </section>
 
-        <section aria-labelledby="feel" className="mt-5">
-          {hasResults && !feelOpen ? (
+        <section aria-labelledby="feel" className={SIMPLE_MODE ? 'mt-4' : 'mt-5'}>
+          {hasResults && !feelOpen && !SIMPLE_MODE ? (
             <>
               <h2 id="feel" className="sr-only">How do you want them to feel?</h2>
               <Summary n={2} title="How you want them to feel" value={feelSummary} onChange={() => setFeelOpen(true)} />
@@ -660,7 +669,7 @@ export default function App() {
               </div>}
               <div role="tabpanel" id={`panel-${mode}`} aria-labelledby={`tab-${mode}`}>
                 {(SIMPLE_MODE || mode === 'feel') && (
-                  <div className={SIMPLE_MODE ? 'grid grid-cols-2 gap-2 [&>button]:justify-center' : 'flex flex-wrap gap-2'}>
+                  <div className={SIMPLE_MODE ? 'grid grid-cols-3 gap-1.5 [&>button]:justify-center [&>button]:px-1.5' : 'flex flex-wrap gap-2'}>
                     {SHOWN_FEELINGS.map((f) => <Chip key={f.id} active={feeling === f.id} onClick={() => pickFeeling(f.id)}><span aria-hidden className="mr-1.5">{f.emoji}</span>{f.label}</Chip>)}
                   </div>
                 )}
@@ -722,11 +731,11 @@ export default function App() {
           )}
         </section>
 
-        <section aria-labelledby="results" className="mt-6">
+        <section aria-labelledby="results" className={SIMPLE_MODE ? 'mt-4' : 'mt-6'}>
           {hasResults ? (
             <>
               <h2 id="results" className="text-base font-bold">
-                Words for <span className="text-primary">{needLabel ?? 'anyone'}</span> &rarr; <span className="text-primary">{feelingObj?.label ?? emotionObj?.label}</span>
+                Words for <span className="text-primary">{SIMPLE_MODE ? (needObj?.name ?? 'anyone') : (needLabel ?? 'anyone')}</span> &rarr; <span className="text-primary">{feelingObj?.label ?? emotionObj?.label}</span>
               </h2>
               {situation !== 'all' && (
                 <button type="button" onClick={() => setSituation('all')} className="mt-1.5 inline-flex min-h-7 items-center gap-1 rounded-full bg-secondary px-2.5 text-xs font-medium" aria-label={`Remove filter: ${SITUATIONS.find((x) => x.id === situation)?.label}`}>
