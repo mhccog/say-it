@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import { defineConfig } from 'vite'
+import { SIMPLE_MODE } from './src/simple.ts'
 
 // GitHub Pages serves this site from /say-it/, so every link needs that prefix.
 const base = '/say-it/'
@@ -30,7 +31,8 @@ export default defineConfig({
           { src: 'icon-512.png', sizes: '512x512', type: 'image/png' },
           { src: 'icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
-        shortcuts: [
+        // Home-screen shortcuts point at full-version screens, so the simple version has none.
+        shortcuts: SIMPLE_MODE ? [] : [
           { name: 'My lines', short_name: 'My lines', description: 'Lines you starred', url: base + '?view=favourites', icons: [{ src: 'icon-192.png', sizes: '192x192', type: 'image/png' }] },
           { name: 'Prep card', short_name: 'Prep', description: 'Three lines and a tip before you go in', url: base + '?view=prep', icons: [{ src: 'icon-192.png', sizes: '192x192', type: 'image/png' }] },
         ],

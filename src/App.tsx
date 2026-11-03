@@ -9,6 +9,7 @@ import {
   FEELING_TIPS, NEEDS, needText, RESEARCH, SITUATIONS, SOURCES, STORY_TYPES, STUDIES, TIPS, isResearchTip, sourceHref, type NeedId, type Situation,
 } from '@/data/content'
 import phrasesRaw from '@/data/phrases.json'
+import { SIMPLE_MODE } from '@/simple'
 
 interface Phrase {
   id: string; need: string; feeling: string; situation: Situation; sources: string[]; text: string
@@ -126,7 +127,7 @@ export default function App() {
   const [emotion, setEmotion] = useState<string | null>(saved.emotion)
   const [mode, setMode] = useState<Mode>(saved.mode)
   const [settings, setSettings] = useState<Settings>(() => load(SETTINGS_KEY, DEFAULT_SETTINGS))
-  const situation = settings.situation
+  const situation: Situation | 'all' = SIMPLE_MODE ? 'all' : settings.situation
   const setSituation = (v: Situation | 'all') => setSettings((x) => ({ ...x, situation: v }))
   const [needOpen, setNeedOpen] = useState(!saved.need && !(saved.feeling || saved.emotion))
   const [feelOpen, setFeelOpen] = useState(!(saved.feeling || saved.emotion))
@@ -142,7 +143,8 @@ export default function App() {
   const [showAllKey, setShowAllKey] = useState('')
   const [reviewMode, setReviewMode] = useState(false)
   const [showBinned, setShowBinned] = useState(false)
-  const [keptOnly, setKeptOnly] = useState(() => localStorage.getItem(KEPT_KEY) === '1')
+  const [keptOnlySaved, setKeptOnly] = useState(() => localStorage.getItem(KEPT_KEY) === '1')
+  const keptOnly = !SIMPLE_MODE && keptOnlySaved // saved setting untouched in the simple version
   const [review, setReview] = useState<Review>(loadReview)
   const [editing, setEditing] = useState<string | null>(null)
   const [draftText, setDraftText] = useState('')
@@ -159,7 +161,7 @@ export default function App() {
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([])
 
   useEffect(() => { localStorage.setItem(KEY, JSON.stringify(review)) }, [review])
-  useEffect(() => { localStorage.setItem(KEPT_KEY, keptOnly ? '1' : '0') }, [keptOnly])
+  useEffect(() => { localStorage.setItem(KEPT_KEY, keptOnlySaved ? '1' : '0') }, [keptOnlySaved])
   useEffect(() => { localStorage.setItem(FAV_KEY, JSON.stringify(favs)) }, [favs])
   useEffect(() => { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)) }, [settings])
   useEffect(() => { localStorage.setItem(PICKS_KEY, JSON.stringify({ need, feeling, emotion, mode })) }, [need, feeling, emotion, mode])
@@ -176,7 +178,7 @@ export default function App() {
   useEffect(() => {
     const url = new URL(window.location.href)
     const view = url.searchParams.get('view')
-    if (!view) return
+    if (!view || SIMPLE_MODE) return
     url.searchParams.delete('view'); window.history.replaceState(null, '', url)
     const t = window.setTimeout(() => {
       if (view === 'prep') { setPrepNeed(saved.need ?? 'any'); setPrepFeeling(saved.feeling ?? 'heard'); setPrepOpen(true) }
@@ -228,7 +230,8 @@ export default function App() {
   const listKey = [need, feeling, emotion, situation, keptOnly].join('|') // "show more" resets when the picks change
   const showAll = showAllKey === listKey + '#all'
   const quickOnly = settings.quick && !showAllKey.startsWith(listKey + '#')
-  const shown = quickOnly ? best.slice(0, 1) : showAll ? best : best.slice(0, LIMIT)
+  const simpleMore = showAllKey === listKey + '#more'
+  const shown = SIMPLE_MODE ? best.slice(0, simpleMore ? LIMIT : 3) : quickOnly ? best.slice(0, 1) : showAll ? best : best.slice(0, LIMIT)
   const reminder = REMINDERS[hash(listKey) % REMINDERS.length]
   const favPhrases = favs.map((id) => ALL_PHRASES.find((p) => p.id === id)).filter((p): p is Phrase => !!p)
 
@@ -425,8 +428,8 @@ export default function App() {
     const sit = SITUATIONS.find((s) => s.id === p.situation)!
     const isEditing = editing === p.id
     const text = textOf(p)
-    const tag = 'inline-flex h-6 items-center rounded-full px-2.5 text-xs font-medium'
-    const details = settings.details
+    const tag = SIMPLE_MODE ? 'inline-flex h-5 items-center rounded-full px-2 text-[0.7rem] font-medium opacity-80' : 'inline-flex h-6 items-center rounded-full px-2.5 text-xs font-medium'
+    const details = !SIMPLE_MODE && settings.details
     const fav = favs.includes(p.id)
     return (
       <article key={p.id} aria-label={text} className={cn('pop rounded-2xl border bg-card p-4 shadow-soft', st === 'bin' && 'opacity-55', st === 'keep' ? 'border-primary/40' : 'border-border')}>
@@ -447,7 +450,7 @@ export default function App() {
             {st === 'bin' && <span className={cn(tag, 'bg-destructive/10 text-destructive')}>Binned</span>}
             {reviewMode && (review[p.id]?.text || p.editedText) && <span className={cn(tag, 'border border-border')}>Edited</span>}
           </div>
-          <div className="-mr-1.5 -mt-1 flex shrink-0 items-center">
+          {!SIMPLE_MODE && <div className="-mr-1.5 -mt-1 flex shrink-0 items-center">
             <button type="button" aria-pressed={fav} aria-label={fav ? 'Remove from My lines' : 'Save to My lines'} onClick={() => toggleFav(p.id)}
               className={cn('inline-flex size-9 items-center justify-center rounded-full transition-colors hover:bg-accent/60', fav ? 'text-primary' : 'text-muted-foreground')}>
               <Star className={cn('size-[1.15rem]', fav && 'fill-current')} />
@@ -472,7 +475,7 @@ export default function App() {
                 </div>
               )}
             </div>
-          </div>
+          </div>}
         </div>
         {!isEditing && (
           <button type="button" onClick={() => onCopy(p)} className="group -mx-1.5 block w-[calc(100%+0.75rem)] rounded-xl px-1.5 py-1 text-left transition-colors hover:bg-accent/40 active:bg-accent/70">
@@ -494,19 +497,19 @@ export default function App() {
             </div>
           </div>
         )}
-        <div className="mt-3 rounded-xl bg-accent/55 p-3 text-sm text-accent-foreground">
+        {!SIMPLE_MODE && <div className="mt-3 rounded-xl bg-accent/55 p-3 text-sm text-accent-foreground">
           <span className="font-semibold">How to say it: </span>{tipText}
           {details && <span className="mt-1 block text-xs opacity-75">{tipResearch ? 'Falling pitch: backed by research. The rest is a coach\u2019s tip.' : 'Stagecraft (coach\u2019s tip): try it and keep what feels natural.'}</span>}
-        </div>
+        </div>}
         {details && <div className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
           <span>{example ? `${example}. Source:` : 'Source:'}</span>
           {srcGroups(p.sources)}
           {study && <span className="inline-flex flex-wrap items-center gap-1.5">Why this works: {study.url ? <a href={study.url} target="_blank" rel="noreferrer" className="inline-flex min-h-6 items-center underline decoration-border underline-offset-2 hover:text-foreground">{study.label}</a> : <span>{study.label}</span>}</span>}
           {!p.delivery && srcGroups([tip.source], 'Tip: ')}
         </div>}
-        {!details && <button type="button" onClick={() => setSettings((x) => ({ ...x, details: true }))} className="mt-1.5 inline-flex min-h-6 items-center text-xs text-muted-foreground underline decoration-border underline-offset-2 hover:text-foreground">Sources{study ? ' and research' : ''}</button>}
-        {practiceFor === p.id && !isEditing && <div className="pop mt-3 rounded-xl border border-border bg-background p-3"><Practice text={text.replace(/___/g, 'this')} onClose={() => setPracticeFor(null)} /></div>}
-        {REWORD_URL && !isEditing && (
+        {!details && !SIMPLE_MODE && <button type="button" onClick={() => setSettings((x) => ({ ...x, details: true }))} className="mt-1.5 inline-flex min-h-6 items-center text-xs text-muted-foreground underline decoration-border underline-offset-2 hover:text-foreground">Sources{study ? ' and research' : ''}</button>}
+        {!SIMPLE_MODE && practiceFor === p.id && !isEditing && <div className="pop mt-3 rounded-xl border border-border bg-background p-3"><Practice text={text.replace(/___/g, 'this')} onClose={() => setPracticeFor(null)} /></div>}
+        {!SIMPLE_MODE && REWORD_URL && !isEditing && (
           reword?.id === p.id ? (
             <div className="pop mt-3 rounded-xl border border-border bg-background p-3 text-sm">
               <form className="flex gap-2" onSubmit={(e) => { e.preventDefault(); runReword(p, reword.note.trim()) }}>
@@ -529,7 +532,7 @@ export default function App() {
             </div>
           ) : null
         )}
-        {reviewMode && !isEditing && (
+        {!SIMPLE_MODE && reviewMode && !isEditing && (
           <div className="mt-3 flex flex-wrap gap-2 border-t border-border pt-3">
             <Button size="sm" className="min-h-8" variant={st === 'keep' ? 'default' : 'outline'} aria-pressed={st === 'keep'} onClick={() => setStatus(p.id, st === 'keep' ? 'draft' : 'keep')}><Check /> Keep</Button>
             <Button size="sm" className="min-h-8" variant="outline" onClick={() => { setEditing(p.id); setDraftText(rawTextOf(p)) }}><Pencil /> Edit</Button>
@@ -558,14 +561,14 @@ export default function App() {
               : <p className="truncate text-xs text-muted-foreground">Listen first, then find the words</p>}
           </div>
           <div className="ml-auto flex items-center gap-1.5">
-            {reviewMode && <span className="rounded-full bg-primary px-2.5 py-1 text-xs font-medium text-primary-foreground">Review</span>}
-            <Button variant="outline" className="min-h-9 rounded-full px-3" onClick={() => setMoreOpen(true)} aria-haspopup="dialog"><SlidersHorizontal /> More</Button>
+            {!SIMPLE_MODE && reviewMode && <span className="rounded-full bg-primary px-2.5 py-1 text-xs font-medium text-primary-foreground">Review</span>}
+            {!SIMPLE_MODE && <Button variant="outline" className="min-h-9 rounded-full px-3" onClick={() => setMoreOpen(true)} aria-haspopup="dialog"><SlidersHorizontal /> More</Button>}
           </div>
         </header>
       </div>
 
       <main className="pt-4">
-        {favPhrases.length > 0 && (
+        {!SIMPLE_MODE && favPhrases.length > 0 && (
           <section id="my-lines" aria-labelledby="my-lines-h" className="mb-5 scroll-mt-20 rounded-2xl border border-primary/20 bg-card p-3 shadow-soft">
             <h2 id="my-lines-h" className="mb-1.5 flex items-center gap-1.5 px-1 text-sm font-semibold"><Star className="size-4 fill-current text-primary" /> My lines</h2>
             <ul className="divide-y divide-border">
@@ -611,7 +614,7 @@ export default function App() {
               </p>
             </>
           )}
-          {needObj && (
+          {!SIMPLE_MODE && needObj && (
             <div className="mt-2">
               <button type="button" aria-expanded={spotOpen} onClick={() => setSpotOpen((v) => !v)} className="inline-flex min-h-8 items-center gap-1 text-sm font-medium text-primary">
                 What to listen for <ChevronDown className={cn('size-4 transition-transform', spotOpen && 'rotate-180')} />
@@ -641,20 +644,20 @@ export default function App() {
           ) : (
             <>
               <Step n={2} id="feel" title="How do you want them to feel?" />
-              <div role="tablist" aria-label="Choose by" className="mb-3 grid grid-cols-3 gap-1 rounded-full bg-secondary p-1 text-sm font-medium">
+              {!SIMPLE_MODE && <div role="tablist" aria-label="Choose by" className="mb-3 grid grid-cols-3 gap-1 rounded-full bg-secondary p-1 text-sm font-medium">
                 {MODES.map(([id, label], i) => (
                   <button key={id} ref={(el) => { tabRefs.current[i] = el }} role="tab" id={`tab-${id}`} aria-controls={`panel-${id}`} aria-selected={mode === id}
                     tabIndex={mode === id ? 0 : -1} type="button" onClick={() => setMode(id)} onKeyDown={(e) => onTabKey(e, i)}
                     className={cn('min-h-9 rounded-full px-2 transition-colors', mode === id ? 'bg-card text-primary shadow-sm' : 'text-muted-foreground hover:text-foreground')}>{label}</button>
                 ))}
-              </div>
+              </div>}
               <div role="tabpanel" id={`panel-${mode}`} aria-labelledby={`tab-${mode}`}>
-                {mode === 'feel' && (
+                {(SIMPLE_MODE || mode === 'feel') && (
                   <div className="flex flex-wrap gap-2">
                     {FEELINGS.map((f) => <Chip key={f.id} active={feeling === f.id} onClick={() => pickFeeling(f.id)}><span aria-hidden className="mr-1.5">{f.emoji}</span>{f.label}</Chip>)}
                   </div>
                 )}
-                {mode === 'now' && (
+                {!SIMPLE_MODE && mode === 'now' && (
                   <>
                     <p className="mb-2.5 inline-flex min-h-6 items-center rounded-full bg-[oklch(0.96_0.035_80)] px-2.5 text-xs font-medium text-[oklch(0.42_0.08_60)]">{EMOTION_BADGE}</p>
                     <p className="mb-2 text-sm text-muted-foreground">What are they feeling right now? We&rsquo;ll suggest what to aim for.</p>
@@ -664,7 +667,7 @@ export default function App() {
                     {emotionObj && renderEmotionDetail(emotionObj)}
                   </>
                 )}
-                {mode === 'map' && (
+                {!SIMPLE_MODE && mode === 'map' && (
                   <div>
                     <p className="mb-2.5 inline-flex min-h-6 items-center rounded-full bg-[oklch(0.96_0.035_80)] px-2.5 text-xs font-medium text-[oklch(0.42_0.08_60)]">{EMOTION_BADGE}</p>
                     <div aria-hidden className="mb-1.5 grid grid-cols-[6.6rem_1fr] gap-2 px-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
@@ -725,11 +728,12 @@ export default function App() {
               )}
               {emotionObj && !feelOpen && <p className="mt-2 rounded-xl bg-accent/50 p-2.5 text-sm"><span className="font-semibold">They seem to feel {emotionObj.label.toLowerCase()}. </span>{emotionObj.respond}</p>}
               {keptOnly && <p className="mt-2 text-xs text-muted-foreground">Showing kept phrases only. <button type="button" className="inline-flex min-h-6 items-center font-medium text-primary underline" onClick={() => setKeptOnly(false)}>Show all</button></p>}
-              {best.length === 0 && more.length === 0 && <p className="mt-3 rounded-2xl border border-dashed border-border p-4 text-sm text-muted-foreground">Nothing here for this mix yet. Try another feeling{situation !== 'all' ? ', or remove the filter' : ''}.</p>}
+              {best.length === 0 && (SIMPLE_MODE || more.length === 0) && <p className="mt-3 rounded-2xl border border-dashed border-border p-4 text-sm text-muted-foreground">Nothing here for this mix yet. Try another feeling{situation !== 'all' ? ', or remove the filter' : ''}.</p>}
               <div className="mt-3 space-y-3">{shown.map((p) => renderCard(p, !!need && need !== 'any' && p.need === 'any'))}</div>
-              {quickOnly && best.length > 1 && <Button variant="outline" className="mt-3 min-h-10 w-full rounded-full" onClick={() => setShowAllKey(listKey + '#more')}>Show more ({best.length - 1})</Button>}
-              {!quickOnly && !showAll && best.length > LIMIT && <Button variant="outline" className="mt-3 min-h-10 w-full rounded-full" onClick={() => setShowAllKey(listKey + '#all')}>Show {best.length - LIMIT} more</Button>}
-              {!quickOnly && more.length > 0 && (
+              {SIMPLE_MODE && !simpleMore && best.length > 3 && <Button variant="ghost" className="mt-2 min-h-10 w-full rounded-full text-muted-foreground" onClick={() => setShowAllKey(listKey + '#more')}>Show more</Button>}
+              {!SIMPLE_MODE && quickOnly && best.length > 1 && <Button variant="outline" className="mt-3 min-h-10 w-full rounded-full" onClick={() => setShowAllKey(listKey + '#more')}>Show more ({best.length - 1})</Button>}
+              {!SIMPLE_MODE && !quickOnly && !showAll && best.length > LIMIT && <Button variant="outline" className="mt-3 min-h-10 w-full rounded-full" onClick={() => setShowAllKey(listKey + '#all')}>Show {best.length - LIMIT} more</Button>}
+              {!SIMPLE_MODE && !quickOnly && more.length > 0 && (
                 <>
                   <h3 className="mb-2 mt-6 text-sm font-semibold text-muted-foreground">More for {needLabel} (other feelings)</h3>
                   <div className="space-y-3">{more.map((p) => renderCard(p))}</div>
@@ -740,13 +744,13 @@ export default function App() {
           ) : (
             <div className="rounded-2xl border border-dashed border-border bg-card/70 p-6 text-center text-sm text-muted-foreground">
               <h2 id="results" className="text-base font-semibold text-foreground">Pick a feeling to see phrases</h2>
-              <p className="mt-1">Step 1 is optional. Tap a line to copy it, or star it to keep it.</p>
+              <p className="mt-1">{SIMPLE_MODE ? 'Step 1 is optional. Tap a line to copy it.' : 'Step 1 is optional. Tap a line to copy it, or star it to keep it.'}</p>
             </div>
           )}
         </section>
       </main>
 
-      {reviewMode && (
+      {!SIMPLE_MODE && reviewMode && (
         <div className="fixed inset-x-0 bottom-0 z-30 border-t border-border bg-card px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 shadow-[0_-8px_24px_-12px_rgba(60,40,20,0.25)]">
           <div className="mx-auto flex max-w-2xl flex-wrap items-center gap-x-3 gap-y-2">
             <span className="text-sm"><b>Review</b> · Kept {counts.keep} · Binned {counts.bin} · Edited {counts.edited}</span>

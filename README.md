@@ -37,3 +37,9 @@ Built with Vite, React, Tailwind and shadcn/ui. Deployed to GitHub Pages by `.gi
 - Deploy (needs Node 22 and a Cloudflare API token in `CLOUDFLARE_API_TOKEN`): `cd worker && npm ci && npx wrangler deploy`.
 - Switch the button on by setting the repo Actions variable `VITE_REWORD_URL` to the Worker's URL, then re-run the Pages deploy. While it is empty the button doesn't appear.
 - Live Worker: https://say-it-reword.carplay.workers.dev (POST only, from the Say it site). Notes that ask for guilt, pressure or deception are dropped before they reach the model, and `___` blanks are kept.
+
+## Simple version (current)
+
+The live app runs the simple version: six types, how you want them to feel, then three lines with one-tap copy.
+Everything else (More, Prep card, Practice out loud, Say it differently, Share, My lines, quick mode, home-screen shortcuts) is still in the code, just hidden.
+To bring the full version back, set `SIMPLE_MODE = false` in `src/simple.ts` and push. The full version is also saved as the `full-version` tag and branch.
