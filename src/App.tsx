@@ -9,7 +9,7 @@ import {
   FEELING_TIPS, NEEDS, needText, RESEARCH, SITUATIONS, SOURCES, STORY_TYPES, STUDIES, TIPS, isResearchTip, sourceHref, type NeedId, type Situation,
 } from '@/data/content'
 import phrasesRaw from '@/data/phrases.json'
-import { SIMPLE_MODE } from '@/simple'
+import { SIMPLE_FEELINGS, SIMPLE_MODE } from '@/simple'
 
 interface Phrase {
   id: string; need: string; feeling: string; situation: Situation; sources: string[]; text: string
@@ -17,6 +17,8 @@ interface Phrase {
   replaces?: string[]; supersededBy?: string; status?: 'keep' | 'bin'; editedText?: string
 }
 const ALL_PHRASES = phrasesRaw as Phrase[]
+/** Feelings on screen: six in the simple version, all 14 in the full one. */
+const SHOWN_FEELINGS = SIMPLE_MODE ? SIMPLE_FEELINGS.map((id) => FEELINGS.find((f) => f.id === id)!).filter(Boolean) : FEELINGS
 const PHRASES = ALL_PHRASES.filter((p) => !p.supersededBy) // superseded rows keep their IDs but are hidden
 const IDS = new Set(ALL_PHRASES.map((p) => p.id))
 
@@ -121,7 +123,12 @@ function Summary({ n, title, value, onChange }: { n: number; title: string; valu
 }
 
 export default function App() {
-  const [saved] = useState(() => load<Picks>(PICKS_KEY, { need: null, feeling: null, emotion: null, mode: 'feel' }))
+  const [saved] = useState(() => {
+    const p = load<Picks>(PICKS_KEY, { need: null, feeling: null, emotion: null, mode: 'feel' })
+    // Simple version: a saved feeling that isn't one of the six (or a "they feel now" pick) starts fresh at step 2.
+    if (SIMPLE_MODE && (p.emotion || (p.feeling && !SIMPLE_FEELINGS.includes(p.feeling)))) return { ...p, feeling: null, emotion: null }
+    return p
+  })
   const [need, setNeed] = useState<NeedChoice | null>(saved.need)
   const [feeling, setFeeling] = useState<string | null>(saved.feeling)
   const [emotion, setEmotion] = useState<string | null>(saved.emotion)
@@ -653,8 +660,8 @@ export default function App() {
               </div>}
               <div role="tabpanel" id={`panel-${mode}`} aria-labelledby={`tab-${mode}`}>
                 {(SIMPLE_MODE || mode === 'feel') && (
-                  <div className="flex flex-wrap gap-2">
-                    {FEELINGS.map((f) => <Chip key={f.id} active={feeling === f.id} onClick={() => pickFeeling(f.id)}><span aria-hidden className="mr-1.5">{f.emoji}</span>{f.label}</Chip>)}
+                  <div className={SIMPLE_MODE ? 'grid grid-cols-2 gap-2 [&>button]:justify-center' : 'flex flex-wrap gap-2'}>
+                    {SHOWN_FEELINGS.map((f) => <Chip key={f.id} active={feeling === f.id} onClick={() => pickFeeling(f.id)}><span aria-hidden className="mr-1.5">{f.emoji}</span>{f.label}</Chip>)}
                   </div>
                 )}
                 {!SIMPLE_MODE && mode === 'now' && (

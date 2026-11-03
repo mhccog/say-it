@@ -7,3 +7,7 @@
  * The full version is also saved as the git tag and branch `full-version`.
  */
 export const SIMPLE_MODE = true
+
+/** The six feelings shown in the simple version, in order (the full version shows all 14).
+ *  Chosen for everyday use and phrase coverage: every type gets at least 13 lines for each. */
+export const SIMPLE_FEELINGS = ['heard', 'understood', 'comfortable', 'liked', 'trusted', 'respected']
