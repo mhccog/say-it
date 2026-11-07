@@ -32,7 +32,7 @@ Built with Vite, React, Tailwind and shadcn/ui. Deployed to GitHub Pages by `.gi
 
 ## "Say it differently" (optional AI rewording)
 
-`worker/` is a tiny Cloudflare Worker that rewords one phrase with **Cloudflare Workers AI** (`@cf/meta/llama-3.1-8b-instruct-fp8`, through the `AI` binding; the plain 8b model was retired by Cloudflare), so there is no separate AI provider key. Its prompt keeps suggestions honest and kind: same meaning, no new claims or compliments, no pressure or persuasion tricks. Only the GitHub Pages origin (and localhost) may call it, and each visitor is limited to 20 rewrites a minute.
+`worker/` is a tiny Cloudflare Worker that rewords one phrase with **Cloudflare Workers AI** (`@cf/google/gemma-4-26b-a4b-it`, through the `AI` binding; Cloudflare retires `@cf/meta/llama-3.1-8b-instruct-fp8` on 20 Nov 2026), so there is no separate AI provider key. Its prompt keeps suggestions honest and kind: same meaning, no new claims or compliments, no pressure or persuasion tricks. Only the GitHub Pages origin (and localhost) may call it, and each visitor is limited to 20 rewrites a minute.
 
 - Deploy (needs Node 22 and a Cloudflare API token in `CLOUDFLARE_API_TOKEN`): `cd worker && npm ci && npx wrangler deploy`.
 - Switch the button on by setting the repo Actions variable `VITE_REWORD_URL` to the Worker's URL, then re-run the Pages deploy. While it is empty the button doesn't appear.

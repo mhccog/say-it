@@ -16,4 +16,4 @@ simple = { limit = 20, period = 60 }
 
 [vars]
 ALLOWED_ORIGINS = "https://mhccog.github.io,http://localhost:5173,http://localhost:4173"
-MODEL = "@cf/meta/llama-3.1-8b-instruct-fp8"
+MODEL = "@cf/google/gemma-4-26b-a4b-it"
