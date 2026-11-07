@@ -3,7 +3,7 @@
 // speaker can't stand behind, no covert techniques, and the other person stays free to say no.
 
 interface Env {
-  AI: { run: (model: string, input: unknown) => Promise<{ response?: string }> }
+  AI: { run: (model: string, input: unknown) => Promise<{ response?: string; choices?: { message?: { content?: string } }[] }> }
   LIMITER?: { limit: (o: { key: string }) => Promise<{ success: boolean }> }
   ALLOWED_ORIGINS: string
   MODEL: string
@@ -74,8 +74,10 @@ export default {
         const out = await env.AI.run(env.MODEL, {
           messages: [{ role: 'system', content: SYSTEM }, { role: 'user', content: user }],
           max_tokens: 180, temperature: 0.7,
-        })
-        options = cleanOptions((out.response ?? '').replace(/\[BLANK\]/gi, '___'), text)
+        }) as { response?: string; choices?: { message?: { content?: string } }[] }
+        // Older Workers AI models return { response }; chat-completions-shaped models (e.g. Gemma 4) return choices[].
+        const raw = out.response ?? out.choices?.[0]?.message?.content ?? ''
+        options = cleanOptions(raw.replace(/\[BLANK\]/gi, '___'), text)
         if (text.includes('___')) options = options.filter((o) => o.split('___').length === text.split('___').length)
       }
       if (!options.length) return json({ error: 'No suggestion this time. Try again.' }, 502, headers)
